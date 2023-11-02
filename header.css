@@ -1,0 +1,129 @@
+.header{
+    margin-left: 150px;   
+   }
+   .header{
+       width:1190px;
+       height: 50px;/* 60% of the viewpoint */
+       display:flex;
+       padding: 6px;
+       justify-content: space-between;
+       align-items: center;
+       background-color: #379a63;
+   }
+   .logo_background{
+       background:#fff9f9;
+       display: flex;
+       margin: 0px 0px 0 2px;
+       padding-right: 2px;
+       margin-right: 0px;
+   }
+   .logo{
+       display:flex;
+       transform: scale(1.4,1.4); /*--zoom*/
+       width:50px;
+       height:44px;
+       margin:5px;
+       padding:0px 0px 0px 10px;
+       margin-right: 0px;
+       
+   }
+   .logo_img{
+       display:flex;
+       width:120px;
+       height:44px;
+   }
+
+   nav ul li {
+    margin-right: 15px; /* Add a 5px gap between list items */
+    }
+
+    nav ul li:last-child {
+        margin-right: 0; /* Remove margin for the last list item */
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(6, 59, 49);
+        display: flex;
+        align-items: center;
+        text-decoration-color: rgb(255, 255, 255);
+    }
+
+    nav ul li a:hover {
+        color: #9CC89F;
+    }
+
+    nav ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0px; /* Remove default padding */
+    display: flex; /* Arrange list items horizontally */
+    margin: 0%;
+    }
+
+   .search_box {
+       display:flex;
+       margin-right:0px;/*top left down right*/
+       border: 2px solid #807c7c;
+       width: 550px;
+       height:40px;
+       border-radius: 25px;
+       background-color:#ffffff;
+       align-items: center; /*vertically centers searchbar */
+   }
+   
+   .search_input {
+       border: none;
+       outline: none;
+       padding: 1px 0 0 0; 
+       margin: 10px;
+       width: 550px;
+       height: 20px;
+   }
+   
+   .search_icon_background{
+       background-color: #0d6e6e;
+       margin:0px 3px 0px 3px;
+       height:35px;
+       width:70px;
+       margin-right:3px;
+       border-radius:25px;
+       cursor: pointer;
+       display: flex;
+       justify-content: center; /* Horizontally center contents */
+       align-items: center; /* Vertically center contents */
+   }
+   
+   .search_icon{
+    color: black;   
+    font-size: 18px;
+   
+   }
+   .cart_icon {
+       font-size: 18px;
+       margin:0px 3px 0px 0px;
+       display: flex;
+
+       align-items: center;
+       width: 20px;
+       height: 40px;
+   }
+   
+   .button {
+       border: none;
+       display: flex;
+       align-items: center;
+       margin: 10 0 0 50px; /* 2 inches away from the right */
+       width: 75px;
+       border-radius: 25px;
+       background-color: #9CC89F;
+       height: 40px;
+   }
+
+   
+
+
+
+
+
+
+
