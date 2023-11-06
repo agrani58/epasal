@@ -102,8 +102,7 @@
        font-size: 18px;
        margin:0px 3px 0px 0px;
        display: flex;
-
-       align-items: center;
+      align-items: left;
        width: 20px;
        height: 40px;
    }
