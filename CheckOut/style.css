@@ -1,0 +1,203 @@
+body{
+    font-family:Poppins;
+    font-size: 16px;
+    margin-top:10px 0px 0px 5px;
+    
+    background-color:lightgrey;
+}
+
+
+h1{
+    font-size: 20px;
+    margin:5px 10px 2px 10px;
+    text-align: center;
+}
+
+h2{
+    font-size: 18px;
+    text-align: left;
+    margin-top:5px;
+
+}
+h3{
+    font-size: 14px;
+    text-align: left;
+}
+h4{
+    font-size: 12px;
+    text-align: justify;
+}
+
+label{
+    display:inline-block;
+    height: 12px;
+    width:80px;
+   
+
+}
+
+input{
+    width:120px;
+    height:12px;
+    display: inline-block;
+}
+
+
+
+#button{
+    border: 2px rgb(46, 128, 128) solid;
+    border-radius: 5%;
+    width:fit-content;
+    height: fit-content;
+    
+}
+
+   
+.info{
+    background-color: rgb(80, 181, 215);
+    color:white;
+    
+    border:1px solid rgb(80, 181, 215);     
+}
+
+.info:hover{
+    
+    background-color:white;
+   color:rgb(80, 181, 215);
+}
+
+.button{
+    border: none;
+      color: white;
+      padding: 12px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .logo{
+        width:160px;
+      margin: 0px 0px;
+      display:block;
+      padding: 5px 0;
+
+      /* Filter  */
+      filter: brightness(1);
+    }
+   
+    .price{
+        text-align: right;
+    }
+    p{
+        font-size: 14px;
+        text-align: left;
+    }
+   
+
+   
+
+/* Global Container */
+.row {
+    display: flex;
+}
+
+.row-horizontal {
+    flex-direction: column;
+}
+
+.col {
+    flex: 1; /* flex = 1 means, take all available space, after adjusting it's sibling space */
+}
+
+.col-7 {
+   flex-basis: calc(7 / 12 * 100%);
+}
+
+.col-5 {
+    flex-basis: calc(5 / 12 * 100%);
+}
+
+.container-checkout {
+    gap: 8px;
+}
+
+.product-wrapper{
+    height:100%;
+    padding: 15px;
+    border-radius: 8px;
+    background: white;
+}
+
+.billing-nav{
+    padding: 15px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.bill{
+    border:1px solid lightgray;
+    margin-bottom: 20px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.bill table {
+    
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bill table td,
+.bill table th {
+    /* border: 1px solid lightgray; */
+    padding: 4px;
+}
+
+.bill  select{
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid lightgray;
+    padding: 8px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+
+/* Applies to our card-container only */
+.card-container-summary .card-product-summary {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background: white; 
+    border: 1px solid lightgray;
+}
+
+.card-container-summary .card-product-summary img{
+    flex: unset;
+    padding: 10px;  
+    margin:0px;
+    height:160px;
+    width:300px;
+}
+
+.card-container-summary .card-product-summary .description{
+    margin-top: 0px;
+    margin-right: 5px;
+    margin-bottom:5px;
+    text-align: right;
+}
+
+
+
+
+
+
+
+/* Just for reference, no USE */
+.blah {
+    flex-shrink: 0; /* This means do not minimize, we give you width, make it fixed. */ 
+    flex-grow: 0; /* This means do not maximize, we give you width, make it fixed. */
+}

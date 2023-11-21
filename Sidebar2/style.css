@@ -1,0 +1,137 @@
+body{
+
+    font-family:Poppins;
+    font-size:16px;
+    margin:0px;
+    background-color: rgb(116, 120, 119);
+    
+}
+
+/* START sidebar section="nav-bar" */
+ 
+.nav-bar{
+    height:100%;
+    width:260px;
+    background-color:#4d535a;
+    position:fixed;
+    top:0px;
+    margin:0px;
+    overflow-y:auto;
+}
+
+
+
+/* END sidebar section="nav-bar" */
+
+
+/* START content section=content-bar */
+
+.content-bar{
+
+    margin-top: 20px;
+    margin-right:20px;
+    margin-bottom:20px;
+    margin-left:280px; /*width:260 px + margin:20px */
+    align-content:right;
+    background-color: rgb(237, 239, 241);
+    min-height: 90vh;
+    border-radius:10px;
+}
+
+/* END content section=content-bar */
+
+.logo{
+    width:160px;
+    margin:0px auto; /* top, right=0px and bottom, left=auto */
+    display:block;
+    padding:0px; /*top, right =20px and bottom, left= 0px */
+
+    filter:brightness(0) invert(1); 
+
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td{
+    background-color:white;
+    border-collapse:collapse;
+    padding:12px;
+    border:2px rgb(192, 190, 190) solid;
+}
+
+
+
+th:hover{
+    color:red;
+    
+}
+
+
+/* START navigation style*/
+
+ul{
+    padding-left: 0px;
+    margin:0px;
+}
+
+.title-nav .topic-nav .list-nav{ /* ul , li, ul*/
+    display:none;
+}
+
+.title-nav .topic-nav:hover .list-nav{
+    display:block;
+}
+
+li{
+    display:block;
+    color:black;
+    text-align: left;
+    margin:0px;
+    padding: 10px 12px;
+    border-bottom:1px white solid ;
+    cursor:pointer;
+}
+
+.title-nav .topic-nav:hover{
+    color:white;
+    font-weight:bold;
+    background-color:lightblue;
+}
+
+.title-nav .topic-nav .list-nav{
+    margin-top:18px;
+   border-top: 1px lightgray;
+}
+
+.title-nav .fa{
+    font-size:24px;
+    position:relative;
+    top:3px;
+    left:3px;
+}
+
+
+
+.title-nav a{
+    color:inherit;
+    text-decoration: none;
+}
+
+.title-nav .topic-nav ul li{
+    padding:8px 16px;
+    font-weight:normal;
+}
+
+.title-nav .topic-nav ul li:hover{
+    background-color: lightcyan;
+    border-radius: 10px;
+}
+
+/* END navigation style*/
+
+
+
+

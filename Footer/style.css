@@ -1,0 +1,22 @@
+/* body, button, input */
+
+body{
+    font-size: 16px;
+    font-family:Poppins;
+    margin:0px 0px 0px 0px;
+
+}
+
+p{
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+footer p{
+    text-align: center;
+    border-top-width:2px;
+    border-top-style:solid;
+    border-top-color:rgb(204, 189, 189);
+    padding-top:8px;
+
+}

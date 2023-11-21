@@ -1,0 +1,144 @@
+
+We need to manage layouts.
+
+There are following methods-
+1. Float
+2. Flexbox
+3. Grid
+
+Among them, we must know float and should know flexbox.
+
+Learn float on your own.
+Let's do it with flexbox. 
+
+First, we need to make flex container
+Second, we need to display flex items in column
+
+Let's get started.
+
+Conversations
+Bujeu? Maile sabai items lai .flex-container ma rakheko?
+um
+
+Maile aba items haru lai .flex-item ma rakheko? Bujeu??
+um 3 ota items.
+
+We saw ki flex-items haru column vayera display vayeko xa. But we need to display it in column.
+So, we need to change flex-direction for .flex-item
+
+Default chai flex-direction: row hunxa.
+
+Aba flex-item ko bhitra img and .description lai chai display flex ani flex-direction: row 
+garnu parxa.
+
+Bujirako xau??
+xa
+
+Bujeu? K gareko??
+umm
+
+Aba flex-shrink and flex-grow ko concept.
+Flex-shrink le flex-items lai sano parne ki nai vanera set garna milxa.
+If value is 0, then do not make it sano.
+If value is 1, then you can make it sano and so on as value increases.
+
+Got it??
+yup, minimize jasto ho?
+Umm, it about minimize garne ki nai.
+
+Varkharai, flex-item ko style milako by giving white background, adding 8px padding and adding
+curve of 4px i.e border radius Got it??
+um got it.
+
+Tmle position use gareko product container ra checkout container lai milauna? Why??
+height width na milerw
+
+Tyo position ko idea ramro lagyo but tyo ali advance concept ho. Do not recommend. 
+Aba layout ko concept use garne yesma pani Okay??
+
+okayy
+
+Tyo vanda agadi let's refactor some code.
+We will make .flex-container as .row 
+ani we will make .flex-item as .col
+
+Is that alright??
+class name>? 
+YES
+okay
+
+We will add additional change .flex-container as .card-container-summary
+Ani, we will add additional change .flex-item as card-product-summary
+For giving names to our cards.
+
+Okay??
+why
+To target them in css, .row will be in every element as needed 
+but .card-container-summary will be in one element, that we can target and change it easily
+without changing code in .row class. It is for clean code purpose.
+
+okay.
+
+We will remove .flex-container class now, as it is transferred to
+.card-container-summary okay??
+
+okay
+
+So far, we have changed names and added additional names.
+This process is called refactoring. It is useful as it
+way of making our code readable by outside developer for
+better collaboration. ,
+
+You got that??
+yes
+but im hungry. 
+Alright, give me 10 more minutes, I will wrap this up. Okay??
+not okay, 
+Let's do this way, tme mam khau or eat something, I will code in your laptop
+Ani I add comments, ani tmro khana sakesi, I will explain. Okay??
+
+okay i see.
+Okay babe.
+
+Wait, I'm figuring this out. I'm making you follow system, so it will be easier paxi.
+ok
+
+I added .row-horizontal to make it display in flex-direction: column;
+So, we can tweak direction with this class
+
+We added row to .card-product-summary because, it is nested flex-container.
+I eat aba. You look code, css, and nabujeko note gara.
+Okay??
+okay. ahile samma ko complex vayo
+Umm, it is. But yesari nai use garxam vane sadhai professionally. 
+Make yourself comfortable. I will explain khana khaye paxi pani.
+okay
+
+Now, let's remove position wala, ani add row class.
+
+
+Yo Utility folder ma aru files haru rakheko
+so that, main file ma chaine kura matra hos
+okay babe?
+okaey bae
+
+Jampa didi ko bihe??
+K sundai xuh??
+ummmero babe saga means ice dada
+checkout ko ma top margin xa
+
+Umm design part yeti nai ho,
+Aba code clean up growarnu xa.
+
+Ekxoti ma sarara vandinxu hai ta?
+ok. yetai xuh no
+
+calc(7 / 12 * 100%) this implies that we have 12 columns, out of which we occupy 7 columns bujeu??
+always 12 col.
+Yes, 12 col is standard one. Not 10, not 16 but 12 columns hai.ok.
+
+Yo sabai practice gara, chatjpt lai sodha or w3 schools ma ajhai sika
+OKAYYYYYYY?
+YETA DHERAI BOLNU MILDENA AAJHA
+ok.
+OKAY babe
