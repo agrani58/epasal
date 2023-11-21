@@ -1,0 +1,142 @@
+body{
+  background-color: white;
+  margin:0;
+  padding:0;
+}
+.container{
+  background-color:white;
+  width: 80%;
+  margin-left:auto;
+  margin-right:auto;
+  padding: 100px;
+  border: 1px solid gray;
+}
+.row{
+  padding: 10px;
+  border: 1px solid gray;
+  margin-top: 0px;
+  margin-left:auto;
+  margin-right:auto;
+  display: flex;
+}
+.col-6{
+  width: 50%;
+  flex: 0 0 auto;
+}
+img{
+  max-width:159.6px;
+  height: 160px;
+}
+.text{
+  height :100%
+}
+.title{
+  padding-top: 08px;
+  line-height: 5px;
+  font-size: 24px;
+  font-family: ‘Open Sans’;
+  font-weight: 800;
+  color: #202020;
+ }
+
+
+
+ <body>
+        <div class="body">
+            <div class="container">
+                <div class="body-section">
+                    <div class="row">
+                        <div class="col-6">
+                            <img  src ="C:\Users\Admin\Pictures\Screenshots\Screenshot (291).png">
+                        </div>
+                        <div class="col-6">
+                            <div class="text">
+                                <h1 class="title">MoMo</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+    .product{
+      max-width:159.6px;
+      height: 160px;
+    }
+    .text{
+      height :100%
+    }
+    .title{
+      padding-top: 08px;
+      line-height: 5px;
+      font-size: 24px;
+      font-weight: 800;
+     }
+     .star{
+      max-width:164.96px;
+      height: 25.53px;
+     }
+ <!-- this adds review stars-->
+          <!--<span class="stock"><i class="fa fa-check"></i> In stock</span>
+          <div class="reviews">
+            <ul class="stars">
+              <li><i class="fa fa-star star_filled"></i></li>
+              <li><i class="fa fa-star star_filled"></i></li>
+              <li><i class="fa fa-star star_filled"></i></li>
+              <li><i class="fa fa-star star_filled"></i></li>
+              <li><i class="fa fa-star star_empty"></i></li>
+            </ul>
+            <span class="review-text">(64 Reviews)</span>
+          </div> -->
+
+          <div class="half"><!-- second half contains quantity, quantity buttons and cart button -->
+            <div class="quantity"><!-- div for quantity starts-->
+              <label for="quantity">Quantity:</label>
+              <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                <button class="decrement">-</button>
+                <div class="quantity-box">1</div>
+                <button class="increment">+</button>
+              </div><!-- div for quantity control ends-->
+            </div><!-- div for quantity ends-->
+      
+            <div class="card__footer"><!-- div for card__footer-->
+              <div class="action"><!-- action includes color changing while hovering-->
+                <button type="button">Add to cart</button>
+              </div><!--action ends-->
+            </div><!--div for card footer ends-->
+          </div><!-- div for half part of the card ends-->
+        </div><!-- div for card body ends-->
+        </main>
+        
+        span.stock {
+          font-family: sans-serif;
+          font-weight: 600;
+          color: #a1cc16;
+        }
+        
+        .reviews {
+          display: flex;
+          align-items: center;
+        }
+        
+        .stars {
+          list-style: none;
+          padding: 0;
+          display: flex;
+        }
+        
+        .star_filled {
+          color: #f7c01b;
+        }
+        
+        .star_empty {
+          color: #5d5959; /* or any other color for empty stars 
+        }
+        
+        .review-text {
+          font-family: sans-serif;
+          font-size: 12px;
+          margin-left: 5px;
+          color: #822a2a;
