@@ -1,15 +1,5 @@
-/* Reset default browser styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-/* Set the body font and background color */
-body {
-  font-family: sans-serif;
-  background-color: #fffefc;
-}
+
 
 /* Header styles */
 header {
@@ -19,10 +9,14 @@ header {
 }
 
 .header {
+  padding:  0.25rem 0px;
+ 
+}
+
+.header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
 }
 
 .logo_background {
@@ -35,8 +29,6 @@ header {
   width: 60px;
   /* Adjust the width to make the image larger */
   height: 60px;
-  /* Adjust the height to make the image larger */
-  margin-left: 60px;
 }
 
 .logo_img {
@@ -53,31 +45,30 @@ header {
   display: flex;
   align-items: center;
   border: 1px solid #ccc;
-  width: 750px;
+  width: 32.5rem;
   border-radius: 25px;
   padding: 5px;
-  margin-right: 5%;
+  /* margin-right: 5%; */
 }
 
 .searchBox input {
   border: none;
   outline: none;
   padding: 14px;
-  width: 700px;
+  width: 100%;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
-
+  height: 45px;
 }
 
 .search_icon_background {
   display: flex;
   align-items: center;
-  width: 50px;
   background-color: #fff;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-  padding: 5px;
-
+  padding: 12px 24px;
+  height: 45px;
 }
 
 .search_icon {
@@ -113,6 +104,7 @@ header {
 .navbar li {
   list-style: none;
   padding: 10px;
+  line-height: 31px;
 }
 
 .navbar a:hover {
@@ -134,7 +126,7 @@ header {
   
   #nav1 li {
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;;
     list-style: none;
     padding: 10px;
 

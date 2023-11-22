@@ -42,7 +42,7 @@
 .information {
   margin-top: 30px;
   font-weight: 100;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;;
   font-size: 12px;
 }
 .description {
@@ -63,7 +63,7 @@
 }
 body{
   background: #fff;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;;
 }
 h4{
   text-align: center;
@@ -107,7 +107,7 @@ img{
   align-items: center;
   font-size: 12px;
   margin-left:5px;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;;
   padding: 0px;
   
 }
