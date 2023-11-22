@@ -5,52 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ePasal - Home Page</title>
-    <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <!-- Header Start -->
     <header>
         <div class="header">
-            <div class="logo_background">
-                <a class="logo" href="https://www.daraz.com.np">
-                    <div class="logo_img">
-                        <img src="img/epasal-primary-logo.png" alt="ePasal - Online Food App">
-                    </div>
-                </a>
-            </div>
-
-            <div class="searchBox">
-                <input type="text" placeholder="Search for products and categories" />
-                <div class="search_icon_background">
-                    <span class="search_icon"><i class="fas fa-search"></i></span>
-                    
+            <div class="container">
+                <div class="logo_background">
+                    <a class="logo" href="https://www.daraz.com.np">
+                        <div class="logo_img">
+                            <img src="img/epasal-primary-logo.png" alt="ePasal - Online Food App">
+                        </div>
+                    </a>
                 </div>
 
-            </div>
+                <div class="searchBox">
+                    <input type="text" placeholder="Search for products and categories" />
+                    <div class="search_icon_background">
+                        <span class="search_icon"><i class="fas fa-search"></i></span>
 
-            <div class="navbar" id="nav">
-                <ul>
-                    <li>
-                        <div class="cart_icon">
-                            <span class="cart_icon"><i class="fas fa-shopping-cart"></i></span>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#">Sign in</a>
-                    </li>
-                    <li>
-                        <a href="#">Sign out </a>
-                    </li>
-                </ul>
+                    </div>
+
+                </div>
+
+                <div class="navbar" id="nav">
+                    <ul>
+                        <li>
+                            <div class="cart_icon">
+                                <span class="cart_icon"><i class="fas fa-shopping-cart"></i></span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Sign in</a>
+                        </li>
+                        <li>
+                            <a href="#">Sign out </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
     <!-- Header End -->
 
     <!-- Category Start -->
-    <div id="container">
+    <div class="container">
         <nav>
             <ul>
                 <li><a href="" class="category">Chicken</a>
@@ -128,74 +136,380 @@
     <!-- Category End -->
 
     <!-- Products Start -->
-    <div class="gallery">
-        <div class="content">
-            <img src="/public/img/products/veg_momo.jpg" alt="Product">
-            <h2>Chowmein</h2>
-            <p>NRs:100</p>
+    <div class="seller-container">
+        <div class="container">
+            <div class="seller-group">
+                <div class="seller-profile">
+                    <div class="seller-info">
+                        <h3>Hymalayan Java</h3>
+                        <h5>Baneshowr, Kathmandu</h5>
+                    </div>
+                    <button class="button info button-small">See More</button>
+                </div>
+                <div class="gallery">
+                    <div class="content">
+                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <h2>Chowmein</h2>
+                        <p>NRs:100</p>
 
 
-            <div class="quantity"><!-- div for quantity starts-->
-                <label for="quantity">Qty:</label>
-                <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                    <button class="decrement">-</button>
-                    <div class="quantity_box">1</div>
-                    <button class="increment">+</button>
-                </div><!-- div for quantity control ends-->
-            </div><!-- div for quantity ends-->
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
 
-            <div class="card__footer"><!-- div for card__footer-->
-                <div class="action"><!-- action includes color changing while hovering-->
-                    <button type="button">Add to Cart</button>
-                </div><!--action ends-->
-            </div><!--div for card footer ends-->
+                        <div class="card__footer"><!-- div for card__footer-->
+                            <div class="action"><!-- action includes color changing while hovering-->
+                                <button type="button">Add to Cart</button>
+                            </div><!--action ends-->
+                        </div><!--div for card footer ends-->
+                    </div>
+
+
+                    <div class="content">
+                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <h2>Veg Momo</h2>
+                        <p>NRs:100</p>
+
+
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
+
+                        <div class="card__footer"><!-- div for card__footer-->
+                            <div class="action"><!-- action includes color changing while hovering-->
+                                <button type="button">Add to Cart</button>
+                            </div><!--action ends-->
+                        </div><!--div for card footer ends-->
+                    </div>
+                    <div class="content">
+                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <h2>Chowmein</h2>
+                        <p>NRs:100</p>
+
+
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
+
+                        <div class="card__footer"><!-- div for card__footer-->
+                            <div class="action"><!-- action includes color changing while hovering-->
+                                <button type="button">Add to Cart</button>
+                            </div><!--action ends-->
+                        </div><!--div for card footer ends-->
+                    </div>
+
+
+                    <div class="content">
+                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <h2>Veg Momo</h2>
+                        <p>NRs:100</p>
+
+
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
+
+                        <div class="card__footer"><!-- div for card__footer-->
+                            <div class="action"><!-- action includes color changing while hovering-->
+                                <button type="button">Add to Cart</button>
+                            </div><!--action ends-->
+                        </div><!--div for card footer ends-->
+                    </div>
+                    <div class="content">
+                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <h2>Chowmein</h2>
+                        <p>NRs:100</p>
+
+
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
+
+                        <div class="card__footer"><!-- div for card__footer-->
+                            <div class="action"><!-- action includes color changing while hovering-->
+                                <button type="button">Add to Cart</button>
+                            </div><!--action ends-->
+                        </div><!--div for card footer ends-->
+                    </div>
+
+
+                    <div class="content">
+                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <h2>Veg Momo</h2>
+                        <p>NRs:100</p>
+
+
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
+
+                        <div class="card__footer"><!-- div for card__footer-->
+                            <div class="action"><!-- action includes color changing while hovering-->
+                                <button type="button">Add to Cart</button>
+                            </div><!--action ends-->
+                        </div><!--div for card footer ends-->
+                    </div>
+                    <div class="content">
+                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <h2>Boilar Momo</h2>
+                        <p>NRs:100</p>
+
+
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
+
+                        <div class="card__footer"><!-- div for card__footer-->
+                            <div class="action"><!-- action includes color changing while hovering-->
+                                <button type="button">Add to Cart</button>
+                            </div><!--action ends-->
+                        </div><!--div for card footer ends-->
+                    </div>
+                    <div class="content">
+                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <h2>Veg paneer Momo</h2>
+                        <p>NRs:100</p>
+
+
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
+
+                        <div class="card__footer"><!-- div for card__footer-->
+                            <div class="action"><!-- action includes color changing while hovering-->
+                                <button type="button">Add to Cart</button>
+                            </div><!--action ends-->
+                        </div><!--div for card footer ends-->
+                    </div>
+                </div>
+            </div>
+            <div class="seller-group">
+                <div class="seller-profile">
+                    <div class="seller-info">
+                        <h3>Hymalayan Java</h3>
+                        <h5>Baneshowr, Kathmandu</h5>
+                    </div>
+                    <button class="button info button-small">See More</button>
+                </div>
+                <div class="gallery">
+                    <div class="content">
+                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <h2>Chowmein</h2>
+                        <p>NRs:100</p>
+
+
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
+
+                        <div class="card__footer"><!-- div for card__footer-->
+                            <div class="action"><!-- action includes color changing while hovering-->
+                                <button type="button">Add to Cart</button>
+                            </div><!--action ends-->
+                        </div><!--div for card footer ends-->
+                    </div>
+
+
+                    <div class="content">
+                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <h2>Veg Momo</h2>
+                        <p>NRs:100</p>
+
+
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
+
+                        <div class="card__footer"><!-- div for card__footer-->
+                            <div class="action"><!-- action includes color changing while hovering-->
+                                <button type="button">Add to Cart</button>
+                            </div><!--action ends-->
+                        </div><!--div for card footer ends-->
+                    </div>
+                    <div class="content">
+                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <h2>Chowmein</h2>
+                        <p>NRs:100</p>
+
+
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
+
+                        <div class="card__footer"><!-- div for card__footer-->
+                            <div class="action"><!-- action includes color changing while hovering-->
+                                <button type="button">Add to Cart</button>
+                            </div><!--action ends-->
+                        </div><!--div for card footer ends-->
+                    </div>
+
+
+                    <div class="content">
+                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <h2>Veg Momo</h2>
+                        <p>NRs:100</p>
+
+
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
+
+                        <div class="card__footer"><!-- div for card__footer-->
+                            <div class="action"><!-- action includes color changing while hovering-->
+                                <button type="button">Add to Cart</button>
+                            </div><!--action ends-->
+                        </div><!--div for card footer ends-->
+                    </div>
+                    <div class="content">
+                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <h2>Chowmein</h2>
+                        <p>NRs:100</p>
+
+
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
+
+                        <div class="card__footer"><!-- div for card__footer-->
+                            <div class="action"><!-- action includes color changing while hovering-->
+                                <button type="button">Add to Cart</button>
+                            </div><!--action ends-->
+                        </div><!--div for card footer ends-->
+                    </div>
+
+
+                    <div class="content">
+                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <h2>Veg Momo</h2>
+                        <p>NRs:100</p>
+
+
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
+
+                        <div class="card__footer"><!-- div for card__footer-->
+                            <div class="action"><!-- action includes color changing while hovering-->
+                                <button type="button">Add to Cart</button>
+                            </div><!--action ends-->
+                        </div><!--div for card footer ends-->
+                    </div>
+                    <div class="content">
+                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <h2>Boilar Momo</h2>
+                        <p>NRs:100</p>
+
+
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
+
+                        <div class="card__footer"><!-- div for card__footer-->
+                            <div class="action"><!-- action includes color changing while hovering-->
+                                <button type="button">Add to Cart</button>
+                            </div><!--action ends-->
+                        </div><!--div for card footer ends-->
+                    </div>
+                    <div class="content">
+                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <h2>Veg paneer Momo</h2>
+                        <p>NRs:100</p>
+
+
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
+
+                        <div class="card__footer"><!-- div for card__footer-->
+                            <div class="action"><!-- action includes color changing while hovering-->
+                                <button type="button">Add to Cart</button>
+                            </div><!--action ends-->
+                        </div><!--div for card footer ends-->
+                    </div>
+                </div>
+            </div>
         </div>
-
-
-        <div class="content">
-            <img src="/public/img/products/veg_momo.jpg" alt="Product">
-            <h2>Veg Momo</h2>
-            <p>NRs:100</p>
-
-
-            <div class="quantity"><!-- div for quantity starts-->
-                <label for="quantity">Qty:</label>
-                <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                    <button class="decrement">-</button>
-                    <div class="quantity_box">1</div>
-                    <button class="increment">+</button>
-                </div><!-- div for quantity control ends-->
-            </div><!-- div for quantity ends-->
-
-            <div class="card__footer"><!-- div for card__footer-->
-                <div class="action"><!-- action includes color changing while hovering-->
-                    <button type="button">Add to Cart</button>
-                </div><!--action ends-->
-            </div><!--div for card footer ends-->
-        </div>
-
-        <div class="content">
-            <img src="/public/img/products/veg_momo.jpg" alt="Product">
-            <h2>Chowmein</h2>
-            <p>NRs:100</p>
-
-
-            <div class="quantity"><!-- div for quantity starts-->
-                <label for="quantity">Qty:</label>
-                <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                    <button class="decrement">-</button>
-                    <div class="quantity_box">1</div>
-                    <button class="increment">+</button>
-                </div><!-- div for quantity control ends-->
-            </div><!-- div for quantity ends-->
-
-            <div class="card__footer"><!-- div for card__footer-->
-                <div class="action"><!-- action includes color changing while hovering-->
-                    <button type="button">Add to Cart</button>
-                </div><!--action ends-->
-            </div><!--div for card footer ends-->
-        </div>
-
+    </div>
     </div>
     </div><!-- div for card body ends-->
     <!-- Products End -->

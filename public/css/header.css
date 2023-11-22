@@ -1,15 +1,5 @@
-/* Reset default browser styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-/* Set the body font and background color */
-body {
-  font-family: sans-serif;
-  background-color: #fffefc;
-}
+
 
 /* Header styles */
 header {
@@ -19,10 +9,14 @@ header {
 }
 
 .header {
+ 
+  padding: 0 20px;
+}
+
+.header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
 }
 
 .logo_background {
@@ -53,20 +47,19 @@ header {
   display: flex;
   align-items: center;
   border: 1px solid #ccc;
-  width: 750px;
+  width: 32.5rem;
   border-radius: 25px;
   padding: 5px;
-  margin-right: 5%;
+  /* margin-right: 5%; */
 }
 
 .searchBox input {
   border: none;
   outline: none;
   padding: 14px;
-  width: 700px;
+  width: 2;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
-
 }
 
 .search_icon_background {
@@ -134,7 +127,7 @@ header {
   
   #nav1 li {
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;;
     list-style: none;
     padding: 10px;
 

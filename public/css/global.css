@@ -1,14 +1,30 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }  
+
 /* body, button, input */
 body {
     font-size: 16px;
     font-family: Poppins;
     margin: 0px 0px 0px 0px;
+    background-color: #eee;
 
 }
 
 p {
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+.container{
+    max-width: 1300px;
+    padding-left:1rem;
+    padding-right: 1rem;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 footer p {
