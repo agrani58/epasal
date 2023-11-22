@@ -1,0 +1,56 @@
+body {
+    font-size: 16px;
+    line-height: 32px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    border: 1px solid black;
+    padding: 1px;
+}
+
+.category {
+    margin-left: 30px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    background-color: white;
+}
+
+nav a {
+    color: black;
+    display: block;
+    padding: 0 10px;
+    line-height: 60px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Hide Dropdown by Default*/
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+
+/* Display Dropdown on Hover */
+nav ul li:hover>ul {
+    display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+
+}
