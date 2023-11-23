@@ -4,8 +4,18 @@
 /* Header styles */
 header {
   background: lightseagreen;
+<<<<<<< HEAD
   color: #c3aaaa; 
   padding: 0 10px;
+=======
+  color: #fff;
+  padding: 0;
+}
+
+.header {
+  padding:  0.25rem 0px;
+ 
+>>>>>>> c32de36553238a331349ed5314231c551cb40c0a
 }
 
 .header .container {
@@ -24,9 +34,12 @@ header {
   width:100px;
   /* Adjust the width to make the image larger */
   height: 60px;
+<<<<<<< HEAD
   /* Adjust the height to make the image larger */
   margin-right: 1rem;
 
+=======
+>>>>>>> c32de36553238a331349ed5314231c551cb40c0a
 }
 
 .logo_img {
@@ -48,20 +61,20 @@ header {
   border: none;
   outline: none;
   padding: 14px;
-  width: 53.5rem;
+  width: 100%;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
+  height: 45px;
 }
 
 .search_icon_background {
   display: flex;
   align-items: center;
-  width: 50px;
   background-color: #fff;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-  padding: 5px;
-
+  padding: 12px 24px;
+  height: 45px;
 }
 
 .search_icon {
@@ -90,6 +103,7 @@ header {
 .navbar li {
   list-style: none;
   padding: 10px;
+  line-height: 31px;
 }
 
 .navbar a:hover {

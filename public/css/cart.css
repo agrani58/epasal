@@ -1,19 +1,11 @@
-*{
-	margin: 0;
-	padding: 0;
-}
-.container{
-	max-width: 100%;
-    margin-left:auto;
-    margin-right:auto;
-    /* border: 1px solid grey; */
-	background-color:rgb(103,146,122);
-    padding: 10px;
 
+.cart-container {
+	margin-top: 1rem;
 }
+
 .products{
 	flex: 0.75;
-	max-width: 80%;
+	
 	margin-left:auto;
     margin-right:auto;
 }
@@ -26,14 +18,13 @@
 	background-color: white;
 	margin-bottom: 10px;
 }
-
-img.img {
-    object-fit: cover;
-}
 .img{
-	padding: 8px;
-    width: 140px;
+	padding:8px;
+	/* padding-top: 15px;
+	padding-left: 10px; */
+    width: 180px;
     text-align: center;
+    object-fit: cover;
 }
 .product > img{
 	transform: scale(1.04);
@@ -45,9 +36,8 @@ img.img {
 }
 .product-name, .discription{
 	margin-bottom: 10px;
-	font-family: ‘Open Sans’;
+	
 }
-
 
 .quantity {
 	width: 10%;
@@ -75,12 +65,7 @@ img.img {
 	/* cursor: pointer; */
 	/* border-radius: 5px; */
 }
-.remove{
-	background-color: rgb(156,200,159);
-	font-family: ‘Open Sans’;
-	width:100px;
-	height:20px;
-}
+
 .price{
 	position: absolute;
 	bottom: 30px;
@@ -89,23 +74,56 @@ img.img {
 
 }
 .end{
-	width:100%;
+
 	justify-content: space-between;
 	align-items: right;
+    display:flex;
+    justify-content: flex-end;
 }
-.checkout{
-	background-color: rgb(156,200,159);
-	font-family: ‘Open Sans’;
-	width:120px;
-	height: 20px;
-	margin-left: 700px;
-	padding: 0px 0px; 
-	cursor: pointer;
+
+
+button{
+    font-family: Poppins;
 }
-.cancel{
-	background-color: rgb(156,200,159);
-	width:120px;
-	height: 20px;
-	font-family: ‘Open Sans’;
-	margin-left:100px;
+
+.button{
+border: none;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+
+
+}
+.icon{
+    
+    background-color: lightgreen;
+    color:white;
+    border:1px solid lightgreen;
+    font-size: 16px;
+}
+
+.icon:hover{
+   
+    background-color:white;
+    color:lightgreen;
+}
+.info{
+    background-color: rgb(116, 198, 225);
+    color:white;
+    
+    
+    border:1px solid rgb(116, 198, 225);   
+}
+
+.info:hover{
+    
+    background-color:white;
+   color:lightblue;
 }
