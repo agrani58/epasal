@@ -4,13 +4,8 @@
 /* Header styles */
 header {
   background: lightseagreen;
-  color: #fff;
-  padding: 0;
-}
-
-.header {
- 
-  padding: 0 20px;
+  color: #c3aaaa; 
+  padding: 0 10px;
 }
 
 .header .container {
@@ -26,28 +21,24 @@ header {
 
 /* Increase the size of the logo image */
 .logo {
-  width: 60px;
+  width:100px;
   /* Adjust the width to make the image larger */
   height: 60px;
   /* Adjust the height to make the image larger */
-  margin-left: 60px;
+  margin-right: 1rem;
+
 }
 
 .logo_img {
   margin-top: 10px;
-  width: 100px;
-}
-
-.logo_img img {
-  max-width: 100%;
-  max-height: 100%;
+  
 }
 
 .searchBox {
   display: flex;
-  align-items: center;
+ 
   border: 1px solid #ccc;
-  width: 32.5rem;
+  width: 55.5rem;
   border-radius: 25px;
   padding: 5px;
   /* margin-right: 5%; */
@@ -57,7 +48,7 @@ header {
   border: none;
   outline: none;
   padding: 14px;
-  width: 2;
+  width: 53.5rem;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
 }
@@ -97,13 +88,6 @@ header {
 }
 
 .navbar li {
-
-  list-style: none;
-  padding: 10px;
-
-}
-
-.navbar li {
   list-style: none;
   padding: 10px;
 }
@@ -118,17 +102,3 @@ header {
   font-weight: 500;
   font-size: 14px;
 }
-
-/* Navbar for home about us */
-/* #nav1 ul {
-    display: flex;
-    align-items: left;
-  }
-  
-  #nav1 li {
-    font-size: 14px;
-    font-family: "Poppins", sans-serif;;
-    list-style: none;
-    padding: 10px;
-
-  } */

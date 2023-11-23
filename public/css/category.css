@@ -1,24 +1,18 @@
 
 
-nav {
-    padding: 1px;
-}
-
-.category {
-    margin-left: 30px;
-}
-
 nav ul {
     padding: 0;
     margin: 0;
     list-style: none;
     position: relative;
+  
 }
 
 nav ul li {
     display: inline-block;
+    
     background-color: white;
-    flex-grow: 1;
+  
 }
 
 nav a {
@@ -28,6 +22,7 @@ nav a {
     line-height: 60px;
     font-size: 16px;
     text-decoration: none;
+    
 }
 
 /* Hide Dropdown by Default*/
@@ -49,4 +44,9 @@ nav ul ul li {
     display: list-item;
     position: relative;
 
+}
+nav .category{
+    display: flex;
+    
+    overflow-x: auto;
 }
