@@ -4,24 +4,15 @@
 /* Header styles */
 header {
   background: lightseagreen;
-<<<<<<< HEAD
   color: #c3aaaa; 
-  padding: 0 10px;
-=======
-  color: #fff;
-  padding: 0;
-}
-
-.header {
-  padding:  0.25rem 0px;
- 
->>>>>>> c32de36553238a331349ed5314231c551cb40c0a
+margin-left: auto;
+margin-right: auto;
 }
 
 .header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
 }
 
 .logo_background {
@@ -34,12 +25,9 @@ header {
   width:100px;
   /* Adjust the width to make the image larger */
   height: 60px;
-<<<<<<< HEAD
   /* Adjust the height to make the image larger */
-  margin-right: 1rem;
+margin-left: 0.5rem;
 
-=======
->>>>>>> c32de36553238a331349ed5314231c551cb40c0a
 }
 
 .logo_img {
@@ -49,18 +37,19 @@ header {
 
 .searchBox {
   display: flex;
+ margin-left: 2rem;
  
   border: 1px solid #ccc;
-  width: 55.5rem;
+  width: 50rem;
   border-radius: 25px;
-  padding: 5px;
-  /* margin-right: 5%; */
+  padding: 2px;
+
 }
 
 .searchBox input {
   border: none;
   outline: none;
-  padding: 14px;
+  padding: 10px;
   width: 100%;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
@@ -85,6 +74,7 @@ header {
 }
 
 .cart_icon {
+  margin-left: 1rem;
   display: flex;
   align-items: center;
 }

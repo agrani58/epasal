@@ -24,7 +24,6 @@ body{
   }
   .product-name, .discription{
     margin-bottom: 10px;
-    font-family: ‘Open Sans’;
   }
   .star{
     /* margin-bottom: 5px; */
@@ -58,12 +57,10 @@ body{
     width:120px;
     height:30px;
     background-color: rgb(156,200,159);
-	  font-family: ‘Open Sans’;
     
   }
   .cart{
     background-color: rgb(156,200,159);
-	  font-family: ‘Open Sans’;
     width:120px;
     height:30px;
     margin-right:15px;
@@ -141,7 +138,6 @@ body{
 }
 .product-name, .discription{
 	margin-bottom: 10px;
-	font-family: ‘Open Sans’;
 }
 .star{
     margin-bottom: 5px;
