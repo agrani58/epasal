@@ -42,9 +42,7 @@ th,td{
     background-color: white;
     
 }
-th:hover{
-    color:rgb(192, 32, 32);
-}
+
 
 table{
     /* margin-top:20px; */
@@ -117,4 +115,10 @@ li{
  .nav .nav-link ul li:hover {
     background: rgba(255, 255, 255, 0.25);
     border-radius: 8px;
+ }
+
+ /* header color*/
+ .header-color{
+    background-color:lightseagreen;
+    color:white;
  }
