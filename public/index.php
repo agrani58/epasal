@@ -17,7 +17,7 @@
 
 <body>
    <?php 
-//    include_once("./partials/header");
+   include_once("./partials/header.php");
     ?>
 
     <!-- Category Start -->
@@ -477,11 +477,11 @@
     </div><!-- div for card body ends-->
     <!-- Products End -->
 
-    <!-- Footer Start -->
-    <footer>
-        <p>&copy; Designed and Developed by <strong>MINOR I GROUP J 2023</strong></p>
-    </footer>
-    <!-- Footer End -->
+    <?php
+    include_once ("./partials/footer.php");
+
+    
+    ?>
 </body>
 
 </html>
