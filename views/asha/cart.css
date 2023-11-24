@@ -45,7 +45,6 @@ img.img {
 }
 .product-name, .discription{
 	margin-bottom: 10px;
-	font-family: ‘Open Sans’;
 }
 
 
@@ -77,7 +76,6 @@ img.img {
 }
 .remove{
 	background-color: rgb(156,200,159);
-	font-family: ‘Open Sans’;
 	width:100px;
 	height:20px;
 }
@@ -95,7 +93,6 @@ img.img {
 }
 .checkout{
 	background-color: rgb(156,200,159);
-	font-family: ‘Open Sans’;
 	width:120px;
 	height: 20px;
 	margin-left: 700px;
@@ -106,6 +103,6 @@ img.img {
 	background-color: rgb(156,200,159);
 	width:120px;
 	height: 20px;
-	font-family: ‘Open Sans’;
+	: ‘Open Sans’;
 	margin-left:100px;
 }

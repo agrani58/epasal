@@ -66,67 +66,59 @@
     <div class="cart-container">
         <div class="container">
             <div class="cart">
-                <div class="products">
-                    <div class="product">
-                        <img src="./img/products/Laddu.jpg" class="img" />
-                        <div class="product-info">
-                            <h3 class="product-name">Laddu</h3>
-                            <P class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
-                            <div class="quantity">
-                                <button class="btn">-</button>
-                                <div class="no.">1</div>
-                                <button class="btn">+</button>
-                            </div>
-                            <p class="product-remove">
-                                <button class="button icon"><i class="fa fa-trash"></i></button>
-                            </p>
-                            <p class="price">Rs.200</p>
+                <div class="product-cart">
+                    <img src="./img/products/Laddu.jpg" class="img" />
+                    <div class="product-info">
+                        <h3 class="product-name">Laddu</h3>
+                        <P class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                        <div class="quantity">
+                            <button class="btn">-</button>
+                            <div class="no.">1</div>
+                            <button class="btn">+</button>
                         </div>
+                        <p class="product-remove">
+                            <button class="button icon"><i class="fa fa-trash"></i></button>
+                        </p>
+                        <p class="price">Rs.200</p>
+                    </div>
+                </div>
+
+                <div class="product-cart">
+                    <img src="./img/products/Laddu.jpg" class="img" />
+                    <div class="product-info">
+                        <h3 class="product-name">Laddu</h3>
+                        <P class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                        <div class="quantity">
+                            <button class="btn">-</button>
+                            <div class="no.">1</div>
+                            <button class="btn">+</button>
+                        </div>
+                        <p class="product-remove">
+                            <button class="button icon"><i class="fa fa-trash"></i></button>
+                        </p>
+                        <p class="price">Rs.200</p>
+                    </div>
+                </div>
+
+                <div class="product-cart">
+                    <img src="./img/products/Laddu.jpg" class="img" />
+                    <div class="product-info">
+                        <h3 class="product-name">Laddu</h3>
+                        <P class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                        <div class="quantity">
+                            <button class="btn">-</button>
+                            <div class="no.">1</div>
+                            <button class="btn">+</button>
+                        </div>
+                        <p class="product-remove">
+                            <button class="button icon"><i class="fa fa-trash"></i></button>
+                        </p>
+                        <p class="price">Rs.200</p>
                     </div>
                 </div>
             </div>
 
-            <div class="cart">
-                <div class="products">
-                    <div class="product">
-                        <img src="./img/products/biryani.jpg" class="img" />
-                        <div class="product-info">
-                            <h3 class="product-name">Biryani</h3>
-                            <P class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
-                            <div class="quantity">
-                                <button class="btn">-</button>
-                                <div class="no.">1</div>
-                                <button class="btn">+</button>
-                            </div>
-                            <p class="product-remove">
-                                <button class="button icon"><i class="fa fa-trash"></i></button>
-                            </p>
-                            <p class="price">Rs.200</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cart">
-                <div class="products">
-                    <div class="product">
-                        <img src="./img/products/C Momo.jpeg" class="img" />
-                        <div class="product-info">
-                            <h3 class="product-name">C Momo</h3>
-                            <P class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
-                            <div class="quantity">
-                                <button class="btn">-</button>
-                                <div class="no.">1</div>
-                                <button class="btn">+</button>
-                            </div>
-                            <p class="product-remove">
-                                <button class="button icon"><i class="fa fa-trash"></i></button>
-                            </p>
-                            <p class="price">Rs.200</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
             <div class="end">
                 <button class="button info">Checkout</button>
                 <button class="button info">Cancel</button>

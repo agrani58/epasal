@@ -3,28 +3,21 @@
 	margin-top: 1rem;
 }
 
-.products{
-	flex: 0.75;
-	
-	margin-left:auto;
-    margin-right:auto;
-}
-.product{
+
+.product-cart{
 	display: flex;
-	width: 100%;
-	height: 150px;
-	overflow: hidden;
 	border: 1px solid silver;
 	background-color: white;
 	margin-bottom: 10px;
 }
-.img{
+.product-cart .img{
 	padding:8px;
 	/* padding-top: 15px;
 	padding-left: 10px; */
-    width: 180px;
-    text-align: center;
-    object-fit: cover;
+	text-align: center;
+	object-fit: cover;
+	width: 266px;
+	height: 150px;
 }
 .product > img{
 	transform: scale(1.04);
@@ -82,9 +75,6 @@
 }
 
 
-button{
-    font-family: Poppins;
-}
 
 .button{
 border: none;
