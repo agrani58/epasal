@@ -10,13 +10,12 @@
 	background-color: white;
 	margin-bottom: 10px;
 }
-.img{
+.product-cart .img{
 	padding:8px;
 	/* padding-top: 15px;
 	padding-left: 10px; */
 	text-align: center;
 	object-fit: cover;
-	
 	width: 266px;
 	height: 150px;
 }

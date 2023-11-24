@@ -16,46 +16,9 @@
 </head>
 
 <body>
-    <!-- Header Start -->
-    <header>
-        <div class="header">
-            <div class="container">
-                <div class="logo_background">
-                    <a class="logo" href="https://www.daraz.com.np">
-                        <div class="logo_img">
-                            <img src="img/epasal-primary-logo.png" alt="ePasal - Online Food App">
-                        </div>
-                    </a>
-                </div>
-
-                <div class="searchBox">
-                    <input type="text" placeholder="Search for products and categories" />
-                    <div class="search_icon_background">
-                        <span class="search_icon"><i class="fas fa-search"></i></span>
-                    </div>
-                </div>
-
-                <div class="navbar" id="nav">
-                    <ul>
-                        <li>
-                            <a href="/public/cart.html">
-                                <div class="cart_icon">
-                                    <span class="cart_icon"><i class="fas fa-shopping-cart"></i></span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">Sign in</a>
-                        </li>
-                        <li>
-                            <a href="#">Sign out </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- Header End -->
+   <?php 
+//    include_once("./partials/header");
+    ?>
 
     <!-- Category Start -->
     <div class="container">
@@ -148,7 +111,7 @@
                 </div>
                 <div class="gallery">
                     <div class="content">
-                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
                         <h2>Chowmein</h2>
                         <p>NRs:100</p>
 
@@ -171,7 +134,7 @@
 
 
                     <div class="content">
-                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
                         <h2>Veg Momo</h2>
                         <p>NRs:100</p>
 
@@ -192,7 +155,7 @@
                         </div><!--div for card footer ends-->
                     </div>
                     <div class="content">
-                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
                         <h2>Chowmein</h2>
                         <p>NRs:100</p>
 
@@ -215,7 +178,7 @@
 
 
                     <div class="content">
-                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
                         <h2>Veg Momo</h2>
                         <p>NRs:100</p>
 
@@ -236,7 +199,7 @@
                         </div><!--div for card footer ends-->
                     </div>
                     <div class="content">
-                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
                         <h2>Chowmein</h2>
                         <p>NRs:100</p>
 
@@ -259,7 +222,7 @@
 
 
                     <div class="content">
-                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
                         <h2>Veg Momo</h2>
                         <p>NRs:100</p>
 
@@ -280,7 +243,7 @@
                         </div><!--div for card footer ends-->
                     </div>
                     <div class="content">
-                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
                         <h2>Boilar Momo</h2>
                         <p>NRs:100</p>
 
@@ -301,7 +264,7 @@
                         </div><!--div for card footer ends-->
                     </div>
                     <div class="content">
-                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
                         <h2>Veg paneer Momo</h2>
                         <p>NRs:100</p>
 
@@ -333,7 +296,7 @@
                 </div>
                 <div class="gallery">
                     <div class="content">
-                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
                         <h2>Chowmein</h2>
                         <p>NRs:100</p>
 
@@ -356,7 +319,7 @@
 
 
                     <div class="content">
-                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
                         <h2>Veg Momo</h2>
                         <p>NRs:100</p>
 
@@ -377,7 +340,7 @@
                         </div><!--div for card footer ends-->
                     </div>
                     <div class="content">
-                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
                         <h2>Chowmein</h2>
                         <p>NRs:100</p>
 
@@ -400,7 +363,7 @@
 
 
                     <div class="content">
-                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
                         <h2>Veg Momo</h2>
                         <p>NRs:100</p>
 
@@ -421,7 +384,7 @@
                         </div><!--div for card footer ends-->
                     </div>
                     <div class="content">
-                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
                         <h2>Chowmein</h2>
                         <p>NRs:100</p>
 
@@ -444,7 +407,7 @@
 
 
                     <div class="content">
-                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
                         <h2>Veg Momo</h2>
                         <p>NRs:100</p>
 
@@ -465,7 +428,7 @@
                         </div><!--div for card footer ends-->
                     </div>
                     <div class="content">
-                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
                         <h2>Boilar Momo</h2>
                         <p>NRs:100</p>
 
@@ -486,7 +449,7 @@
                         </div><!--div for card footer ends-->
                     </div>
                     <div class="content">
-                        <img src="/public/img/products/veg_momo.jpg" alt="Product">
+                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
                         <h2>Veg paneer Momo</h2>
                         <p>NRs:100</p>
 

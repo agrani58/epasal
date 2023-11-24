@@ -147,7 +147,7 @@
         <div class="row">
             <div class="col-7">
                 <div class="product-info>">
-                    <img src="/public/img/products/biryani.jpg" class="img" />
+                    <img src="/epasale/public/img/products/biryani.jpg" class="img" />
                     <div class="product-info">
                         <h3 class="product-name">Chicken Biryani</h3>
                         <P class="discription">Price: Rs.300</P>
@@ -173,28 +173,28 @@
                     <p class="store">Product Recommendations</p>
                 </div>
                 <div class="product">
-                    <img src="/public/img/products/C Momo.jpeg" class="pic" />
+                    <img src="/epasale/public/img/products/C Momo.jpeg" class="pic" />
                     <div class="product-info">
                         <h3 class="product-name">MoMo</h3>
                         <P class="discription">Price: Rs 200</P>
                     </div>
                 </div>
                 <div class="product">
-                    <img src="/public/img/products/cheese pizza.jpg" class="pic" />
+                    <img src="/epasale/public/img/products/cheese pizza.jpg" class="pic" />
                     <div class="product-info">
                         <h3 class="product-name">Pizza</h3>
                         <P class="discription">Price: Rs .250</P>
                     </div>
                 </div>
                 <div class="product">
-                    <img src="/public/img/products/Jalebi.jpg" class="pic" />
+                    <img src="/epasale/public/img/products/Jalebi.jpg" class="pic" />
                     <div class="product-info">
                         <h3 class="product-name">Burger</h3>
                         <P class="discription">Price: Rs.200</P>
                     </div>
                 </div>
                 <div class="product">
-                    <img src="/public/img/products/Chocolate Milk Shake.jpg" class="pic" />
+                    <img src="/epasale/public/img/products/Chocolate Milk Shake.jpg" class="pic" />
                     <div class="product-info">
                         <h3 class="product-name">Coffee</h3>
                         <p class="discription">Price: Rs.150</p>
