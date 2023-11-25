@@ -1,0 +1,70 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }  
+
+/* body, button, input */
+body {
+    font-size: 16px;
+    font-family: Poppins;
+    margin: 0px 0px 0px 0px;
+    background-color: #eee;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+input {
+    font: inherit;
+}
+
+.container{
+    max-width: 1300px;
+    padding-left:1rem;
+    padding-right: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col-12 {
+    width: calc(12/12 * 100%);
+}
+
+.col-7 {
+    width: calc(7/12 * 100%);
+}
+
+.col-6 {
+    width: calc(6/12 * 100%);
+}
+
+.col-5 {
+    width: calc(5/12 * 100%);
+}
+
+.col-4 {
+    width: calc(4/12 * 100%);
+}
+
+.col-3 {
+    width: calc(3/12 * 100%);
+}
+
+footer p {
+    text-align: center;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: rgb(204, 189, 189);
+    padding-top: 8px;
+
+}

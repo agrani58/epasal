@@ -1,0 +1,120 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .main {
+    max-width: 720px;
+    margin: 5% auto;
+  }
+  /* this adds background color */
+  body {
+    background-image: linear-gradient(to right bottom,
+    #1edaab,
+    #18b18b,
+    #1eb1da6b,
+    #156597,
+    #125b88);
+  
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  /* this gives property to whole product card */
+  .card {
+    margin-top:5px;
+    background:#c1bfbf;
+    margin: 25px;
+    width: 188px;
+    border-radius: 8px;
+    height:290px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 8px  rgb(0, 0, 0);
+  }
+  .image {
+    border-bottom-left-radius:8px;
+    border-bottom-right-radius:8px;
+  
+        width: 100%;
+        height: 0;
+        display:contents;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100%) */
+      
+  }
+  /*product name*/
+  h1 {
+    
+    font-size: 14px;
+    text-align:left;
+
+  }
+  
+  .featured_text {
+    margin-left:5px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .quantity {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-left:5px;
+    padding: 0px;
+    
+  }
+  .quantity_control {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+  
+  }
+  
+  .quantity_control button {
+    font-size: 20px;
+    color: #000000;
+    background:none;
+    border: none;
+    padding: 5px;
+    border-radius: 15%;
+    font-weight: 200px;
+  }
+  
+  .quantity_box {
+
+    background-color: #aaa8a6;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+   /* Center the button */
+   .action {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%;
+  }
+  /* Button style with linear gradient background */
+.action button {
+  border-bottom-left-radius:8px;
+  border-bottom-right-radius:8px;
+  background: linear-gradient(to bottom, #8C8175, #968572);
+  color: #fff;
+  
+  border: none;
+  width: 100%; /* Match the card width */
+  padding: 10px 0; /* Adjust padding for spacing */
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+}
+  
+  /* help change color when hovering */
+  .action button:hover {
+    background: linear-gradient(to bottom, #9CC89F, #5f8d74); /* Linear gradient on hover */
+  }

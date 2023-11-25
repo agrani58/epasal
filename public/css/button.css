@@ -1,0 +1,86 @@
+
+
+.button {
+    border: none;
+    color: white;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-small {
+    padding: 8px 16px;
+}
+
+.default {
+    background-color: gray;
+    color: white;
+    border: 1px solid gray;
+
+}
+
+.default:hover {
+    background-color: white;
+    color: gray;
+}
+
+.info {
+    background-color: lightblue;
+    color: white;
+
+    border: 1px solid lightblue;
+}
+
+.info:hover {
+
+    background-color: white;
+    color: lightblue;
+}
+
+.success {
+    background-color: green;
+    color: white;
+
+    border: 1px solid green;
+}
+
+.success:hover {
+
+    background-color: white;
+    color: green;
+}
+
+
+.warning {
+
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+}
+
+.warning:hover {
+
+    background-color: white;
+    color: red;
+}
+
+
+.icon {
+
+    background-color: lightgreen;
+    color: white;
+    border: 1px solid lightgreen;
+    font-size: 24px;
+}
+
+.icon:hover {
+
+    background-color: white;
+    color: lightgreen;
+}
