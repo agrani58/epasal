@@ -1,0 +1,25 @@
+.order{
+    background-color: rgb(241, 241, 241);
+}
+table{
+    border:1px solid rgb(192, 184, 184);
+    border-spacing: 0px;
+    width: 100%;
+}
+.order-container{
+    border:1px solid rgb(241, 241, 241);
+    width:90%;
+    margin-left: auto;
+    margin-right:auto;
+    padding: 15px;
+    background-color: white;
+}
+td{
+    border-right:1px solid rgb(192, 190, 190);
+    border-bottom:1px solid rgb(192, 186, 186) ;
+    padding:10px;
+    text-align: center;
+}
+.color{
+    background-color: aquamarine;
+}
