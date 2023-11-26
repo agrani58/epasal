@@ -112,28 +112,25 @@
                 <div class="product-info>">
                     <img src="/epasale/public/img/products/biryani.jpg" class="img" />
                     <div class="product-info">
-                        <h3 class="product-name">Chicken Biryani</h3>
-                        <P class="discription">Price: Rs.300</P>
-                        <div class="quantity">
-                            <p>Quantity</p>
-                            <button class="btn">-</button>
-                            <div class="no.">1</div>
-                            <button class="btn">+</button>
-                        </div>
-                        <div class="btn2">
-                            <button class="buy">Buy Now</button>
-                            <button class="cart">Add To Cart</button>
-                        </div>
-                        <p class="detail">Product Details</p>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </li>
-    
+                        <h2>Chowmein</h2>
+                        <p>NRs:100</p>
+                        <div class="quantity"><!-- div for quantity starts-->
+                            <label for="quantity">Qty:</label>
+                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
+                                <button class="decrement">-</button>
+                                <div class="quantity_box">1</div>
+                                <button class="increment">+</button>
+                            </div><!-- div for quantity control ends-->
+                        </div><!-- div for quantity ends-->
+                        <h1 class="detail">Product Details</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
                     </div>
                 </div>
             </div>
           <div class="col-5">
             <div class="product-recommendation">
                 <div class="border">
-                    <p class="store">Product Recommendations</p>
+                    <p class="store" >Product Recommendations</p>
                 </div>
                 <div class="product">
                     <img src="/epasale/public/img/products/C Momo.jpeg" class="pic" />
