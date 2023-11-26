@@ -1,9 +1,9 @@
- <!-- Header Start -->
- <header>
+<!-- Header Start -->
+<header>
     <div class="header">
         <div class="container">
             <div class="logo_background">
-                <a class="logo" href="https://www.daraz.com.np">
+                <a class="logo" href="/epasale/public">
                     <div class="logo_img">
                         <img src="img/epasal-primary-logo.png" alt="ePasal - Online Food App">
                     </div>
