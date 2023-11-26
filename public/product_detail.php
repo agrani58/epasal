@@ -1,14 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ePasal -Product details</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-</head>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -122,13 +113,14 @@
                                 <button class="increment">+</button>
                             </div><!-- div for quantity control ends-->
                         </div><!-- div for quantity ends-->
-                        <h1 class="detail">Product Details</h1>
+                        <h2 class="detail">Product Details</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
                     </div>
                 </div>
             </div>
           <div class="col-5">
             <div class="product-recommendation">
+           
                 <div class="border">
                     <p class="store" >Product Recommendations</p>
                 </div>
@@ -147,19 +139,21 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="/epasale/public/img/products/Jalebi.jpg" class="pic" />
+                    <img src="/epasale/public/img/products/C Momo.jpeg" class="pic" />
                     <div class="product-info">
-                        <h3 class="product-name">Burger</h3>
-                        <P class="discription">Price: Rs.200</P>
+                        <h3 class="product-name">MoMo</h3>
+                        <P class="discription">Price: Rs 200</P>
                     </div>
                 </div>
                 <div class="product">
-                    <img src="/epasale/public/img/products/Chocolate Milk Shake.jpg" class="pic" />
+                    <img src="/epasale/public/img/products/cheese pizza.jpg" class="pic" />
                     <div class="product-info">
-                        <h3 class="product-name">Coffee</h3>
-                        <p class="discription">Price: Rs.150</p>
+                        <h3 class="product-name">Pizza</h3>
+                        <P class="discription">Price: Rs .250</P>
                     </div>
                 </div>
+             
+         
             </div>
         </div>
         </div>
