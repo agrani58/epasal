@@ -18,52 +18,16 @@
 </head>
 
 <body>
-    <!-- Header Start -->
- <header>
-    <div class="header">
-        <div class="container">
-            <div class="logo_background">
-                <a class="logo" href="https://www.daraz.com.np">
-                    <div class="logo_img">
-                        <img src="img/epasal-primary-logo.png" alt="ePasal - Online Food App">
-                    </div>
-                </a>
-            </div>
+<?php
+                include_once("./partials/header.php");
+             ?>
 
-            <div class="searchBox">
-                <input type="text" placeholder="Search for products and categories" />
-                <div class="search_icon_background">
-                    <span class="search_icon"><i class="fas fa-search"></i></span>
-                </div>
-            </div>
-
-            <div class="navbar" id="nav">
-                <ul>
-                    <li>
-                        <a href="/public/cart.html">
-                            <div class="cart_icon">
-                                <span class="cart_icon"><i class="fas fa-shopping-cart"></i></span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">Sign in</a>
-                    </li>
-                    <li>
-                        <a href="#">Sign out </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</header>
-<!-- Header End -->
     <!-- Table Start -->
     <div class="container">
         <div class="head-section">
             <div class="row">
                 <div class="col-6">
-                    <img  src ="C:\Users\Admin\Downloads\3 (1).png" class="logo">
+                    <img  src ="/epasale/public/img/epasal-primary-logo.png" class="logo">
                 </div>
                 <div class="col-6">
                     <div class="head-detail">
@@ -143,11 +107,9 @@
     </div>
     <!-- Table End -->
 
-<!-- Footer Start -->
-    <footer>
-          <p>&copy; Designed and Developed by <strong>MINOR I GROUP J 2023</strong></p>
-    </footer>
-<!-- Footer End -->
+    <?php
+                include_once("./partials/footer.php");
+             ?>
 </body>
 
 </html>
