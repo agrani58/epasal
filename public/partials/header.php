@@ -5,7 +5,7 @@
             <div class="logo_background">
                 <a class="logo" href="https://www.daraz.com.np">
                     <div class="logo_img">
-                        <img src="img/epasal-primary-logo.png" alt="ePasal - Online Food App">
+                        <img src="/epasale/public/img/epasal-primary-logo.png" alt="ePasal - Online Food App">
                     </div>
                 </a>
             </div>
