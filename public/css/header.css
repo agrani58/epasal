@@ -10,6 +10,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .logo_background {
@@ -42,8 +43,8 @@ header {
   width: 100%;
   max-width: 36rem;
   border-radius: 25px;
-  padding: 1px;
-  margin-left: 1.5rem;
+  padding: 2px;
+
 }
 
 .searchBox input {
