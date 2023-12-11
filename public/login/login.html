@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
 
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="/public/css/login.css">
     <!-- google font start -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,41 +23,61 @@
 </head>
 
 <body>
-    <p>CUSTOMER LOGIN</p>
-    <div>
+    
 
+    <div class="container">
+        <p class="paragraph">CUSTOMER LOGIN PAGE</p>
         <div>
-            <i class="fa fa-user"></i>
+            <div>
+                <p class="icon"> <i class="fa fa-user"></i></p>
+                <label for="username">Username:</label>
 
-            <label for="username">Username:</label>
-            <input type="text" id="username">
-        </div>
+                <label class="position-right" for="forgotpw">Already have an account?
+                    <a href="#">Sign up</a></label>
 
-
-        <div>
-            <i class="fa fa-password"></i>
-
-            <label for="password">Password</label>
-            <label for="fpassword"><a href="#">Forgot Password?</a></label>
+            </div>
 
             <div>
-                <input type="text" id="password">
+                <input class="width-area" type="text" id="username">
+
             </div>
         </div>
 
         <div>
-            <label for=""></label>
+
+
+            <div>
+                <p class="icon"> <i class="fa fa-lock"></i></p>
+                <label for="password">Password:</label>
+                <label class="position-right show">
+                    <p class="small-icon"> <i class="fa fa-eye"></i> </p>
+                    Show
+                </label>
+
+
+            </div>
+            <div>
+                <input class="width-area" type="text" id="password">
+            </div>
         </div>
-
-
-        <input type="checkbox">
-        <label for="checklist">Remember me </label>
 
 
 
         <div>
-            <button type="login">Login</button>
+            <input type="checkbox">
+            <label for="checklist">Remember me </label>
         </div>
+
+
+
+        <div>
+            <button class="button info" type="login">Login</button>
+        </div>
+        
+      <div class="position-center">
+        <label class="position-right" for="fpassword"><a href="#">Forgot Password?</a></label>
+      </div>
+    
 
 
 
