@@ -39,7 +39,18 @@ input {
 .col-12 {
     width: calc(12/12 * 100%);
 }
-
+.col-11{
+    width:calc(11/12*100);
+}
+.col-10{
+    width:calc(10/12*100);
+}
+.col-9{
+    width:calc(9/12*100);
+}
+.col-8{
+    width:calc(8/12*100);
+}
 .col-7 {
     width: calc(7/12 * 100%);
 }
@@ -60,6 +71,12 @@ input {
     width: calc(3/12 * 100%);
 }
 
+.col-2{
+    width:calc(2/12*100);
+}
+.col-1{
+    width:calc(1/12*100);
+}
 footer p {
     text-align: center;
     border-top-width: 2px;

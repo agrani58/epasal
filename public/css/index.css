@@ -1,0 +1,76 @@
+
+
+.seller-group .content {
+    cursor: pointer;
+    border-radius: 8px;
+}
+.seller-group .content p{
+font-size: 0.8rem;
+margin-left:0.5rem;
+}
+.seller-group .content h3{
+    margin-left:0.5rem;
+    } 
+
+.seller-group .content img{
+    width:100%;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+}
+.content .quantity_buttons {
+    font-size: 0.8rem;
+    display: flex;
+    margin-bottom: 0.5rem;        margin-left:0.5rem;
+    
+}
+.content .quantity_buttons .number{
+    display: flex;
+    margin-left:0.5rem;
+    margin-right:0.5rem;
+justify-content: space-between;
+}
+.content .quantity_buttons .button1{
+    margin-left: 1rem;
+    width:2rem;
+    height:2rem;
+    color: #000000;
+    border: none;
+}
+.content .quantity_buttons .button2{
+    border: none;
+    width:2rem;
+    height:2rem;
+    color: #000000;
+}
+
+/* Center the button */
+.card__footer .action {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+}
+
+/* Button style with linear gradient background */
+.card__footer .action button {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: linear-gradient(to bottom, #8C8175, #968572);
+    color: #fff;
+
+
+    /* Match the card width */
+
+    /* Adjust padding for spacing */
+    cursor: pointer;
+
+    text-align: center;
+}
+
+/* help change color when hovering */
+.card__footer .action button:hover {
+    background: linear-gradient(to bottom, #9CC89F, #5f8d74);
+    /* Linear gradient on hover */
+}
+
+/* end */

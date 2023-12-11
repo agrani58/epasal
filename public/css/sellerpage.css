@@ -1,0 +1,77 @@
+.sellerfullpage{
+  border-radius: 8px;
+} 
+.seller_detail  {
+background: turquoise;
+display: flex;
+}
+.sp-detail img{
+  display: flex;
+  margin-top:1rem;
+  border-radius: 5rem;
+}
+.sp-detail form {
+  justify-content: center;
+}
+
+.sp-detail form {
+  margin: 1rem;
+  display: flex;
+  align-content: flex-start;
+}
+.sp-detail img {
+  border-radius: 200%;
+  margin: 1rem;
+}
+.sellerpage .seller_content p{
+  font-size: 0.8rem;
+  margin-left:0.5rem;
+  }
+  .sellerpage .seller_content h3{
+      margin-left:0.5rem;
+      } 
+  
+  .sellerpage .seller_content img{
+      width:100%;
+      border-top-left-radius: 0.4rem;
+      border-top-right-radius: 0.4rem;
+  }
+  .sp_content .sp_quantity_buttons {
+      font-size: 0.8rem;
+      display: flex;
+      margin-bottom: 0.5rem;      
+       margin-left:0.5rem;
+      
+  }
+  .sp_content .sp_quantity_buttons .number{
+      display: flex;
+      margin-left:0.5rem;
+      margin-right:0.5rem;
+  justify-content: space-between;
+  }
+  .sp_content .sp_quantity_buttons .button1{
+      margin-left: 1rem;
+      width:2rem;
+      height:2rem;
+      color: #000000;
+      border: none;
+  }
+  .sp_content .sp_quantity_buttons .button2{
+      border: none;
+      width:2rem;
+      height:2rem;
+      color: #000000;
+  }
+  
+  /* Center the button */
+  .sp_content .sp_card__footer .action {
+      display: flex;
+      justify-content: center;
+      /* Center horizontally */
+      align-items: center;
+  }
+  
+
+  
+  
+  /* end */
