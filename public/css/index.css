@@ -1,0 +1,77 @@
+
+.index_card{
+    cursor: pointer;
+    border-radius: 8px;
+}
+.seller-group .index_card--img{
+font-size: 0.8rem;
+margin-left:0.5rem;
+}
+
+.seller-group .index_card--img{
+    margin-left:0.5rem;
+    } 
+
+
+.seller-group .index_card--img{
+    width:100%;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+}
+.index-quantity__button {
+    font-size: 0.8rem;
+    display: flex;
+    margin-bottom: 0.5rem;        margin-left:0.5rem;
+    
+}
+.index-quantity__button--number{
+    display: flex;
+    margin-left:0.5rem;
+    margin-right:0.5rem;
+justify-content: space-between;
+}
+.index-quantity__button--decrease{
+    margin-left: 1rem;
+    width:2rem;
+    height:2rem;
+    color: #000000;
+    border: none;
+}
+.index-quantity__button--increase{
+    border: none;
+    width:2rem;
+    height:2rem;
+    color: #000000;
+}
+
+/* Center the button */
+.index-card__action{
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+}
+
+/* Button style with linear gradient background */
+.index-card__group-button{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: linear-gradient(to bottom, #8C8175, #968572);
+    color: #fff;
+
+
+    /* Match the card width */
+
+    /* Adjust padding for spacing */
+    cursor: pointer;
+
+    text-align: center;
+}
+
+/* help change color when hovering */
+.index-card__group-button:hover {
+    background: linear-gradient(to bottom, #9CC89F, #5f8d74);
+    /* Linear gradient on hover */
+}
+
+/* end */
