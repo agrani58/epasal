@@ -1,43 +1,50 @@
-nav {
+#nav-category {
+    background: lightgray;
+}
+
+#nav-category nav {
     width: 100%;
 }
 
-nav ul {
+#nav-category nav ul {
     display: flex;
-    flex-grow: 8;
-    padding: 10;
-    margin: 10;
     list-style: none;
     position: relative;
 }
 
-nav ul li {
+#nav-category nav ul li {
     display: inline-block;
-    background-color: white;
     flex-grow: 1;
 }
 
-nav a {
+#nav-category nav a {
     color: black;
     display: block;
-    padding: 0 10px;
-    line-height: 60px;
+    padding: 8px 10px;
     font-size: 16px;
     text-decoration: none;
+    text-align: center;
     
 }
 
+#nav-category nav a:hover {
+    background: gray;
+}
+
 /* Hide Dropdown by Default*/
-nav ul ul {
+#nav-category nav ul ul {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 100%;
+    z-index: 999;
 }
 
 /* Display Dropdown on Hover */
-nav ul li:hover>ul {
+#nav-category nav ul li:hover >  ul {
     display: inherit;
+    background: lightgray;
 }
+
 
 /* Fisrt Tier Dropdown */
 nav ul ul li {

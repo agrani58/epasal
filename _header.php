@@ -1,42 +1,38 @@
 <!-- Header Start -->
-<header>
-    <div class="header">
-        <div class="container">
-            <div class="logo_background">
-                <a class="logo" href="/epasale/public">
-                    <img src="/epasale/public/img/epasal-primary-logo.png" alt="ePasal - Online Food App" width="140px">
-                </a>
-            </div>
+<header class="header">
+    <div class="header__container">
+        <a class="header_logo" href="/epasale/">
+            <img src="/epasale/public/img/epasal-primary-logo.png" alt="ePasal - Online Food App" width="120px">
+        </a>
 
-            <div class="searchBox">
-                <input type="text" placeholder="Search for products and categories" />
-                <div class="search_icon_background">
-                    <span class="search_icon"><i class="fas fa-search"></i></span>
-                </div>
+        <div class="header_searchbar">
+            <input type="text" placeholder="Search for products and categories" />
+            <div class="search_icon_background">
+                <span class="search_icon"><i class="fas fa-search"></i></span>
             </div>
+        </div>
 
-            <div class="navbar" id="nav">
-                <ul>
-                    <li>
-                        <a href="/epasale/public/cart.php">
-                            <div class="cart_icon">
-                                <span class="cart_icon"><i class="fas fa-shopping-cart"></i></span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">Sign in</a>
-                    </li>
-                    <li>
-                        <a href="#">Sign out </a>
-                    </li>
-                </ul>
-            </div>
+        <div class="header__nav">
+            <ul>
+                <li class="header_nav-links">
+                    <a href="/epasale/public/cart.php">
+                        <span class="cart_icon"><i class="fas fa-shopping-cart"></i></span>
+                    </a>
+                </li>
+                <li class="header_nav-links">
+                    <a href="#">Sign in</a>
+                </li>
+                <li class="header_nav-links">
+                    <a href="#">Sign out </a>
+                </li>
+            </ul>
         </div>
     </div>
 </header>
 <!-- Header End -->
 
+<section id="nav-category">
+    
 <div class="container">
     <nav>
         <ul>
@@ -112,3 +108,4 @@
         </ul>
     </nav>
 </div>
+</section>
