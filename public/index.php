@@ -27,319 +27,400 @@
                     <h3>Hymalayan Java</h3>
                     <h5>Baneshowr, Kathmandu</h5>
                 </div>
-                <button class="button info button-small">See More</button>
+                <button class="seller-info__button-seemore">See More</button>
             </div>
-            <div class="gallery">
-                <div class="content">
+            <div class="card--gallery">
+                <div class="index_card--img">
                     <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
                     <h3>Chowmein</h3>
                     <p>NRs:100</p>
 
-                    <div class="quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
                     </div>
 
 
-                    <div class="card__footer"><!-- div for card__footer-->
-                        <div class="action"><!-- action includes color changing while hovering-->
-                            <button type="button">Add to Cart</button>
-                        </div><!--action ends-->
-                    </div><!--div for card footer ends-->
-                </div>
-                <div class="content">
-                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
-                    <h3>Chowmein</h3>
-                    <p>NRs:100</p>
-
-                    <div class="quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
-                    </div>
-
-
-                    <div class="card__footer"><!-- div for card__footer-->
-                        <div class="action"><!-- action includes color changing while hovering-->
-                            <button type="button">Add to Cart</button>
-                        </div><!--action ends-->
-                    </div><!--div for card footer ends-->
-                </div>
-                <div class="content">
-                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
-                    <h3>Chowmein</h3>
-                    <p>NRs:100</p>
-
-                    <div class="quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
-                    </div>
-
-
-                    <div class="card__footer"><!-- div for card__footer-->
-                        <div class="action"><!-- action includes color changing while hovering-->
-                            <button type="button">Add to Cart</button>
-                        </div><!--action ends-->
-                    </div><!--div for card footer ends-->
-                </div>
-                <div class="content">
-                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
-                    <h3>Chowmein</h3>
-                    <p>NRs:100</p>
-
-                    <div class="quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
-                    </div>
-
-
-                    <div class="card__footer"><!-- div for card__footer-->
-                        <div class="action"><!-- action includes color changing while hovering-->
-                            <button type="button">Add to Cart</button>
-                        </div><!--action ends-->
-                    </div><!--div for card footer ends-->
-                </div>
-                <div class="content">
-                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
-                    <h3>Chowmein</h3>
-                    <p>NRs:100</p>
-
-                    <div class="quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
-                    </div>
-
-
-                    <div class="card__footer"><!-- div for card__footer-->
-                        <div class="action"><!-- action includes color changing while hovering-->
-                            <button type="button">Add to Cart</button>
-                        </div><!--action ends-->
-                    </div><!--div for card footer ends-->
-                </div>
-                <div class="content">
-                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
-                    <h3>Chowmein</h3>
-                    <p>NRs:100</p>
-
-                    <div class="quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
-                    </div>
-
-
-                    <div class="card__footer"><!-- div for card__footer-->
-                        <div class="action"><!-- action includes color changing while hovering-->
-                            <button type="button">Add to Cart</button>
-                        </div><!--action ends-->
-                    </div><!--div for card footer ends-->
-                </div>
-                <div class="content">
-                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
-                    <h3>Chowmein</h3>
-                    <p>NRs:100</p>
-
-                    <div class="quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
-                    </div>
-
-
-                    <div class="card__footer"><!-- div for card__footer-->
-                        <div class="action"><!-- action includes color changing while hovering-->
-                            <button type="button">Add to Cart</button>
-                        </div><!--action ends-->
-                    </div><!--div for card footer ends-->
-                </div>
-                
-
-                <div class="content">
-                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
-                    <h3>Chowmein</h3>
-                    <p>NRs:100</p>
-
-                    <div class="quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
-                    </div>
-
-
-                    <div class="card__footer"><!-- div for card__footer-->
-                        <div class="action"><!-- action includes color changing while hovering-->
-                            <button type="button">Add to Cart</button>
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
                         </div><!--action ends-->
                     </div><!--div for card footer ends-->
                 </div>
             </div>
-        </div>
-   
-    <!-- --------------------------------------------------------------- -->
+
+            <div class="card--gallery">
+                <div class="index_card--img">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <h3>Chowmein</h3>
+                    <p>NRs:100</p>
+
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
+                    </div>
+
+
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
+                        </div><!--action ends-->
+                    </div><!--div for card footer ends-->
+                </div>
+            </div>
+
+            <div class="card--gallery">
+                <div class="index_card--img">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <h3>Chowmein</h3>
+                    <p>NRs:100</p>
+
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
+                    </div>
+
+
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
+                        </div><!--action ends-->
+                    </div><!--div for card footer ends-->
+                </div>
+            </div>
+
+            <div class="card--gallery">
+                <div class="index_card--img">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <h3>Chowmein</h3>
+                    <p>NRs:100</p>
+
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
+                    </div>
+
+
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
+                        </div><!--action ends-->
+                    </div><!--div for card footer ends-->
+                </div>
+            </div>
+
+            <div class="card--gallery">
+                <div class="index_card--img">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <h3>Chowmein</h3>
+                    <p>NRs:100</p>
+
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
+                    </div>
+
+
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
+                        </div><!--action ends-->
+                    </div><!--div for card footer ends-->
+                </div>
+            </div>
+
+            <div class="card--gallery">
+                <div class="index_card--img">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <h3>Chowmein</h3>
+                    <p>NRs:100</p>
+
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
+                    </div>
+
+
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
+                        </div><!--action ends-->
+                    </div><!--div for card footer ends-->
+                </div>
+            </div>
+
+            <div class="card--gallery">
+                <div class="index_card--img">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <h3>Chowmein</h3>
+                    <p>NRs:100</p>
+
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
+                    </div>
+
+
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
+                        </div><!--action ends-->
+                    </div><!--div for card footer ends-->
+                </div>
+            </div>
+
+            <div class="card--gallery">
+                <div class="index_card--img">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <h3>Chowmein</h3>
+                    <p>NRs:100</p>
+
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
+                    </div>
+
+
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
+                        </div><!--action ends-->
+                    </div><!--div for card footer ends-->
+                </div>
+            </div>
+
+            <div class="card--gallery">
+                <div class="index_card--img">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <h3>Chowmein</h3>
+                    <p>NRs:100</p>
+
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
+                    </div>
+
+
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
+                        </div><!--action ends-->
+                    </div><!--div for card footer ends-->
+                </div>
+            </div>
+
+
+         </div>
+    <!-- ---------------------SECOND SELLER GROUP----------------------------- -->
     <div class="seller-group">
             <div class="seller-profile">
                 <div class="seller-info">
                     <h3>Hymalayan Java</h3>
                     <h5>Baneshowr, Kathmandu</h5>
                 </div>
-                <button class="button info button-small">See More</button>
+                <button class="seller-info__button-seemore">See More</button>
             </div>
-            <div class="gallery">
-
-
-                <div class="content">
+            <div class="card--gallery">
+                <div class="index_card--img">
                     <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
                     <h3>Chowmein</h3>
                     <p>NRs:100</p>
 
-                    <div class="quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
                     </div>
 
 
-                    <div class="card__footer"><!-- div for card__footer-->
-                        <div class="action"><!-- action includes color changing while hovering-->
-                            <button type="button">Add to Cart</button>
-                        </div><!--action ends-->
-                    </div><!--div for card footer ends-->
-                </div>
-                <div class="content">
-                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
-                    <h3>Chowmein</h3>
-                    <p>NRs:100</p>
-
-                    <div class="quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
-                    </div>
-
-
-                    <div class="card__footer"><!-- div for card__footer-->
-                        <div class="action"><!-- action includes color changing while hovering-->
-                            <button type="button">Add to Cart</button>
-                        </div><!--action ends-->
-                    </div><!--div for card footer ends-->
-                </div>
-                <div class="content">
-                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
-                    <h3>Chowmein</h3>
-                    <p>NRs:100</p>
-
-                    <div class="quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
-                    </div>
-
-
-                    <div class="card__footer"><!-- div for card__footer-->
-                        <div class="action"><!-- action includes color changing while hovering-->
-                            <button type="button">Add to Cart</button>
-                        </div><!--action ends-->
-                    </div><!--div for card footer ends-->
-                </div>
-                <div class="content">
-                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
-                    <h3>Chowmein</h3>
-                    <p>NRs:100</p>
-
-                    <div class="quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
-                    </div>
-
-
-                    <div class="card__footer"><!-- div for card__footer-->
-                        <div class="action"><!-- action includes color changing while hovering-->
-                            <button type="button">Add to Cart</button>
-                        </div><!--action ends-->
-                    </div><!--div for card footer ends-->
-                </div>
-                <div class="content">
-                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
-                    <h3>Chowmein</h3>
-                    <p>NRs:100</p>
-
-                    <div class="quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
-                    </div>
-
-
-                    <div class="card__footer"><!-- div for card__footer-->
-                        <div class="action"><!-- action includes color changing while hovering-->
-                            <button type="button">Add to Cart</button>
-                        </div><!--action ends-->
-                    </div><!--div for card footer ends-->
-                </div>
-                <div class="content">
-                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
-                    <h3>Chowmein</h3>
-                    <p>NRs:100</p>
-
-                    <div class="quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
-                    </div>
-
-
-                    <div class="card__footer"><!-- div for card__footer-->
-                        <div class="action"><!-- action includes color changing while hovering-->
-                            <button type="button">Add to Cart</button>
-                        </div><!--action ends-->
-                    </div><!--div for card footer ends-->
-                </div>
-                <div class="content">
-                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
-                    <h3>Chowmein</h3>
-                    <p>NRs:100</p>
-
-                    <div class="quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
-                    </div>
-
-
-                    <div class="card__footer"><!-- div for card__footer-->
-                        <div class="action"><!-- action includes color changing while hovering-->
-                            <button type="button">Add to Cart</button>
-                        </div><!--action ends-->
-                    </div><!--div for card footer ends-->
-                </div>
-                
-
-                <div class="content">
-                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
-                    <h3>Chowmein</h3>
-                    <p>NRs:100</p>
-
-                    <div class="quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
-                    </div>
-
-
-                    <div class="card__footer"><!-- div for card__footer-->
-                        <div class="action"><!-- action includes color changing while hovering-->
-                            <button type="button">Add to Cart</button>
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
                         </div><!--action ends-->
                     </div><!--div for card footer ends-->
                 </div>
             </div>
-        </div>
-    </div>
+
+            <div class="card--gallery">
+                <div class="index_card--img">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <h3>Chowmein</h3>
+                    <p>NRs:100</p>
+
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
+                    </div>
+
+
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
+                        </div><!--action ends-->
+                    </div><!--div for card footer ends-->
+                </div>
+            </div>
+
+            <div class="card--gallery">
+                <div class="index_card--img">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <h3>Chowmein</h3>
+                    <p>NRs:100</p>
+
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
+                    </div>
+
+
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
+                        </div><!--action ends-->
+                    </div><!--div for card footer ends-->
+                </div>
+            </div>
+
+            <div class="card--gallery">
+                <div class="index_card--img">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <h3>Chowmein</h3>
+                    <p>NRs:100</p>
+
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
+                    </div>
+
+
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
+                        </div><!--action ends-->
+                    </div><!--div for card footer ends-->
+                </div>
+            </div>
+
+            <div class="card--gallery">
+                <div class="index_card--img">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <h3>Chowmein</h3>
+                    <p>NRs:100</p>
+
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
+                    </div>
+
+
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
+                        </div><!--action ends-->
+                    </div><!--div for card footer ends-->
+                </div>
+            </div>
+
+            <div class="card--gallery">
+                <div class="index_card--img">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <h3>Chowmein</h3>
+                    <p>NRs:100</p>
+
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
+                    </div>
+
+
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
+                        </div><!--action ends-->
+                    </div><!--div for card footer ends-->
+                </div>
+            </div>
+
+            <div class="card--gallery">
+                <div class="index_card--img">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <h3>Chowmein</h3>
+                    <p>NRs:100</p>
+
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
+                    </div>
+
+
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
+                        </div><!--action ends-->
+                    </div><!--div for card footer ends-->
+                </div>
+            </div>
+
+            <div class="card--gallery">
+                <div class="index_card--img">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <h3>Chowmein</h3>
+                    <p>NRs:100</p>
+
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
+                    </div>
+
+
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
+                        </div><!--action ends-->
+                    </div><!--div for card footer ends-->
+                </div>
+            </div>
+
+            <div class="card--gallery">
+                <div class="index_card--img">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <h3>Chowmein</h3>
+                    <p>NRs:100</p>
+
+                    <div class="index-quantity__button">Qty:
+                        <button class="index-quantity__button--decrease">-</button>
+                        <div class="index-quantity__button--number">1</div>
+                        <button class="index-quantity__button--increase">+</button>
+                    </div>
+
+
+                    <div class="index-card__footer"><!-- div for card__footer-->
+                        <div class="index-card__action"><!-- action includes color changing while hovering-->
+                            <button class="index-card__group-button"type="button">Add to Cart</button>
+                        </div><!--action ends-->
+                    </div><!--div for card footer ends-->
+                </div>
+            </div>
+
+            
+         </div>
+   
     </div>
         <?php
         include_once("./partials/footer.php");

@@ -1,42 +1,43 @@
 
-
-.seller-group .content {
+.index_card{
     cursor: pointer;
     border-radius: 8px;
 }
-.seller-group .content p{
+.seller-group .index_card--img{
 font-size: 0.8rem;
 margin-left:0.5rem;
 }
-.seller-group .content h3{
+
+.seller-group .index_card--img{
     margin-left:0.5rem;
     } 
 
-.seller-group .content img{
+
+.seller-group .index_card--img{
     width:100%;
     border-top-left-radius: 0.4rem;
     border-top-right-radius: 0.4rem;
 }
-.content .quantity_buttons {
+.index-quantity__button {
     font-size: 0.8rem;
     display: flex;
     margin-bottom: 0.5rem;        margin-left:0.5rem;
     
 }
-.content .quantity_buttons .number{
+.index-quantity__button--number{
     display: flex;
     margin-left:0.5rem;
     margin-right:0.5rem;
 justify-content: space-between;
 }
-.content .quantity_buttons .button1{
+.index-quantity__button--decrease{
     margin-left: 1rem;
     width:2rem;
     height:2rem;
     color: #000000;
     border: none;
 }
-.content .quantity_buttons .button2{
+.index-quantity__button--increase{
     border: none;
     width:2rem;
     height:2rem;
@@ -44,7 +45,7 @@ justify-content: space-between;
 }
 
 /* Center the button */
-.card__footer .action {
+.index-card__action{
     display: flex;
     justify-content: center;
     /* Center horizontally */
@@ -52,7 +53,7 @@ justify-content: space-between;
 }
 
 /* Button style with linear gradient background */
-.card__footer .action button {
+.index-card__group-button{
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     background: linear-gradient(to bottom, #8C8175, #968572);
@@ -68,7 +69,7 @@ justify-content: space-between;
 }
 
 /* help change color when hovering */
-.card__footer .action button:hover {
+.index-card__group-button:hover {
     background: linear-gradient(to bottom, #9CC89F, #5f8d74);
     /* Linear gradient on hover */
 }
