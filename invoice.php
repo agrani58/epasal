@@ -20,7 +20,7 @@
         <div class="head-section">
             <div class="row">
                 <div class="col-6">
-                    <img src="/epasale/public/img/epasal-primary-logo.png" class="logo">
+                    <img src="/epasale/public/img/epasal-primary-logo.png" class="invoice__img">
                 </div>
                 <div class="col-6">
                     <div class="head-detail">
@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="body-section">
-            <table>
+            <table class="invoice__table">
                 <thead>
                     <tr>
                         <th class="right">Items</th>
