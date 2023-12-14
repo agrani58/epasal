@@ -1,4 +1,4 @@
-*{
+/* *{
 	margin: 0;
 	padding: 0;
 }
@@ -6,11 +6,11 @@
 	max-width: 100%;
     margin-left:auto;
     margin-right:auto;
-    /* border: 1px solid grey; */
+    border: 1px solid grey; 
 	background-color:rgb(103,146,122);
     padding: 10px;
 
-}
+} 
 .products{
 	flex: 0.75;
 	max-width: 80%;
@@ -73,7 +73,7 @@ img.img {
 	padding: 0px 0px;
 	/* cursor: pointer; */
 	/* border-radius: 5px; */
-}
+/* }
 .remove{
 	background-color: rgb(156,200,159);
 	width:100px;
@@ -105,4 +105,4 @@ img.img {
 	height: 20px;
 	: ‘Open Sans’;
 	margin-left:100px;
-}
+} */
