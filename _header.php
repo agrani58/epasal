@@ -15,7 +15,7 @@
         <div class="header__nav">
             <ul>
                 <li class="header_nav-links">
-                    <a href="/epasale/public/cart.php">
+                    <a href="/epasale/cart.php">
                         <span class="cart_icon"><i class="fas fa-shopping-cart"></i></span>
                     </a>
                 </li>

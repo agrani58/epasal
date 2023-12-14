@@ -25,7 +25,9 @@
         <div class="seller">
             <div class="seller__info">
                 <div class="seller__profile">
-                    <img class="seller__profile-avatar" src="/epasale/public/img/epasal-primary-logo.png" width="40px" />
+                    <a class="seller__a" href="/epasale/seller-page.php?id=1">
+                        <img class="seller__profile-avatar" src="/epasale/public/img/epasal-primary-logo.png" width="40px" />
+                    </a>
                     <div class="seller__profile-content">
                         <h3>Himalayan Java</h3>
                         <h4>Baneshowr, Kathmandu</h4>
@@ -36,9 +38,13 @@
 
             <div class="seller__content">
                 <div class="seller__card">
-                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" >
+                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" >
+                    </a>
                     <div class="seller__cardbody">
-                        <h3 class="seller__cardtitle">Chowmein</h3>
+                        <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                            <h3 class="seller__cardtitle">Chowmein</h3>
+                        </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
                         <div class="qtygroup">
@@ -49,14 +55,18 @@
                         </div>
 
 
-                        <button class="button--cart" type="button">Add to Cart</button>
+                        <button class="seller__btn--cart" type="button">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="seller__card">
-                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" >
+                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" >
+                    </a>
                     <div class="seller__cardbody">
-                        <h3 class="seller__cardtitle">Chowmein</h3>
+                        <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                            <h3 class="seller__cardtitle">Chowmein</h3>
+                        </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
                         <div class="qtygroup">
@@ -67,14 +77,18 @@
                         </div>
 
 
-                        <button class="button--cart" type="button">Add to Cart</button>
+                        <button class="seller__btn--cart" type="button">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="seller__card">
-                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" >
+                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" >
+                    </a>
                     <div class="seller__cardbody">
-                        <h3 class="seller__cardtitle">Chowmein</h3>
+                        <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                            <h3 class="seller__cardtitle">Chowmein</h3>
+                        </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
                         <div class="qtygroup">
@@ -85,14 +99,18 @@
                         </div>
 
 
-                        <button class="button--cart" type="button">Add to Cart</button>
+                        <button class="seller__btn--cart" type="button">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="seller__card">
-                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" >
+                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" >
+                    </a>
                     <div class="seller__cardbody">
-                        <h3 class="seller__cardtitle">Chowmein</h3>
+                        <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                            <h3 class="seller__cardtitle">Chowmein</h3>
+                        </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
                         <div class="qtygroup">
@@ -103,14 +121,18 @@
                         </div>
 
 
-                        <button class="button--cart" type="button">Add to Cart</button>
+                        <button class="seller__btn--cart" type="button">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="seller__card">
-                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" >
+                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" >
+                    </a>
                     <div class="seller__cardbody">
-                        <h3 class="seller__cardtitle">Chowmein</h3>
+                        <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                            <h3 class="seller__cardtitle">Chowmein</h3>
+                        </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
                         <div class="qtygroup">
@@ -121,14 +143,18 @@
                         </div>
 
 
-                        <button class="button--cart" type="button">Add to Cart</button>
+                        <button class="seller__btn--cart" type="button">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="seller__card">
-                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" >
+                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" >
+                    </a>
                     <div class="seller__cardbody">
-                        <h3 class="seller__cardtitle">Chowmein</h3>
+                        <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                            <h3 class="seller__cardtitle">Chowmein</h3>
+                        </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
                         <div class="qtygroup">
@@ -139,7 +165,7 @@
                         </div>
 
 
-                        <button class="button--cart" type="button">Add to Cart</button>
+                        <button class="seller__btn--cart" type="button">Add to Cart</button>
                     </div>
                 </div>
             </div>

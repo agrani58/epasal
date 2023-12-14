@@ -34,7 +34,7 @@ include_once("./partials/header.php");
                         </div>
                         <div class="product-detail__group-button">
                             <button class="button--buy">Buy Now</button>
-                            <button class="button--cart">Add To Cart</button>
+                            <button class="seller__btn--cart">Add To Cart</button>
                         </div>
                         <div class="product-description">Product Details
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>

@@ -7,8 +7,8 @@
     <title>Login Page</title>
 
     <!-- CSS Stylesheets Start -->
-    <link rel="stylesheet" href=<link rel="stylesheet" href="/epasale/public/css/style.css">
-    <link rel="stylesheet" href="./login.css" />
+    <link rel="stylesheet" href="/epasale/public/css/style.css">
+    <link rel="stylesheet" href="/epasale/public/css/login.css" />
     <!-- CSS Stylesheets End -->
 
 
