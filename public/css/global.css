@@ -22,6 +22,10 @@ input {
     font: inherit;
 }
 
+button {
+    font: inherit;
+}
+
 img {
     vertical-align: middle;
 }

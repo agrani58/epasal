@@ -37,55 +37,98 @@
 
             <div class="card--gallery">
                 <div class="card">
-
                     <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" class="card--img">
-                    <div class="card--body">
+                    <div class="card__body">
                         <h3 class="card__title">Chowmein</h3>
-                        <p class="card__subtitle">NRs:100</p>
+                        <p class="card__subtitle">NRs. 100.00</p>
 
-                        <div class="group--quantity">Qty:
+                        <div class="group--quantity">
+                            <label for="qty">Qty: </label>
                             <button class="quantity__button--decrease">-</button>
-                            <input value="1" class="quantity__input" />
+                            <input type="number" min="1" max="10" class="quantity__input" value="1" size="5" disabled />
                             <button class="quantity__button--increase">+</button>
                         </div>
 
 
-                        <div class="button--card"><!-- div for card__footer-->
-                            <div class="card__action"><!-- action includes color changing while hovering-->
+                        <div class="button--card">
+                            <div class="card__action">
                                 <button class="button--cart" type="button">Add to Cart</button>
-                            </div><!--action ends-->
-                        </div><!--div for card footer ends-->
-                    </div>
-
-
-                    <div class="card">
-                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" class="card--img">
-                        <div class="card--body">
-                            <h3 class="card__title">Chowmein</h3>
-                            <p class="card__subtitle">NRs:100</p>
-
-                            <div class="group--quantity">Qty:
-                                <button class="quantity__button--decrease">-</button>
-                                <input value="1" class="quantity__button--number" />
-                                <button class="quantity__button--increase">+</button>
                             </div>
-
-
-                            <div class="button--card"><!-- div for card__footer-->
-                                <div class="card__action"><!-- action includes color changing while hovering-->
-                                    <button class="card__group--add-to-cart" type="button">Add to Cart</button>
-                                </div><!--action ends-->
-                            </div><!--div for card footer ends-->
                         </div>
                     </div>
                 </div>
 
+                <div class="card">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" class="card--img">
+                    <div class="card__body">
+                        <h3 class="card__title">Chowmein</h3>
+                        <p class="card__subtitle">NRs. 100.00</p>
+
+                        <div class="group--quantity">
+                            <label for="qty">Qty: </label>
+                            <button class="quantity__button--decrease">-</button>
+                            <input type="number" min="1" max="10" class="quantity__input" value="1" size="5" disabled />
+                            <button class="quantity__button--increase">+</button>
+                        </div>
+
+
+                        <div class="button--card">
+                            <div class="card__action">
+                                <button class="button--cart" type="button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" class="card--img">
+                    <div class="card__body">
+                        <h3 class="card__title">Chowmein</h3>
+                        <p class="card__subtitle">NRs. 100.00</p>
+
+                        <div class="group--quantity">
+                            <label for="qty">Qty: </label>
+                            <button class="quantity__button--decrease">-</button>
+                            <input type="number" min="1" max="10" class="quantity__input" value="1" size="5" disabled />
+                            <button class="quantity__button--increase">+</button>
+                        </div>
+
+
+                        <div class="button--card">
+                            <div class="card__action">
+                                <button class="button--cart" type="button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" class="card--img">
+                    <div class="card__body">
+                        <h3 class="card__title">Chowmein</h3>
+                        <p class="card__subtitle">NRs. 100.00</p>
+
+                        <div class="group--quantity">
+                            <label for="qty">Qty: </label>
+                            <button class="quantity__button--decrease">-</button>
+                            <input type="number" min="1" max="10" class="quantity__input" value="1" size="5" disabled />
+                            <button class="quantity__button--increase">+</button>
+                        </div>
+
+
+                        <div class="button--card">
+                            <div class="card__action">
+                                <button class="button--cart" type="button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
-        <?php
-        include_once("./partials/footer.php");
-        ?>
+    </div>
+        <!-- Includes footer partial from ./_footer.php -->
+    <?php include_once("_footer.php"); ?>
 </body>
 
 </html>
