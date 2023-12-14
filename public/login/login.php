@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
 
-    <link rel="stylesheet" href="/epasale/public/css/style.css">
     <link rel="stylesheet" href="./login.css" />
     <!-- google font start -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,9 +23,6 @@
 </head>
 
 <body>
-    <?php
-    include_once("./../partials/header.php");
-    ?>
     
     <div class="whole">
         <h1 class="login">CUSTOMER LOGIN</h1>
@@ -58,10 +54,6 @@
         </div>
     </div>
 
-
-    <?php
-    include_once("./../partials/footer.php");
-    ?>
 </body>
 
 </html>

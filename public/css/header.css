@@ -1,46 +1,47 @@
-
-
-
 /* Header styles */
 header {
   background: lightseagreen;
-  color: #c3aaaa; 
-margin-left: auto;
-margin-right: auto;
+  color: #c3aaaa;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
 }
 
 .logo_background {
-  display: flex;
+  /* display: flex; */
   align-items: center;
 }
 
 /* Increase the size of the logo image */
 .logo {
-  width:100px;
+  width: 100px;
   /* Adjust the width to make the image larger */
   height: 60px;
   /* Adjust the height to make the image larger */
-margin-left: 0.5rem;
+  margin-left: 0.5rem;
 
 }
 
 .logo_img {
   margin-top: 10px;
-  
+
+}
+
+.logo_img img {
+  width: 160px;
 }
 
 .searchBox {
   display: flex;
- margin-left: 2rem;
- 
   border: 1px solid #ccc;
-  width: 50rem;
+  width: 100%;
+  max-width: 36rem;
   border-radius: 25px;
   padding: 2px;
 
@@ -74,7 +75,6 @@ margin-left: 0.5rem;
 }
 
 .cart_icon {
-  margin-left: 1rem;
   display: flex;
   align-items: center;
 }
@@ -85,15 +85,20 @@ margin-left: 0.5rem;
 }
 
 /* Navbar styles */
+.navbar {
+  border: 0px;
+}
+
 .navbar ul {
   display: flex;
-  align-items: left;
+  border: 0px;
 }
 
 .navbar li {
   list-style: none;
   padding: 10px;
   line-height: 31px;
+  border-bottom: 0px;
 }
 
 .navbar a:hover {

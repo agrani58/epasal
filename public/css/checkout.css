@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     font-size: 16px;
     margin-top:10px 0px 0px 5px;
@@ -6,11 +7,69 @@ body{
 
 
 h1{
+=======
+.checkout-section {
+    display: flex;
+}
+
+
+.product-summary{
+    height:100%;
+    padding: 15px;
+    border-radius: 8px;
+    background: white;
+    width: 50%;
+}
+
+.product-summary__card {
+    display: flex;
+    display: grid;
+    gap: 10px;
+    border: 1px solid lightgray;
+}
+
+.product-summary__img {
+    width: 200px;
+    height: 120px;
+    vertical-align: middle;
+}
+
+.product-summary__price{
+    text-align: right;
+}
+.product-summary__quantity{
+    font-size: 14px;
+    text-align: left;
+}
+
+.product-summary__h3{
+    font-size: 18px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.product-summary__h4{
+    font-size: 12px;
+    text-align: justify;
+}
+
+
+.product-checkout{
+    padding: 15px;
+    border-radius: 8px;
+    background-color: white;
+    width: 50%;
+}
+
+
+.product-checkout__h1{
+>>>>>>> d7065efe92045cf713729ca28e6437eab8a487fb
     font-size: 20px;
     margin:5px 10px 2px 10px;
     text-align: center;
 }
 
+<<<<<<< HEAD
 h2{
     font-size: 18px;
     text-align: left;
@@ -27,11 +86,23 @@ h4{
 }
 
 label{
+=======
+
+.billing-section__h2{
+    font-size: 18px;
+    text-align: left;
+    margin-top:5px;
+}
+
+
+/* label{
+>>>>>>> d7065efe92045cf713729ca28e6437eab8a487fb
     display:inline-block;
     height: 12px;
     width:80px;
    
 
+<<<<<<< HEAD
 }
 
 input{
@@ -119,10 +190,35 @@ input{
     flex-basis: calc(5 / 12 * 100%);
 }
 
+=======
+} */
+
+/* input{
+    width:120px;
+    height:12px;
+    display: inline-block;
+} */
+
+
+
+
+/* .logo{
+    width:160px;
+    margin: 0px 0px;
+    display:block;
+    padding: 5px 0;
+
+    filter: brightness(1);
+} */
+   
+
+/* Global Container */
+>>>>>>> d7065efe92045cf713729ca28e6437eab8a487fb
 .container-checkout {
     gap: 8px;
 }
 
+<<<<<<< HEAD
 .product-wrapper{
     height:100%;
     padding: 15px;
@@ -137,18 +233,27 @@ input{
 }
 
 .bill{
+=======
+
+.billing-section{
+>>>>>>> d7065efe92045cf713729ca28e6437eab8a487fb
     border:1px solid lightgray;
     margin-bottom: 20px;
     padding: 8px;
     border-radius: 8px;
 }
 
+<<<<<<< HEAD
 .bill table {
     
+=======
+.order-section__table {
+>>>>>>> d7065efe92045cf713729ca28e6437eab8a487fb
     width: 100%;
     border-collapse: collapse;
 }
 
+<<<<<<< HEAD
 .bill table td,
 .bill table th {
     /* border: 1px solid lightgray; */
@@ -156,6 +261,15 @@ input{
 }
 
 .bill  select{
+=======
+.order-section__table td,
+.order-section__table th {
+    padding: 4px;
+}
+
+.billing-section__select ,
+.payment-section__select{
+>>>>>>> d7065efe92045cf713729ca28e6437eab8a487fb
     height: 40px;
     font-size: 16px;
     border: 1px solid lightgray;
@@ -189,6 +303,28 @@ input{
 }
 
 
+<<<<<<< HEAD
+=======
+.button--info{
+    margin-top: 10px;
+    border: none;
+      color: white;
+      padding: 12px 32px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 0.5rem;
+    background-color: rgba(80, 181, 215, 0.8);
+}
+
+   
+
+.button--info:hover{
+    color:white;
+    background-color:rgba(80, 181, 215, 1.0);
+}
+
+
+>>>>>>> d7065efe92045cf713729ca28e6437eab8a487fb
 
 
 
