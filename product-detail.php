@@ -8,12 +8,6 @@
 
     <!-- CSS Stylesheets Start -->
     <link rel="stylesheet" href="/epasale/public/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300&display=swap"
-        rel="stylesheet" />
     <!-- CSS Stylesheets End -->
 </head>
 
@@ -33,9 +27,9 @@
                             <P class="product-detail-information__product-name__p">Price: Rs.300</P>
                             <div class="product-quantity">
                                 <p>Quantity</p>
-                                <button class="product-quantity__button--decrease">-</button>
+                                <button class="product-qtygroup__btn--dec">-</button>
                                 <input value="1" class="product-quantity__button--number" />
-                                <button class="product-quantity__button--increase">+</button>
+                                <button class="product-qtygroup__btn--inc">+</button>
                             </div>
                             <div class="product-detail__group-button">
                                 <button class="button--buy">Buy Now</button>

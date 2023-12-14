@@ -279,15 +279,15 @@ input{
 }
 
 
-/* Applies to our card-container only */
-.card-container-summary .card-product-summary {
+/* Applies to our seller__content only */
+.seller__content-summary .seller__card-product-summary {
     margin-bottom: 8px;
     border-radius: 4px;
     background: white; 
     border: 1px solid lightgray;
 }
 
-.card-container-summary .card-product-summary img{
+.seller__content-summary .seller__card-product-summary img{
     flex: unset;
     padding: 10px;  
     margin:0px;
@@ -295,7 +295,7 @@ input{
     width:300px;
 }
 
-.card-container-summary .card-product-summary .description{
+.seller__content-summary .seller__card-product-summary .description{
     margin-top: 0px;
     margin-right: 5px;
     margin-bottom:5px;

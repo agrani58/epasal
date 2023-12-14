@@ -28,9 +28,9 @@ include_once("./partials/header.php");
                         <P class="product-detail-information__product-name__p">Price: Rs.300</P>
                         <div class="product-quantity">
                             <p>Quantity</p>
-                            <button class="product-quantity__button--decrease">-</button>
+                            <button class="product-qtygroup__btn--dec">-</button>
                             <input  value="1" class="product-quantity__button--number"/>
-                            <button class="product-quantity__button--increase">+</button>
+                            <button class="product-qtygroup__btn--inc">+</button>
                         </div>
                         <div class="product-detail__group-button">
                             <button class="button--buy">Buy Now</button>

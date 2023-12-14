@@ -1,9 +1,4 @@
-.shop_profile img {
-    width: 44px;
-    height: 44px;
-}
-
-.seller-container {
+.seller__container {
     margin-bottom: 1rem;
     margin-top: 1rem;
     max-width: 1300px;
@@ -12,39 +7,58 @@
 }
 
 
-.seller-group{
+.seller {
     background-color: #fff;
     border-radius: 8px;
     font-size: 0.8rem;
-    border:2px solid gray;
+    border: 2px solid gray;
 }
 
-.seller-profile {
+
+.seller__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left:1rem;
+    padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.5rem;
 }
 
-.card-container {
+
+.seller__profile {
     display: flex;
-    flex-wrap: nowrap; /* makes horizontally stack */
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.seller__profile .seller__profile-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid lightseagreen;
+    object-fit: contain;
+    background: #eee;
+}
+
+
+.seller__content {
+    display: flex;
+    flex-wrap: nowrap;
+    /* makes horizontally stack */
     align-items: center;
     gap: 0.5rem;
     justify-content: flex-start;
-    padding:0.5rem;
-    overflow-x: auto; /* allows horizontall scroll as needed */
+    padding: 0.5rem;
+    overflow-x: auto;
+    /* allows horizontall scroll as needed */
 }
 
-.card {
+.seller__card {
     color: black;
     max-width: 260px;
     border-radius: 20px;
     cursor: pointer;
     border-radius: 8px;
-
     border: 1px solid #0b0b0b;
     background: #ffffff;
     flex-shrink: 0;
@@ -53,19 +67,19 @@
     flex-direction: column;
 }
 
-.card__body {
+.seller__cardbody {
     padding: 10px;
 }
 
-.card__subtitle {
+.seller__cardsubtitle {
     font-weight: 500;
     font-size: 14px;
     color: green;
 }
 
 .button--cart,
-.quantity__button--decrease,
-.quantity__button--increase {
+.qtygroup__btn--dec,
+.qtygroup__btn--inc {
     margin-top: 10px;
     width: 100%;
     padding: 8px 12px;
@@ -76,14 +90,14 @@
     line-height: 1;
 }
 
-.quantity__input {
+.qtygroup__input {
     padding: 4px 12px;
     width: 60px;
 }
 
 
-.quantity__button--decrease,
-.quantity__button--increase {
+.qtygroup__btn--dec,
+.qtygroup__btn--inc {
     background: transparent;
     width: auto;
     color: #333;
@@ -92,9 +106,6 @@
 
 }
 
-.index_food_image {
-    width: 100%;
-}
 
 .quantity {
     display: flex;
@@ -149,7 +160,7 @@
 
     border: none;
     width: 100%;
-    /* Match the card width */
+    /* Match the seller__card width */
     padding: 10px 0;
     /* Adjust padding for spacing */
     cursor: pointer;
@@ -166,8 +177,8 @@
 /* end */
 
 
-/* Product Card (prd-card) */
-.prd-card {
+/* Product Card (prd-seller__card) */
+.prd-seller__card {
     width: 220px;
     border-width: 1px;
     border-style: solid;
@@ -195,7 +206,7 @@
     margin-bottom: 0.25rem;
 }
 
-.prd-card__body {
+.prd-seller__cardbody {
     padding: 0.5rem;
 
 }
@@ -223,50 +234,55 @@
 }
 
 
-.index_card{
+.index_card {
     cursor: pointer;
     border-radius: 8px;
 }
 
-.seller-info {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
+.seller-info__button-seemore {
+    padding: 0.3rem;
+    width: 7rem;
 }
-.seller-info .seller-info-avatar{
-/* border-bottom: 0.5px dotted black; */
-width: 50px;
-height: 50px;
-border-radius: 50%;
-border: 2px solid lightseagreen;
-object-fit: contain;
-background: #eee;
-}
-.seller-info__button-seemore{
-    padding:0.3rem;
-    width:7rem;
-}
-.card{
+
+.seller__card {
     width: 100%;
-    margin-top:0.5rem;
+    margin-top: 0.5rem;
     margin-left: 0.5rem;
-display:flex;
-justify-content: space-between;
-max-width: 280px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 280px;
 }
-.card--img{
+
+.qtygroup__cardimg {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
 }
-.card--body{
+
+.seller__card--body {
     padding: 12px;
     border-top: 1px solid #eee;
     display: flex;
 
 }
-.card__title{
+
+.seller__cardtitle {
     display: block;
     font-weight: 500;
     font-size: 18px;
 }
+
+
+
+
+
+/* 
+
+
+
+
+    
+.index_food_image {
+    width: 100%;
+}
+*/

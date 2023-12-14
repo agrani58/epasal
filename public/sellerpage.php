@@ -53,7 +53,7 @@ include_once("./partials/header.php");
                     
                             <button type="button">Add to Cart</button>
                         </div><!--action ends-->
-                    </div><!--div for card footer ends-->
+                    </div><!--div for seller__card footer ends-->
            
 
                

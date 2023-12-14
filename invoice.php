@@ -5,28 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ePasal Table</title>
-    
-       <!-- CSS Stylesheets Start -->
-   <link rel="stylesheet" href="/epasale/public/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300&display=swap"
-        rel="stylesheet" />
+
+    <!-- CSS Stylesheets Start -->
+    <link rel="stylesheet" href="/epasale/public/css/style.css">
     <!-- CSS Stylesheets End -->
 </head>
 
 <body>
-<!-- Includes header partial from ./_header.php -->
-<?php include_once("_header.php"); ?>
+    <!-- Includes header partial from ./_header.php -->
+    <?php include_once("_header.php"); ?>
 
     <!-- Table Start -->
     <div class="container">
         <div class="head-section">
             <div class="row">
                 <div class="col-6">
-                    <img  src ="/epasale/public/img/epasal-primary-logo.png" class="logo">
+                    <img src="/epasale/public/img/epasal-primary-logo.png" class="logo">
                 </div>
                 <div class="col-6">
                     <div class="head-detail">
@@ -41,15 +35,15 @@
             <div class="row">
                 <div class="col-6">
                     <h1 class="heading">Bill From:</h1>
-                    <p class="sub-heading">e Pasale  </p>
-                    <p class="sub-heading">Kathmandu  </p>
-                    <p class="sub-heading">9874569878  </p> 
+                    <p class="sub-heading">e Pasale </p>
+                    <p class="sub-heading">Kathmandu </p>
+                    <p class="sub-heading">9874569878 </p>
                 </div>
                 <div class="col-6">
                     <h1 class="heading text-right">Bill To:</h1>
-                    <p class="sub-heading text-right">Ram Thapa  </p>
+                    <p class="sub-heading text-right">Ram Thapa </p>
                     <p class="sub-heading text-right">Pokhara </p>
-                    <p class="sub-heading text-right">9874521452  </p>
+                    <p class="sub-heading text-right">9874521452 </p>
                 </div>
             </div>
         </div>
@@ -68,7 +62,7 @@
                         <td class="right"> Item 1</td>
                         <td class="right"> 1</td>
                         <td class="right"> Rs.0</td>
-                        <td> Rs.000</td>     
+                        <td> Rs.000</td>
                     </tr>
                     <tr>
                         <td class="right"> Item 2</td>
@@ -95,7 +89,7 @@
                         <td> Rs.000</td>
                     </tr>
                     <tr>
-                        <td colspan ="3" class="right"> Grand Total</td>
+                        <td colspan="3" class="right"> Grand Total</td>
                         <td> Rs. 0000</td>
                     </tr>
                 </tbody>
