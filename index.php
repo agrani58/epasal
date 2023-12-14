@@ -20,22 +20,73 @@
 <body>
 
     <!-- Includes header partial from ./_header.php -->
-   <?php include_once("_header.php"); ?> 
+    <?php include_once("_header.php"); ?>
 
- 
+
     <!-- Products Start -->
-    <div class="container">
 
+    <!-- 
+        .seller-container contains all .seller-group(s) sections
+        .seller-group contains .seller-info and all card sections
+     -->
+    <div class="seller-container">
         <div class="seller-group">
             <div class="seller-profile">
                 <div class="seller-info">
-                    <h3>Hymalayan Java</h3>
-                    <h5>Baneshowr, Kathmandu</h5>
+                    <img class="seller-info-avatar" src="/epasale/public/img/epasal-primary-logo.png" width="40px" />
+                    <div class="seller-info-content">
+                        <h3>Hymalayan Java</h3>
+                        <h4>Baneshowr, Kathmandu</h4>
+                    </div>
                 </div>
-                <button class="seller-info__button-seemore">See More</button>
+                <button class="button button-small btn-primary">See More</button>
             </div>
 
-            <div class="card--gallery">
+            <div class="card-container">
+                <div class="card">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" class="card--img">
+                    <div class="card__body">
+                        <h3 class="card__title">Chowmein</h3>
+                        <p class="card__subtitle">NRs. 100.00</p>
+
+                        <div class="group--quantity">
+                            <label for="qty">Qty: </label>
+                            <button class="quantity__button--decrease">-</button>
+                            <input type="number" min="1" max="10" class="quantity__input" value="1" size="5" disabled />
+                            <button class="quantity__button--increase">+</button>
+                        </div>
+
+
+                        <div class="button--card">
+                            <div class="card__action">
+                                <button class="button--cart" type="button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" class="card--img">
+                    <div class="card__body">
+                        <h3 class="card__title">Chowmein</h3>
+                        <p class="card__subtitle">NRs. 100.00</p>
+
+                        <div class="group--quantity">
+                            <label for="qty">Qty: </label>
+                            <button class="quantity__button--decrease">-</button>
+                            <input type="number" min="1" max="10" class="quantity__input" value="1" size="5" disabled />
+                            <button class="quantity__button--increase">+</button>
+                        </div>
+
+
+                        <div class="button--card">
+                            <div class="card__action">
+                                <button class="button--cart" type="button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card">
                     <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage" class="card--img">
                     <div class="card__body">
@@ -127,7 +178,7 @@
 
         </div>
     </div>
-        <!-- Includes footer partial from ./_footer.php -->
+    <!-- Includes footer partial from ./_footer.php -->
     <?php include_once("_footer.php"); ?>
 </body>
 
