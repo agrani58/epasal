@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="/epasale/public/css/style.css">
+    <link rel="stylesheet" href="./login.css" />
     <!-- google font start -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,46 +27,38 @@
     <?php
     include_once("./../partials/header.php");
     ?>
-    <p>CUSTOMER LOGIN</p>
-    <div>
-
-        <div>
-            <i class="fa fa-user"></i>
-
-            <label for="username">Username:</label>
-            <input type="text" id="username">
-        </div>
+    
+    <div class="whole">
+        <h1 class="login">CUSTOMER LOGIN</h1>
 
 
-        <div>
-            <i class="fa fa-password"></i>
+        <div class="whole__login-section">
+            <div>
+                <i class="fa fa-user"></i>
+                <label for="username">Username</label>
+                <input class="login-section__input" type="text">
 
-            <label for="password">Password</label>
-            <label for="fpassword"><a href="#">Forgot Password?</a></label>
+            </div>
 
             <div>
-                <input type="text" id="password">
+                <i class="fa fa-lock"></i>
+                <label for="password">Password</label>
+                <input class="login-section__input" type="password">
+
             </div>
+
+            <span class="span-section">
+                
+                    <p> <input type="checkbox">Remember me </p>
+            
+                    <p class="half"><a href="#">Forgot Password?</a></p>
+                
+            </span>
+            <button class="button info">login <i class="fa fa-arrow-right-to-bracket"></i></button>
         </div>
-
-        <div>
-            <label for=""></label>
-        </div>
-
-
-        <input type="checkbox">
-        <label for="checklist">Remember me </label>
-
-
-
-        <div>
-            <button type="login">Login</button>
-        </div>
-
-
-
     </div>
-    
+
+
     <?php
     include_once("./../partials/footer.php");
     ?>
