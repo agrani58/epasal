@@ -1,0 +1,26 @@
+.seller-login-page{
+    margin: 2rem;
+    background-color:lightseagreen;
+    border:2px solid rgb(251, 251, 251);
+    width:30rem;
+}
+fieldset{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 1rem; 
+    margin-bottom: 1rem;
+}
+label{
+    display: flex;
+    justify-content:space-between;
+}
+input{
+    display: flex;
+    justify-content:space-between;
+    width:85%;
+}
+button{
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+
+}

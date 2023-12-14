@@ -10,7 +10,7 @@ body {
     font-size: 16px;
     font-family: Poppins;
     margin: 0px 0px 0px 0px;
-    background-color: #eee;
+    background-color: #eee; /* default bg is gray */
 }
 
 p {
@@ -20,6 +20,14 @@ p {
 
 input {
     font: inherit;
+}
+
+button {
+    font: inherit;
+}
+
+img {
+    vertical-align: middle;
 }
 
 .container{
@@ -40,6 +48,21 @@ input {
     width: calc(12/12 * 100%);
 }
 
+.col-11 {
+    width: calc(11/12 * 100%);
+}
+
+.col-10 {
+    width: calc(10/12 * 100%);
+}
+
+.col-9 {
+    width: calc(9/12 * 100%);
+}
+
+.col-8 {
+    width: calc(8/12 * 100%);
+}
 .col-7 {
     width: calc(7/12 * 100%);
 }
@@ -60,11 +83,109 @@ input {
     width: calc(3/12 * 100%);
 }
 
-footer p {
+.col-2 {
+    width: calc(2/12 * 100%);
+}
+.col{
+    width:calc(1/12* 100%);
+}
+.footer__p {
     text-align: center;
     border-top-width: 2px;
     border-top-style: solid;
     border-top-color: rgb(204, 189, 189);
     padding-top: 8px;
+    font-size: 14px;
+    padding-bottom: 8px;
 
+}
+
+
+
+.button {
+    border: none;
+    color: black;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-small {
+    padding: 8px 16px;
+}
+
+.default {
+    background-color: gray;
+    color: white;
+    border: 1px solid gray;
+
+}
+
+.default:hover {
+    background-color: white;
+    color: gray;
+}
+
+.btn-primary {
+    color: white;
+    background: lightseagreen;
+}
+
+.info {
+    background-color: lightblue;
+    color: white;
+
+    border: 1px solid lightblue;
+}
+
+.info:hover {
+
+    background-color: white;
+    color: lightblue;
+}
+
+.success {
+    background-color: green;
+    color: white;
+
+    border: 1px solid green;
+}
+
+.success:hover {
+
+    background-color: white;
+    color: green;
+}
+
+
+.warning {
+
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+}
+
+.warning:hover {
+
+    background-color: white;
+    color: red;
+}
+
+
+.icon {
+
+    background-color: lightgreen;
+    color: white;
+    border: 1px solid lightgreen;
+    font-size: 16px;
+}
+
+.icon:hover {
+
+    background-color: white;
+    color: lightgreen;
 }
