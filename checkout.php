@@ -15,63 +15,68 @@
   <!-- Includes header partial from ./_header.php -->
   <?php include_once("_header.php"); ?>
 
-  <!-- checkout section includes product summary and product billing -->
-  <div class="checkout-section">
+  <!-- chec section includes product summary and product billing -->
+  <div class="chec__sec">
 
-    <!-- product summary start-->
-    <div class="product-summary">
-      <div class="product-summary__cards">
-        <!-- Card Start -->
-        <div class="product-summary__card">
+    <div class="checinfo">
+      <h3 class="checinfo__h3">Order Summary</h3>
+      <div class="checinfo__cards">
+        <div class="checinfo__card">
+          <img class="checinfo__img" src="/epasale/public/img/products/Dahi Lassi.jpg" alt="photo of lassi" />
 
-          <img class="product-summary__img" src="/epasale/public/img/products/Dahi Lassi.jpg" alt="photo of lassi" />
-
-          <div class="product-summary__description">
-            <h3 class="product-summary__h3">Delightful Lassi</h3>
-            <p class="product-summary_quantity">Qty: 3</p>
-            <p class="product-summary_price">Rs. 350</p>
+          <div class="checinfo__content">
+            <h3 class="checkinfo__cardh3">Delightful Lassi</h3>
+            <p class="checinfo__qty">Qty: 3</p>
+            <p class="checinfo__price">Rs. 350</p>
           </div>
-
-          <!--add-->
-          <img class="product-summary__img" src="/epasale/public/img/products/Dahi Lassi.jpg" alt="photo of lassi" />
-
-
-          <div class="product-summary__description">
-            <h3 class="product-summary__h3">laddu</h3>
-            <p class="product-summary_quantity">Qty: 3</p>
-            <p class="product-summary_price">Rs. 350</p>
-          </div>
-
-
-          <img class="product-summary__img" src="/epasale/public/img/products/Dahi Lassi.jpg" alt="photo of lassi" />
-
-          <div class="product-summary__description">
-            <h3 class="product-summary__h3">jerry</h3>
-            <p class="product-summary_quantity">Qty: 3</p>
-            <p class="product-summary_price">Rs. 350</p>
-          </div>
-
         </div>
-        <!-- Card End -->
 
+        <div class="checinfo__card">
+          <img class="checinfo__img" src="/epasale/public/img/products/Dahi Lassi.jpg" alt="photo of lassi" />
+
+          <div class="checinfo__content">
+            <h3 class="checkinfo__cardh3">jerry</h3>
+            <p class="checinfo__qty">Qty: 3</p>
+            <p class="checinfo__price">Rs. 350</p>
+          </div>
+        </div>
+
+        <div class="checinfo__card">
+          <img class="checinfo__img" src="/epasale/public/img/products/Dahi Lassi.jpg" alt="photo of lassi" />
+
+          <div class="checinfo__content">
+            <h3 class="checkinfo__cardh3">Delightful Lassi</h3>
+            <p class="checinfo__qty">Qty: 3</p>
+            <p class="checinfo__price">Rs. 350</p>
+          </div>
+        </div>
+
+        <div class="checinfo__card">
+          <img class="checinfo__img" src="/epasale/public/img/products/Dahi Lassi.jpg" alt="photo of lassi" />
+
+          <div class="checinfo__content">
+            <h3 class="checkinfo__cardh3">jerry</h3>
+            <p class="checinfo__qty">Qty: 3</p>
+            <p class="checinfo__price">Rs. 350</p>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- product summary end -->
 
-    <div class="product-checkout">
-      <h1 class="product-checkout__h1">CheckOut</h1>
+    <div class="chec">
+      <h4 class="checinfo__h3">CheckOut</h4>
 
-      <div class="billing-section">
-        <h2 class="billing-section__h2">Billing Address</h2>
-        <select class="billing-section__select">
+      <div class="chec__billing">
+        <h3 class="check_h3">Billing Address</h3>
+        <select class="chec__billingselect">
           <option>Bafal, near Everest Bank, Kathmandu</option>
           <option>Baneshwor, near Apex College, Kathmandu</option>
         </select>
       </div>
 
-      <div class="order-section">
-        <h2 class="order-section__h2">Order Summary</h2>
-        <table class="order-section__table">
+      <div class="chec__orderinfo">
+        <h3 class="check_h3">Order Summary</h3>
+        <table class="chec__orderinfotable">
           <tr>
             <td>Items Total</td>
             <td align="right">Rs.2,895</td>
@@ -91,15 +96,16 @@
         </table>
       </div>
 
-      <div class="payment-section">
-        <h2 class="payment-section__h2">Payment Method</h2>
-        <select class="payment-section__select">
+      <div class="chec__pay">
+        <h3 class="check_h3">Payment Method</h3>
+        <select class="chec__payselec">
           <option>eSewa</option>
           <option>Cash on Delivery</option>
         </select>
       </div>
 
-      <button class="button--info">Continue with Payment</button>
+      <a href="/epasale/order.php" class="checinfo__a">
+        <button class="chec__btn--pay">Complete Checkout</button></a>
     </div>
   </div>
 

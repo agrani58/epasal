@@ -38,12 +38,12 @@ img.img {
 .product > img{
 	transform: scale(1.04);
 }
-.product-info{
+.cart__info{
 	padding: 10px;
 	width: 100%;
 	position: relative;
 }
-.product-name, .discription{
+.cart__h3, .cart__p{
 	margin-bottom: 10px;
 }
 

@@ -29,14 +29,14 @@
     border: 1px solid gray;
   }
 
-  /* .row{
+  .row{
     display: flex;
     flex-wrap: wrap;
   }
   .col-6{
     width: 50%;
     flex: 0 0 auto;
-  } */
+  }
   .invoice_body_section__heading {
     font-size: 20px;
     margin-bottom: 08px;

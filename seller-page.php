@@ -16,13 +16,52 @@
     <?php include_once("_header.php"); ?>
 
 
-    <div class="container">
-        <div class="sellerfullpage">
-            <div class="seller_detail">
-                <div class="sp-detail">
+    <div class="sellerfullpage">
+        <div class="seller_detail">
+            <div class="sp-detail">
+                <div class="seller__profile">
                     <img src="/epasale/public/img/products/biryani.jpg" alt="logo">
+
+                    <div class="seller__profileinfo">
+                        <h3>Pong Restaurant</h3>
+                        <p>Bafal, Kathmandu</p>
+                    </div>
                 </div>
-                <form action="" method="get">
+
+                <div class="seller__info">
+                    <table>
+                        <tr>
+                            <th>
+                                Location:
+                            </th>
+
+                            <td>Mid Baneshwor, Devkota Sadak, Kathmandu</td>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                Contact No:
+                            </th>
+
+                            <td>+977 9810154589</td>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                Email Address:
+                            </th>
+
+                            <td>pongrest@gmail.com</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+
+
+            <!-- Advance Topic -->
+            <!-- <form action="" method="get">
                     <label for="name">name </label>
                     <input id="name" type="text">
 
@@ -33,29 +72,140 @@
                     <input id="contact" type="text">
 
                     <button type="submit" name="Submit_name">SEE MORE</button>
-                </form>
-            </div>
+                </form> -->
+        </div>
 
-            <div class="sellerpage">
-                <div class="seller_content">
-                    <img src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
-                    <h3>Chowmein</h3>
-                    <p>NRs:100</p>
+        <div class="seller__content" style="flex-wrap: wrap;">
+            <div class="seller__card">
+                <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                </a>
+                <div class="seller__cardbody">
+                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                        <h3 class="seller__cardtitle">Chowmein</h3>
+                    </a>
+                    <p class="seller__cardsubtitle">NRs. 100.00</p>
 
-                    <div class="sp_quantity_buttons">Qty:
-                        <button class="button1">-</button>
-                        <div class="number">1</div>
-                        <button class="button2">+</button>
+                    <div class="qtygroup">
+                        <label>Qty: </label>
+                        <button class="qtygroup__btn--dec">-</button>
+                        <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
+                        <button class="qtygroup__btn--inc">+</button>
                     </div>
 
-                    <div class="sp_card__footer"><!-- div for card__footer-->
 
-                        <button type="button">Add to Cart</button>
-                    </div><!--action ends-->
-                </div><!--div for seller__card footer ends-->
+                    <button class="seller__btn--cart" type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="seller__card">
+                <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                </a>
+                <div class="seller__cardbody">
+                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                        <h3 class="seller__cardtitle">Chowmein</h3>
+                    </a>
+                    <p class="seller__cardsubtitle">NRs. 100.00</p>
+
+                    <div class="qtygroup">
+                        <label>Qty: </label>
+                        <button class="qtygroup__btn--dec">-</button>
+                        <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
+                        <button class="qtygroup__btn--inc">+</button>
+                    </div>
 
 
+                    <button class="seller__btn--cart" type="button">Add to Cart</button>
+                </div>
+            </div>
 
+            <div class="seller__card">
+                <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                </a>
+                <div class="seller__cardbody">
+                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                        <h3 class="seller__cardtitle">Chowmein</h3>
+                    </a>
+                    <p class="seller__cardsubtitle">NRs. 100.00</p>
+
+                    <div class="qtygroup">
+                        <label>Qty: </label>
+                        <button class="qtygroup__btn--dec">-</button>
+                        <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
+                        <button class="qtygroup__btn--inc">+</button>
+                    </div>
+
+
+                    <button class="seller__btn--cart" type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="seller__card">
+                <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                </a>
+                <div class="seller__cardbody">
+                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                        <h3 class="seller__cardtitle">Chowmein</h3>
+                    </a>
+                    <p class="seller__cardsubtitle">NRs. 100.00</p>
+
+                    <div class="qtygroup">
+                        <label>Qty: </label>
+                        <button class="qtygroup__btn--dec">-</button>
+                        <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
+                        <button class="qtygroup__btn--inc">+</button>
+                    </div>
+
+
+                    <button class="seller__btn--cart" type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="seller__card">
+                <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                </a>
+                <div class="seller__cardbody">
+                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                        <h3 class="seller__cardtitle">Chowmein</h3>
+                    </a>
+                    <p class="seller__cardsubtitle">NRs. 100.00</p>
+
+                    <div class="qtygroup">
+                        <label>Qty: </label>
+                        <button class="qtygroup__btn--dec">-</button>
+                        <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
+                        <button class="qtygroup__btn--inc">+</button>
+                    </div>
+
+
+                    <button class="seller__btn--cart" type="button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="seller__card">
+                <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                </a>
+                <div class="seller__cardbody">
+                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                        <h3 class="seller__cardtitle">Chowmein</h3>
+                    </a>
+                    <p class="seller__cardsubtitle">NRs. 100.00</p>
+
+                    <div class="qtygroup">
+                        <label>Qty: </label>
+                        <button class="qtygroup__btn--dec">-</button>
+                        <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
+                        <button class="qtygroup__btn--inc">+</button>
+                    </div>
+
+
+                    <button class="seller__btn--cart" type="button">Add to Cart</button>
+                </div>
             </div>
         </div>
     </div>

@@ -7,9 +7,9 @@ BEM stands for Block Element Modifier. It's a popular methodology for writing CS
 BEFORE
 <div class="product-cart">
     <img src="./img/products/Laddu.jpg" class="img" />
-    <div class="product-info">
-        <h3 class="product-name">Laddu</h3>
-        <P class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+    <div class="cart__info">
+        <h3 class="cart__h3">Laddu</h3>
+        <P class="cart__p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
         <div class="quantity">
             <button class="btn">-</button>
             <div class="no.">1</div>

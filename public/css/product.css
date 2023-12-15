@@ -12,6 +12,7 @@
     border-radius: 8px;
     font-size: 0.8rem;
     border: 2px solid gray;
+    margin-bottom: 1rem;
 }
 
 .seller__a {
@@ -62,16 +63,23 @@
     /* allows horizontall scroll as needed */
 }
 
+
+
 .seller__card {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    display: flex;
+    justify-content: space-between;
     color: black;
-    max-width: 260px;
     border-radius: 20px;
     cursor: pointer;
     border-radius: 8px;
     border: 1px solid #0b0b0b;
     background: #ffffff;
-    flex-shrink: 0;
-    flex-grow: 1;
+    flex: 300px 2 0;
+    max-width: 420px;
+
     display: flex;
     flex-direction: column;
 }
@@ -251,15 +259,6 @@
 .seller-info__button-seemore {
     padding: 0.3rem;
     width: 7rem;
-}
-
-.seller__card {
-    width: 100%;
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    max-width: 280px;
 }
 
 .qtygroup__cardimg {

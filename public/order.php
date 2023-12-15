@@ -20,9 +20,9 @@
     <?php
                 include_once("./partials/header.php");
              ?>
-        <div class="order">
+        <div class="order__section">
            
-            <div class="order-container">
+            <div class="order__container">
                 <p><b>Orders</b></p>
                 <table class=order_table>
                     <tr>

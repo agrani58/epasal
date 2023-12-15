@@ -36,9 +36,10 @@
             <span class="login-form__form-group">
                 <!-- Remember me is not required -->
                 <!-- <p> <input type="checkbox">Remember me </p> -->
-                <p class="login-form__p"><a href="#">Forgot Password?</a></p>
+                <p class="login-form__p"><a href="/epasale">Forgot Password?</a></p>
             </span>
-            <button class="button info">login <i class="fa fa-arrow-right-to-bracket"></i></button>
+            
+            <a href="/epasale"><button class="button info" style="width: 100%;">login <i class="fa fa-arrow-right-to-bracket"></i></button></a>
         </div>
     </div>
 
