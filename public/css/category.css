@@ -13,6 +13,9 @@
 }
 
 #nav-category nav ul li {
+    position: relative;
+
+    min-width: 120px;
     display: inline-block;
     flex-grow: 1;
 }
@@ -24,7 +27,7 @@
     font-size: 16px;
     text-decoration: none;
     text-align: center;
-    
+
 }
 
 #nav-category nav a:hover {
@@ -33,6 +36,7 @@
 
 /* Hide Dropdown by Default*/
 #nav-category nav ul ul {
+    position: relative;
     display: none;
     position: absolute;
     top: 100%;
@@ -40,22 +44,28 @@
 }
 
 /* Display Dropdown on Hover */
-#nav-category nav ul li:hover >  ul {
-    display: inherit;
+#nav-category nav ul li:hover>ul {
+    display: flex;
+    width: 100%;
     background: lightgray;
+    flex-direction: column;
+
+
 }
 
 
 /* Fisrt Tier Dropdown */
 nav ul ul li {
-    width: 170px;
     float: none;
     display: list-item;
     position: relative;
+    text-align: center;
+
 
 }
-nav .category{
+
+nav .category {
     display: flex;
-    
+
     overflow-x: auto;
 }

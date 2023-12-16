@@ -90,10 +90,17 @@ body{
     margin-top: 15px;
     margin-right: 15px;
     margin-bottom: 15px;
-    min-height: 90vh;
     border-radius: 8px;
+    overflow-x: auto;
 }
 
+
+
+.table__customer table{
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1300px;
+}
 
 
 .table__customer th,
@@ -104,12 +111,12 @@ body{
     background-color: white;
     
 }
-.table__customer th:hover{
-    color:rgb(192, 32, 32);
+
+
+.table__customer th {
+    color: white;
+    background: lightseagreen;
 }
 
-.table__customer{
-    width: 100%;
-    border-collapse: collapse;
-}
+
 
