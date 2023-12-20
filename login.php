@@ -21,25 +21,28 @@
 
         <div class="login-form__wrapper">
             <div class="login-form__form-group">
-                <i class="fa fa-user"></i>
-                <label class="login-form__label" for="username">Username</label>
-                <input class="login-form__input" type="text">
+                <label class="login-form__label" for="email"><i class="fa fa-user"></i> Email</label>
+                <input class="login-form__input" type="text" id="email" placeholder="Enter your email">
             </div>
 
             <div class="login-form__form-group">
-                <i class="fa fa-lock"></i>
-                <label class="login-form__label" for="password">Password</label>
-                <input class="login-form__input" type="password">
-
+                <label class="login-form__label" for="password"><i class="fa fa-lock"></i> Password</label>
+                <input class="login-form__input" type="password" id="password" placeholder="Enter your password">
             </div>
+
+
+
+            <a href="/epasale">
+                <button class="button btn-primary" style="width: 100%;">Login <i
+                        class="fa fa-arrow-right-to-bracket"></i></button>
+            </a>
 
             <span class="login-form__form-group">
                 <!-- Remember me is not required -->
                 <!-- <p> <input type="checkbox">Remember me </p> -->
-                <p class="login-form__p"><a href="/epasale">Forgot Password?</a></p>
+                <a class="link login-form__link" href="/epasale">Forgot your Password?</a> <br />
+                New to ePasal? <a class="link login-form__link" href="/epasale/signup.php">Create your ePasal Account</a>
             </span>
-            
-            <a href="/epasale"><button class="button info" style="width: 100%;">Login <i class="fa fa-arrow-right-to-bracket"></i></button></a>
         </div>
     </div>
 

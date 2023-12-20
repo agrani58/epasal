@@ -16,6 +16,16 @@ body {
 
 }
 
+.link {
+    text-decoration: none;
+    color: #FF9800;
+    border-bottom: 2px solid transparent;
+}
+
+.link:hover {
+    border-bottom: 2px solid #FF9800;
+}
+
 p {
     margin-top: 0px;
     margin-bottom: 0px;
