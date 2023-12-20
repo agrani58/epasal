@@ -104,8 +104,10 @@
         </select>
       </div>
 
+      <br/>
+
       <a href="/epasale/order.php" class="checinfo__a">
-        <button class="chec__btn--pay">Complete Checkout</button></a>
+        <button class="button btn-primary">Complete Checkout</button></a>
     </div>
   </div>
 

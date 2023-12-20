@@ -96,7 +96,7 @@
 
         <div class="cart__btn">
             <a class="cart__a" href="/epasale/checkout.php?id=1">
-                <button class="button info">Proceed to Checkout</button>
+                <button class="button btn-primary">Proceed to Checkout</button>
             </a>
             <button class="button">Cancel</button>
         </div>

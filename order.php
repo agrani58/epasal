@@ -16,6 +16,8 @@
     <!-- Includes header partial from ./_header.php -->
     <?php include_once("_header.php"); ?>
 
+
+    <br/>
     <div class="order__section">
         <div class="order__container">
             <h3 class="order__h3">My Orders</h3>
@@ -95,6 +97,8 @@
 
             </table>
         </div>
+
+        <br/>
         
        <!-- Includes footer partial from ./_footer.php -->
         <?php include_once("_footer.php"); ?> 

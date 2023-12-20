@@ -99,7 +99,7 @@ body{
 .table__customer table{
     width: 100%;
     border-collapse: collapse;
-    min-width: 1300px;
+    min-width: 1320px;
 }
 
 
@@ -115,7 +115,7 @@ body{
 
 .table__customer th {
     color: white;
-    background: lightseagreen;
+    background: #FF9800;
 }
 
 

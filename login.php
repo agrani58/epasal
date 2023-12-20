@@ -39,7 +39,7 @@
                 <p class="login-form__p"><a href="/epasale">Forgot Password?</a></p>
             </span>
             
-            <a href="/epasale"><button class="button info" style="width: 100%;">login <i class="fa fa-arrow-right-to-bracket"></i></button></a>
+            <a href="/epasale"><button class="button info" style="width: 100%;">Login <i class="fa fa-arrow-right-to-bracket"></i></button></a>
         </div>
     </div>
 

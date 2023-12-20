@@ -26,7 +26,7 @@
             <div class="seller__info">
                 <div class="seller__profile">
                     <a class="seller__a" href="/epasale/seller-page.php?id=1">
-                        <img class="seller__profile-avatar" src="/epasale/public/img/epasal-primary-logo.png"
+                        <img class="seller__profile-avatar" src="/epasale/public/img/shops/shop.jpg"
                             width="40px" />
                     </a>
                     <div class="seller__profile-content">
@@ -42,12 +42,12 @@
             <div class="seller__content">
                 <div class="seller__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg"
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
                     </a>
                     <div class="seller__cardbody">
                         <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="seller__cardtitle">Chowmein</h3>
+                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
                         </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
@@ -65,12 +65,12 @@
 
                 <div class="seller__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg"
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
                     </a>
                     <div class="seller__cardbody">
                         <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="seller__cardtitle">Chowmein</h3>
+                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
                         </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
@@ -88,12 +88,12 @@
 
                 <div class="seller__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg"
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
                     </a>
                     <div class="seller__cardbody">
                         <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="seller__cardtitle">Chowmein</h3>
+                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
                         </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
@@ -111,12 +111,12 @@
 
                 <div class="seller__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg"
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
                     </a>
                     <div class="seller__cardbody">
                         <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="seller__cardtitle">Chowmein</h3>
+                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
                         </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
@@ -134,12 +134,12 @@
 
                 <div class="seller__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg"
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
                     </a>
                     <div class="seller__cardbody">
                         <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="seller__cardtitle">Chowmein</h3>
+                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
                         </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
@@ -157,12 +157,12 @@
 
                 <div class="seller__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg"
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
                     </a>
                     <div class="seller__cardbody">
                         <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="seller__cardtitle">Chowmein</h3>
+                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
                         </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
@@ -184,7 +184,7 @@
             <div class="seller__info">
                 <div class="seller__profile">
                     <a class="seller__a" href="/epasale/seller-page.php?id=1">
-                        <img class="seller__profile-avatar" src="/epasale/public/img/epasal-primary-logo.png"
+                        <img class="seller__profile-avatar" src="/epasale/public/img/shops/shop.jpg"
                             width="40px" />
                     </a>
                     <div class="seller__profile-content">
@@ -200,12 +200,12 @@
             <div class="seller__content">
                 <div class="seller__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg"
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
                     </a>
                     <div class="seller__cardbody">
                         <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="seller__cardtitle">Chowmein</h3>
+                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
                         </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
@@ -223,12 +223,12 @@
 
                 <div class="seller__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg"
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
                     </a>
                     <div class="seller__cardbody">
                         <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="seller__cardtitle">Chowmein</h3>
+                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
                         </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
@@ -246,12 +246,12 @@
 
                 <div class="seller__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg"
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
                     </a>
                     <div class="seller__cardbody">
                         <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="seller__cardtitle">Chowmein</h3>
+                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
                         </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
@@ -269,12 +269,12 @@
 
                 <div class="seller__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg"
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
                     </a>
                     <div class="seller__cardbody">
                         <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="seller__cardtitle">Chowmein</h3>
+                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
                         </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
@@ -292,12 +292,12 @@
 
                 <div class="seller__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg"
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
                     </a>
                     <div class="seller__cardbody">
                         <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="seller__cardtitle">Chowmein</h3>
+                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
                         </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 
@@ -315,12 +315,12 @@
 
                 <div class="seller__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg"
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
                     </a>
                     <div class="seller__cardbody">
                         <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="seller__cardtitle">Chowmein</h3>
+                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
                         </a>
                         <p class="seller__cardsubtitle">NRs. 100.00</p>
 

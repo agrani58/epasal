@@ -23,7 +23,7 @@
                     <a href="/epasale/login.php">Sign in</a>
                 </li>
                 <li class="header_nav-links">
-                    <a href="#">Sign out </a>
+                    <a href="#">Sign up </a>
                 </li>
             </ul>
         </div>

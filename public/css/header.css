@@ -1,6 +1,6 @@
 /* Header styles */
 header {
-  background: lightseagreen;
+  background: #FF9800;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -10,7 +10,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1300px;
+  max-width: 1320px;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-right: auto;
@@ -20,6 +20,10 @@ header {
 
 .header_logo {
  width: 120px;
+}
+
+.header_logo img {
+  filter: brightness(0) invert(1);
 }
 
 .header_searchbar {
@@ -35,11 +39,16 @@ header {
 .header_searchbar input {
   border: none;
   outline: none;
-  padding: 10px;
+  padding: 10px 20px;
   width: 100%;
+  font-size: 18px;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   height: 45px;
+}
+
+.header_searchbar input::placeholder {
+  font-size: 16px;
 }
 
 .search_icon_background {

@@ -1,5 +1,5 @@
 #nav-category {
-    background: lightgray;
+    background: rgba(255, 255, 255, 0.95);
 }
 
 #nav-category nav {
@@ -31,7 +31,8 @@
 }
 
 #nav-category nav a:hover {
-    background: gray;
+    /* background: rgba(255, 255, 255, 0.95); */
+    background: #f1f1f1;
 }
 
 /* Hide Dropdown by Default*/
@@ -47,7 +48,7 @@
 #nav-category nav ul li:hover>ul {
     display: flex;
     width: 100%;
-    background: lightgray;
+    background: rgba(255, 255, 255, 0.95);
     flex-direction: column;
 
 

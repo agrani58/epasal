@@ -20,7 +20,7 @@
         <div class="seller_detail">
             <div class="sp-detail">
                 <div class="seller__profile">
-                    <img src="/epasale/public/img/products/biryani.jpg" alt="logo">
+                    <img src="/epasale/public/img/shops/shop.jpg" alt="logo">
 
                     <div class="seller__profileinfo">
                         <h3>Pong Restaurant</h3>
@@ -78,7 +78,7 @@
         <div class="seller__content" style="flex-wrap: wrap;">
             <div class="seller__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
                 <div class="seller__cardbody">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
@@ -100,7 +100,7 @@
 
             <div class="seller__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
                 <div class="seller__cardbody">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
@@ -122,7 +122,7 @@
 
             <div class="seller__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
                 <div class="seller__cardbody">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
@@ -144,7 +144,7 @@
 
             <div class="seller__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
                 <div class="seller__cardbody">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
@@ -166,7 +166,7 @@
 
             <div class="seller__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
                 <div class="seller__cardbody">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
@@ -188,7 +188,7 @@
 
             <div class="seller__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/veg_momo.jpg" alt="Productimage">
+                    <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
                 <div class="seller__cardbody">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">

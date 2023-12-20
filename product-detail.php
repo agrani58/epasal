@@ -19,9 +19,9 @@
     <div class="just">
         <div class="prddetail__wrapper">
             <div class="prddetail">
-                <img src="/epasale/public/img/products/biryani.jpg" class="prddetail__img" />
+                <img src="/epasale/public/img/products/product.avif" class="prddetail__img" />
                 <div class="prddetail__info">
-                    <h3 class="prddetail__infotitle">Chicken Biryani Served with Tomato Sauce</h3>
+                    <h3 class="prddetail__infotitle">Cheese Pizza with Tomato Sauce</h3>
                     <h4 class="prddetail__infodesc">Rs.300.00</h4>
                     <div class="qtygroup">
                         <button class="qtygroup__btn--dec">-</button>
@@ -32,9 +32,16 @@
                         <button class="button btn-primary">Buy Now</button>
                         <button class="button btn-primary">Add To Cart</button>
                     </div>
-                    <div class="desc">
+                    <div class="prddetail__desc">
                         <h3>Product Description</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        <p>1. Classic Cheese Pizza: A mouthwatering celebration of simplicity and flavor <br/>
+2. Hand-tossed, golden-brown crust for the perfect crunch and chewy texture <br/>
+3. Generously topped with premium, 100% real mozzarella cheese for a gooey, melty experience <br/>
+4. Signature tomato sauce made from vine-ripened tomatoes and secret spices for a zesty kick <br/>
+5. Timeless crowd-pleaser suitable for any occasion <br/>
+6. Ideal for customization with your favorite toppings <br/>
+7. Perfect for family gatherings, game nights, or solo pizza indulgence <br/>
+8. A culinary experience that brings joy to every cheesy bite </p>
                     </div>
                 </div>
             </div>
@@ -44,12 +51,12 @@
 
                 <div class="prdthumb">
                     <a class="prdthumb__a" href="/epasale/product-detail.php?id=1">
-                        <img src="/epasale/public/img/products/C Momo.jpeg" class="prdthumb__img" />
+                        <img src="/epasale/public/img/products/product.avif" class="prdthumb__img" />
                     </a>
 
                     <div class="prdthumb__desc">
                         <a class="prdthumb__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="prdthumb__desctitle">MoMo</h3>
+                            <h3 class="prdthumb__desctitle">Cheese Pizza</h3>
                         </a>
                         <P class="prdthumb__desctext">Rs. 200</P>
                     </div>
@@ -57,12 +64,12 @@
 
                 <div class="prdthumb">
                     <a class="prdthumb__a" href="/epasale/product-detail.php?id=1">
-                        <img src="/epasale/public/img/products/C Momo.jpeg" class="prdthumb__img" />
+                        <img src="/epasale/public/img/products/product.avif" class="prdthumb__img" />
                     </a>
 
                     <div class="prdthumb__desc">
                         <a class="prdthumb__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="prdthumb__desctitle">MoMo</h3>
+                            <h3 class="prdthumb__desctitle">Cheese Pizza</h3>
                         </a>
                         <P class="prdthumb__desctext">Rs. 200</P>
                     </div>
@@ -70,12 +77,12 @@
 
                 <div class="prdthumb">
                     <a class="prdthumb__a" href="/epasale/product-detail.php?id=1">
-                        <img src="/epasale/public/img/products/C Momo.jpeg" class="prdthumb__img" />
+                        <img src="/epasale/public/img/products/product.avif" class="prdthumb__img" />
                     </a>
 
                     <div class="prdthumb__desc">
                         <a class="prdthumb__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="prdthumb__desctitle">MoMo</h3>
+                            <h3 class="prdthumb__desctitle">Cheese Pizza</h3>
                         </a>
                         <P class="prdthumb__desctext">Rs. 200</P>
                     </div>
@@ -83,12 +90,12 @@
 
                 <div class="prdthumb">
                     <a class="prdthumb__a" href="/epasale/product-detail.php?id=1">
-                        <img src="/epasale/public/img/products/C Momo.jpeg" class="prdthumb__img" />
+                        <img src="/epasale/public/img/products/product.avif" class="prdthumb__img" />
                     </a>
 
                     <div class="prdthumb__desc">
                         <a class="prdthumb__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="prdthumb__desctitle">MoMo</h3>
+                            <h3 class="prdthumb__desctitle">Cheese Pizza</h3>
                         </a>
                         <P class="prdthumb__desctext">Rs. 200</P>
                     </div>
@@ -96,12 +103,12 @@
 
                 <div class="prdthumb">
                     <a class="prdthumb__a" href="/epasale/product-detail.php?id=1">
-                        <img src="/epasale/public/img/products/C Momo.jpeg" class="prdthumb__img" />
+                        <img src="/epasale/public/img/products/product.avif" class="prdthumb__img" />
                     </a>
 
                     <div class="prdthumb__desc">
                         <a class="prdthumb__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="prdthumb__desctitle">MoMo</h3>
+                            <h3 class="prdthumb__desctitle">Cheese Pizza</h3>
                         </a>
                         <P class="prdthumb__desctext">Rs. 200</P>
                     </div>
@@ -109,12 +116,12 @@
 
                 <div class="prdthumb">
                     <a class="prdthumb__a" href="/epasale/product-detail.php?id=1">
-                        <img src="/epasale/public/img/products/C Momo.jpeg" class="prdthumb__img" />
+                        <img src="/epasale/public/img/products/product.avif" class="prdthumb__img" />
                     </a>
 
                     <div class="prdthumb__desc">
                         <a class="prdthumb__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="prdthumb__desctitle">MoMo</h3>
+                            <h3 class="prdthumb__desctitle">Cheese Pizza</h3>
                         </a>
                         <P class="prdthumb__desctext">Rs. 200</P>
                     </div>
@@ -122,12 +129,12 @@
 
                 <div class="prdthumb">
                     <a class="prdthumb__a" href="/epasale/product-detail.php?id=1">
-                        <img src="/epasale/public/img/products/C Momo.jpeg" class="prdthumb__img" />
+                        <img src="/epasale/public/img/products/product.avif" class="prdthumb__img" />
                     </a>
 
                     <div class="prdthumb__desc">
                         <a class="prdthumb__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="prdthumb__desctitle">MoMo</h3>
+                            <h3 class="prdthumb__desctitle">Cheese Pizza</h3>
                         </a>
                         <P class="prdthumb__desctext">Rs. 200</P>
                     </div>

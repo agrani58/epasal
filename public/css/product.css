@@ -1,17 +1,20 @@
 .seller__container {
     margin-bottom: 1rem;
     margin-top: 1rem;
-    max-width: 1300px;
+    max-width: 1320px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 
 .seller {
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: rgba(255, 255, 255, 0.85);
     border-radius: 8px;
     font-size: 0.8rem;
-    border: 2px solid gray;
+    border: 2px solid #FF9800;
     margin-bottom: 1rem;
 }
 
@@ -21,7 +24,7 @@
 }
 
 .seller__a:hover {
-    color: lightseagreen;
+    color: #FF9800;
 }
 
 
@@ -45,9 +48,10 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid lightseagreen;
+    border: 2px solid #FF9800;
     object-fit: contain;
     background: #eee;
+    object-position: center;
 }
 
 
@@ -67,15 +71,12 @@
 
 .seller__card {
     width: 100%;
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
     display: flex;
     justify-content: space-between;
     color: black;
     border-radius: 20px;
-    cursor: pointer;
     border-radius: 8px;
-    border: 1px solid #0b0b0b;
+    border: 1px solid #FF9800;
     background: #ffffff;
     flex: 300px 2 0;
     max-width: 420px;
@@ -103,8 +104,8 @@
     border: 0px;
     border-radius: 5px;
     color: white;
-    background: lightseagreen;
-    line-height: 1;
+    background: #FF9800;
+    cursor: pointer;
 }
 
 .qtygroup__input {
@@ -122,6 +123,7 @@
     margin: 0px;
 
 }
+
 
 
 .quantity {
@@ -199,7 +201,7 @@
     width: 220px;
     border-width: 1px;
     border-style: solid;
-    border-color: gray;
+    border-color: #FF9800;
 }
 
 .prd-card__img {
@@ -245,9 +247,9 @@
     border: 0px;
     outline: none;
     font: inherit;
-    font-size: 12px;
+    font-size: 14px;
     color: white;
-    background-color: lightseagreen;
+    background-color: #FF9800;
 }
 
 
@@ -269,14 +271,15 @@
 
 .seller__card--body {
     padding: 12px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #FF9800;
     display: flex;
 
 }
 
 .seller__cardtitle {
+    /* font-family: 'Courier New', Courier, monospace; */
     display: block;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 18px;
 }
 

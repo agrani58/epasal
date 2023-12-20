@@ -15,7 +15,7 @@
     padding: 10px;
     margin-top: 5%;
     text-align: center;
-    color: lightseagreen;
+    color: #FF9800;
 }
 
 .login-form__wrapper {
@@ -32,6 +32,10 @@
 
 .login-form__form-group {
     padding: 10px;
+}
+
+.login-form__form-group i {
+    color: #FF9800;
 }
 
 .login-form__p {
@@ -54,15 +58,11 @@
 }
 
 .info {
-    background-color: rgb(72, 150, 176);
     color: white;
-
-    border: 1px solid lightblue;
+    background-color: #FF9800;
 }
 
 .info:hover {
-    color: rgb(72, 150, 176);
-    background-color: lightblue;
-
-
+    background-color: #FF9800;
+    opacity: 0.85;
 }

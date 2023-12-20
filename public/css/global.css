@@ -8,9 +8,11 @@
 /* body, button, input */
 body {
     font-size: 16px;
-    font-family: Poppins;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0px 0px 0px 0px;
-    background-color: #eee; /* default bg is gray */
+    /*background-color: #eee; /* /* default bg is gray */
+    background:  linear-gradient(to bottom, rgba(255, 255, 255,0.8), rgba(255, 255, 255,0.8)),
+    url("/epasale/public/img/background.jpg") center/300px 300px repeat;
 
 }
 
@@ -32,7 +34,7 @@ img {
 }
 
 .container{
-    max-width: 1300px;
+    max-width: 1320px;
     padding-left:1rem;
     padding-right: 1rem;
     margin-right: auto;
@@ -133,6 +135,14 @@ img {
     border-radius: 5px;
 }
 
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    opacity: 0.75;
+}
+
 .button-small {
     padding: 8px 16px;
 }
@@ -151,7 +161,7 @@ img {
 
 .btn-primary {
     color: white;
-    background: lightseagreen;
+    background: #FF9800;
 }
 
 .info {

@@ -1,15 +1,7 @@
 .sellerfullpage {
   border-radius: 8px;
-  background: white;
   margin-bottom: 1rem;
 }
-
-.seller__profile {
-  display: flex;
-  align-items: flex-end;
-  gap: 1rem;
-}
-
 .seller__profileinfo {
   padding-bottom: 1rem;
 }
@@ -19,19 +11,13 @@
   text-align: left;
 }
 
-.seller__content {
-  max-width: 1300px;
-  padding: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .seller_detail {
-  background: turquoise;
+  background: #f1f1f1;
 }
 
 .sp-detail {
-  max-width: 1300px;
+  max-width: 1320px;
   margin-left: auto;
   margin-right: auto;
   padding: 2rem;
