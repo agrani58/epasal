@@ -1,0 +1,53 @@
+
+.sellerlogin-form {
+    height: auto;
+    width: 480px;
+    padding: 10px;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.sellerlogin-form__h1 {
+    padding: 10px;
+    margin-top: 5%;
+    text-align: center;
+    color: #FF9800;
+}
+
+.sellerlogin-form__wrapper {
+    padding-bottom: 10px;
+    margin: 10px;
+    display: grid;
+}
+
+.sellerlogin-form__wrapper label {
+    margin-bottom: 0.25rem;
+    display: block;
+} 
+
+.sellerlogin-form__input {
+    display: block;
+    padding: 10px;
+    width: 100%;
+}
+
+.sellerlogin-form__form-group {
+    padding: 10px;
+}
+
+.sellerlogin-form__link {
+    line-height: 1.6;
+}
+
+.sellerlogin-form__form-group i {
+    color: #FF9800;
+}
+
+.sellerlogin-form__p {
+    display: flex;
+    justify-content: flex-end;
+}
