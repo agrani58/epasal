@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Sign-Up Page</title>
 
     <!-- CSS Stylesheets Start -->
     <link rel="stylesheet" href="/epasale/public/css/style.css">
