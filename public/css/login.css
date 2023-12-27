@@ -1,5 +1,5 @@
 
-.login-form {
+.auth-form {
     height: auto;
     width: 480px;
     padding: 10px;
@@ -11,43 +11,43 @@
     background-color: white;
 }
 
-.login-form__h1 {
+.auth-form__h1 {
     padding: 10px;
     margin-top: 5%;
     text-align: center;
     color: #FF9800;
 }
 
-.login-form__wrapper {
+.auth-form__wrapper {
     padding-bottom: 10px;
     margin: 10px;
     display: grid;
 }
 
-.login-form__wrapper label {
+.auth-form__wrapper label {
     margin-bottom: 0.25rem;
     display: block;
 } 
 
-.login-form__input {
+.auth-form__input {
     display: block;
     padding: 10px;
     width: 100%;
 }
 
-.login-form__form-group {
+.auth-form__form-group {
     padding: 10px;
 }
 
-.login-form__link {
+.auth-form__link {
     line-height: 1.6;
 }
 
-.login-form__form-group i {
+.auth-form__form-group i {
     color: #FF9800;
 }
 
-.login-form__p {
+.auth-form__p {
     display: flex;
     justify-content: flex-end;
 }
