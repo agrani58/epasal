@@ -51,3 +51,8 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.error-msg{
+    color:red;
+    font-size: 14px;
+}
