@@ -9,6 +9,7 @@
     <!-- CSS Stylesheets Start -->
     <link rel="stylesheet" href="/epasale/public/css/style.css">
     <!-- CSS Stylesheets End -->
+
 </head>
 
 <body>
@@ -58,25 +59,10 @@
 
             </div>
 
-
-
-            <!-- Advance Topic -->
-            <!-- <form action="" method="get">
-                    <label for="name">name </label>
-                    <input id="name" type="text">
-
-                    <label for="address">address:</label>
-                    <input id="address" type="text">
-
-                    <label for="contact">contact:</label>
-                    <input id="contact" type="text">
-
-                    <button type="submit" name="Submit_name">SEE MORE</button>
-                </form> -->
         </div>
 
-        <div class="seller__content" style="flex-wrap: wrap;">
-            <div class="seller__card">
+        <div class="seller__content" style="flex-wrap: wrap; ">
+            <div class="seller__card" id="seller__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
                     <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
@@ -98,7 +84,7 @@
                 </div>
             </div>
 
-            <div class="seller__card">
+            <div class="seller__card" id="seller__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
                     <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
@@ -120,7 +106,7 @@
                 </div>
             </div>
 
-            <div class="seller__card">
+            <div class="seller__card" id="seller__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
                     <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
@@ -142,7 +128,7 @@
                 </div>
             </div>
 
-            <div class="seller__card">
+            <div class="seller__card" id="seller__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
                     <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
@@ -164,7 +150,7 @@
                 </div>
             </div>
 
-            <div class="seller__card">
+            <div class="seller__card" id="seller__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
                     <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
@@ -186,7 +172,7 @@
                 </div>
             </div>
 
-            <div class="seller__card">
+            <div class="seller__card" id="seller__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
                     <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
@@ -213,5 +199,6 @@
     <!-- Includes footer partial from ./_footer.php -->
     <?php include_once("_footer.php"); ?>
 </body>
-
+ <!-- makes sure the js code runs after html is parsed -->
+ 
 </html>

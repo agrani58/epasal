@@ -62,8 +62,70 @@
                         <button class="seller__btn--cart" type="button">Add to Cart</button>
                     </div>
                 </div>
-
                 <div class="seller__card">
+                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
+                            alt="Productimage">
+                    </a>
+                    <div class="seller__cardbody">
+                        <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
+                        </a>
+                        <p class="seller__cardsubtitle">NRs. 100.00</p>
+
+                        <div class="qtygroup">
+                            <label>Qty: </label>
+                            <button class="qtygroup__btn--dec">-</button>
+                            <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
+                            <button class="qtygroup__btn--inc">+</button>
+                        </div>
+
+
+                        <button class="seller__btn--cart" type="button">Add to Cart</button>
+                    </div>
+                </div><div class="seller__card">
+                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
+                            alt="Productimage">
+                    </a>
+                    <div class="seller__cardbody">
+                        <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
+                        </a>
+                        <p class="seller__cardsubtitle">NRs. 100.00</p>
+
+                        <div class="qtygroup">
+                            <label>Qty: </label>
+                            <button class="qtygroup__btn--dec">-</button>
+                            <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
+                            <button class="qtygroup__btn--inc">+</button>
+                        </div>
+
+
+                        <button class="seller__btn--cart" type="button">Add to Cart</button>
+                    </div>
+                </div><div class="seller__card">
+                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
+                            alt="Productimage">
+                    </a>
+                    <div class="seller__cardbody">
+                        <a class="seller__a" href="/epasale/product-detail.php?id=1">
+                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
+                        </a>
+                        <p class="seller__cardsubtitle">NRs. 100.00</p>
+
+                        <div class="qtygroup">
+                            <label>Qty: </label>
+                            <button class="qtygroup__btn--dec">-</button>
+                            <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
+                            <button class="qtygroup__btn--inc">+</button>
+                        </div>
+
+
+                        <button class="seller__btn--cart" type="button">Add to Cart</button>
+                    </div>
+                </div><div class="seller__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
                         <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
@@ -86,99 +148,8 @@
                     </div>
                 </div>
 
-                <div class="seller__card">
-                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
-                            alt="Productimage">
-                    </a>
-                    <div class="seller__cardbody">
-                        <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
-                        </a>
-                        <p class="seller__cardsubtitle">NRs. 100.00</p>
 
-                        <div class="qtygroup">
-                            <label>Qty: </label>
-                            <button class="qtygroup__btn--dec">-</button>
-                            <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
-                            <button class="qtygroup__btn--inc">+</button>
-                        </div>
-
-
-                        <button class="seller__btn--cart" type="button">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="seller__card">
-                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
-                            alt="Productimage">
-                    </a>
-                    <div class="seller__cardbody">
-                        <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
-                        </a>
-                        <p class="seller__cardsubtitle">NRs. 100.00</p>
-
-                        <div class="qtygroup">
-                            <label>Qty: </label>
-                            <button class="qtygroup__btn--dec">-</button>
-                            <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
-                            <button class="qtygroup__btn--inc">+</button>
-                        </div>
-
-
-                        <button class="seller__btn--cart" type="button">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="seller__card">
-                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
-                            alt="Productimage">
-                    </a>
-                    <div class="seller__cardbody">
-                        <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
-                        </a>
-                        <p class="seller__cardsubtitle">NRs. 100.00</p>
-
-                        <div class="qtygroup">
-                            <label>Qty: </label>
-                            <button class="qtygroup__btn--dec">-</button>
-                            <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
-                            <button class="qtygroup__btn--inc">+</button>
-                        </div>
-
-
-                        <button class="seller__btn--cart" type="button">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="seller__card">
-                    <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                        <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
-                            alt="Productimage">
-                    </a>
-                    <div class="seller__cardbody">
-                        <a class="seller__a" href="/epasale/product-detail.php?id=1">
-                            <h3 class="seller__cardtitle">Cheese Pizza </h3>
-                        </a>
-                        <p class="seller__cardsubtitle">NRs. 100.00</p>
-
-                        <div class="qtygroup">
-                            <label>Qty: </label>
-                            <button class="qtygroup__btn--dec">-</button>
-                            <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
-                            <button class="qtygroup__btn--inc">+</button>
-                        </div>
-
-
-                        <button class="seller__btn--cart" type="button">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
+               
         </div>
         <div class="seller">
             <div class="seller__info">
@@ -342,5 +313,5 @@
     <!-- Includes footer partial from ./_footer.php -->
     <?php include_once("_footer.php"); ?>
 </body>
-
+<script src="./quantity-btn.js" defer></script>
 </html>
