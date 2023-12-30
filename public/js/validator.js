@@ -2,8 +2,12 @@ class Validator {
 
     // Display an error message for the given form element
     static showError(element, message) {
-        const errorElement = element.nextElementSibling;
-        errorElement.textContent = message;
+        try{
+            const errorElement = element.nextElementSibling;
+            errorElement.textContent = message;
+        }catch(error) {
+            alert(error);
+        }
     }
 
     // Validate if a required form element's value is not empty(not null)
@@ -28,7 +32,7 @@ class Validator {
 
 
     // Validate if a form element's value is a valid 10-digit phone number
-    static validateNumber(element, message) {
+    static validatePhone(element, message) {
         const number = /^\d{10}$/;
         if (!number.test(element.value.trim())) {
             this.showError(element, message);
@@ -64,6 +68,19 @@ class Validator {
             return false;
         }
         return true;
+    }
+
+    static validateRadioSelection(radioGroupName) {
+        const radioButtons = document.querySelectorAll(`${radioGroupName} input[type="radio"]`);
+        const selectedRadioButton = Array.from(radioButtons).find((radio) => radio.checked);
+
+        if(!selectedRadioButton) {
+            this.showError(radioGroupName, "Please select at least one value");
+            return false;
+        }
+
+        return true;
+
     }
 
     // Clear error messages for elements with class 'error-msg'
