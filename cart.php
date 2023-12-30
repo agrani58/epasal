@@ -20,7 +20,7 @@
     <div class="cart__section">
         <h3 class="cart__sectiontitle">Cart Container</h3>
         <div class="cart__container">
-            <div class="cart">
+            <div class="cart product__card">
                 <a class="cart__a" href="/epasale/product-detail.php?id=1">
                     <img class="cart_product__img" src="/epasale/public/img/products/Laddu.jpg" />
                 </a>
@@ -44,7 +44,7 @@
                 </div>
             </div>
 
-            <div class="cart">
+            <div class="cart product__card">
                 <a class="cart__a" href="/epasale/product-detail.php?id=1">
                     <img class="cart_product__img" src="/epasale/public/img/products/Laddu.jpg" />
                 </a>
@@ -68,7 +68,7 @@
                 </div>
             </div>
 
-            <div class="cart">
+            <div class="cart product__card">
                 <a class="cart__a" href="/epasale/product-detail.php?id=1">
                     <img class="cart_product__img" src="/epasale/public/img/products/Laddu.jpg" />
                 </a>
@@ -106,6 +106,7 @@
 
     <!-- Includes footer partial from ./_footer.php -->
     <?php include_once("_footer.php"); ?>
+    <script src="./public/js/add-quantity.js" defer></script>
 </body>
 
 </html>

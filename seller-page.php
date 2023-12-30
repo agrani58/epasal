@@ -62,7 +62,7 @@
         </div>
 
         <div class="seller__content" style="flex-wrap: wrap; ">
-            <div class="seller__card" id="seller__card">
+            <div class="seller__card product__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
                     <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
@@ -84,7 +84,7 @@
                 </div>
             </div>
 
-            <div class="seller__card" id="seller__card">
+            <div class="seller__card product__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
                     <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
@@ -106,7 +106,7 @@
                 </div>
             </div>
 
-            <div class="seller__card" id="seller__card">
+            <div class="seller__card product__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
                     <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
@@ -128,7 +128,7 @@
                 </div>
             </div>
 
-            <div class="seller__card" id="seller__card">
+            <div class="seller__card product__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
                     <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
@@ -150,7 +150,7 @@
                 </div>
             </div>
 
-            <div class="seller__card" id="seller__card">
+            <div class="seller__card product__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
                     <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
@@ -172,7 +172,7 @@
                 </div>
             </div>
 
-            <div class="seller__card" id="seller__card">
+            <div class="seller__card product__card">
                 <a class="seller__a" href="/epasale/product-detail.php?id=1">
                     <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif" alt="Productimage">
                 </a>
@@ -198,6 +198,8 @@
 
     <!-- Includes footer partial from ./_footer.php -->
     <?php include_once("_footer.php"); ?>
+
+    <script src="./public/js/add-quantity.js" defer></script>
 </body>
  <!-- makes sure the js code runs after html is parsed -->
  

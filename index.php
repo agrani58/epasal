@@ -19,7 +19,7 @@
     <!-- 
         Products Start
         .seller__container contains all .seller(s) sections
-        .seller contains .seller__profile and all seller__card sections
+        .seller contains .seller__profile and all seller__card product__card sections
      -->
     <div class="seller__container">
         <div class="seller">
@@ -40,7 +40,7 @@
             </div>
 
             <div class="seller__content">
-                <div class="seller__card">
+                <div class="seller__card product__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
                         <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
@@ -62,7 +62,7 @@
                         <button class="seller__btn--cart" type="button">Add to Cart</button>
                     </div>
                 </div>
-                <div class="seller__card">
+                <div class="seller__card product__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
                         <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
@@ -83,7 +83,7 @@
 
                         <button class="seller__btn--cart" type="button">Add to Cart</button>
                     </div>
-                </div><div class="seller__card">
+                </div><div class="seller__card product__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
                         <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
@@ -104,7 +104,7 @@
 
                         <button class="seller__btn--cart" type="button">Add to Cart</button>
                     </div>
-                </div><div class="seller__card">
+                </div><div class="seller__card product__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
                         <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
@@ -125,7 +125,7 @@
 
                         <button class="seller__btn--cart" type="button">Add to Cart</button>
                     </div>
-                </div><div class="seller__card">
+                </div><div class="seller__card product__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
                         <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
@@ -147,10 +147,12 @@
                         <button class="seller__btn--cart" type="button">Add to Cart</button>
                     </div>
                 </div>
+            </div>
 
 
                
         </div>
+
         <div class="seller">
             <div class="seller__info">
                 <div class="seller__profile">
@@ -169,7 +171,7 @@
             </div>
 
             <div class="seller__content">
-                <div class="seller__card">
+                <div class="seller__card product__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
                         <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
@@ -192,7 +194,7 @@
                     </div>
                 </div>
 
-                <div class="seller__card">
+                <div class="seller__card product__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
                         <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
@@ -215,7 +217,7 @@
                     </div>
                 </div>
 
-                <div class="seller__card">
+                <div class="seller__card product__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
                         <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
@@ -238,7 +240,7 @@
                     </div>
                 </div>
 
-                <div class="seller__card">
+                <div class="seller__card product__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
                         <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
@@ -261,7 +263,7 @@
                     </div>
                 </div>
 
-                <div class="seller__card">
+                <div class="seller__card product__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
                         <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
@@ -284,7 +286,7 @@
                     </div>
                 </div>
 
-                <div class="seller__card">
+                <div class="seller__card product__card">
                     <a class="seller__a" href="/epasale/product-detail.php?id=1">
                         <img class="qtygroup__cardimg" src="/epasale/public/img/products/product.avif"
                             alt="Productimage">
@@ -309,9 +311,10 @@
             </div>
 
         </div>
+        
     </div>
     <!-- Includes footer partial from ./_footer.php -->
     <?php include_once("_footer.php"); ?>
+    <script src="./public/js/add-quantity.js" defer></script>
 </body>
-<script src="./quantity-btn.js" defer></script>
 </html>
