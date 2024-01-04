@@ -14,6 +14,7 @@
 
 <body>
 
+    <div class="auth-form__container">
     <div class="auth-form">
         <h1 class="auth-form__h1">USER REGISTRATION</h1>
 
@@ -79,6 +80,7 @@
                 Already have an account? <a class="link auth-form__link" href="/epasale/login.php">Sign in</a>
             </span>
         </form>
+    </div>
     </div>
 
 

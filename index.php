@@ -1,5 +1,6 @@
 <?php session_start(); ?>
-<?php require_once("./utils/Locator.php"); ?>
+<?php require_once("./utils/Locator.php");
+require_once("./utils/connection.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -5,6 +5,11 @@
     box-sizing: border-box;
   }  
 
+
+:root {
+    --xs: 576px;
+}
+
 /* body, button, input */
 body {
     font-size: 16px;

@@ -28,35 +28,6 @@
                         <p>Bafal, Kathmandu</p>
                     </div>
                 </div>
-
-                <div class="seller__info">
-                    <table>
-                        <tr>
-                            <th>
-                                Location:
-                            </th>
-
-                            <td>Mid Baneshwor, Devkota Sadak, Kathmandu</td>
-                        </tr>
-
-                        <tr>
-                            <th>
-                                Contact No:
-                            </th>
-
-                            <td>+977 9810154589</td>
-                        </tr>
-
-                        <tr>
-                            <th>
-                                Email Address:
-                            </th>
-
-                            <td>pongrest@gmail.com</td>
-                        </tr>
-                    </table>
-                </div>
-
             </div>
 
         </div>

@@ -4,7 +4,8 @@
 /* Import remote google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap');
 
-@import url("./global.css"); /* global style file */
+@import url("./global.css");
+/* global style file */
 @import url("./header.css");
 @import url("./category.css");
 @import url("./product.css");
@@ -12,6 +13,100 @@
 @import url("./checkout.css");
 @import url("./table.css");
 @import url("./checkout.css");
-@import url("./index.css");
 @import url("./sellerpage.css");
-@import url("./sellerlogin.css");
+
+
+
+:root {
+  --extra-small: 575.98px;
+  --small: 767.98px;
+  --medium: 991.98px;
+  --large: 1199.98px;
+  --extra-large: 1200px;
+}
+
+@media screen and (max-width: 375px) {
+  .header__nav li {
+    padding: 6px;
+  }
+
+  .header__container {
+    justify-content: center
+  }
+
+  .header_logo {
+    display: none;
+  }
+
+  .auth-form__container {
+    padding: 0.5rem !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .seller__info button {
+    display: none;
+  }
+
+  .auth-form__form-group {
+    padding: 8px !important;
+  }
+
+
+  
+}
+
+
+@media screen and (max-width: 768px) {
+  .header_logo img {
+    width: 100px;
+  }
+
+  .header__container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    ;
+
+  }
+
+  .header__searchbar {
+    order: 1;
+    max-width: unset;
+  }
+
+  .header__searchbar input {
+    padding: 6px 10px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .search_icon_background {
+    padding: 6px 18px;
+    height: 40px;
+  }
+
+}
+
+
+
+
+/* Small Devices (tablets, 576px - 767.98px) */
+@media screen and (min-width: 576px) {}
+
+/* Medium Devices (desktops, 768px - 991.98px) */
+@media (min-width: 768px) {
+  .header__searchbar {
+    max-width: 18rem;
+    order: initial;
+  }
+}
+
+/* Large Devices (large desktops, 992px - 1199.98px) */
+@media (min-width: 992px) {
+  .header__searchbar {
+    max-width: 36rem;
+  }
+}
+
+/* Extra Large Devices (extra large screens, 1200px and above) */
+@media (min-width: 1200px) {}

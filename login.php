@@ -14,38 +14,40 @@
 
 <body>
 
-    <div class="auth-form">
-        <h1 class="auth-form__h1">SIGN IN</h1>
-        <form class="auth-form__wrapper" action="index.php" onsubmit="return LoginValidateForm()">
-            <div class="auth-form__form-group">
-                <label class="auth-form__label" for="email"><i class="fa fa-user"></i> Email</label>
-                <input class="auth-form__input" type="email" id="email" placeholder="Enter your email">
-                <span class="error-msg"></span>
-            </div>
-            <div class="auth-form__form-group">
-                <label class="auth-form__label" for="password"><i class="fa fa-lock"></i> Password</label>
-                <input class="auth-form__input" type="password" id="password" placeholder="Enter your password">
-                <span class="error-msg"></span>
-            </div>
+    <div class="auth-form__container">
+        <div class="auth-form">
+            <h1 class="auth-form__h1">SIGN IN</h1>
+            <form class="auth-form__wrapper" action="index.php" onsubmit="return LoginValidateForm()">
+                <div class="auth-form__form-group">
+                    <label class="auth-form__label" for="email"><i class="fa fa-user"></i> Email</label>
+                    <input class="auth-form__input" type="email" id="email" placeholder="Enter your email">
+                    <span class="error-msg"></span>
+                </div>
+                <div class="auth-form__form-group">
+                    <label class="auth-form__label" for="password"><i class="fa fa-lock"></i> Password</label>
+                    <input class="auth-form__input" type="password" id="password" placeholder="Enter your password">
+                    <span class="error-msg"></span>
+                </div>
 
-            <div class="auth-form__form-group">
+                <div class="auth-form__form-group">
                     <button type="submit" class="button btn-primary" style="width: 100%;">
                         Sign in <i class="fa fa-arrow-right-to-bracket"></i>
                     </button>
-            </div>
+                </div>
 
 
-            <!-- <a class="link auth-form__link" href="/epasale">Forgot your Password?</a> <br /> -->
-            <div class="auth-form__form-group auth-form__form-links">
-                New to ePasal?
-                <a class="link auth-form__link" href="/epasale/signup.php"> Create your ePasal Account</a>
-            </div>
-        </form>
+                <!-- <a class="link auth-form__link" href="/epasale">Forgot your Password?</a> <br /> -->
+                <div class="auth-form__form-group auth-form__form-links">
+                    New to ePasal?
+                    <a class="link auth-form__link" href="/epasale/signup.php"> Create your ePasal Account</a>
+                </div>
+            </form>
+        </div>
     </div>
     <script src="/epasale/public/js/validator.js"></script>
     <script>
         // function to validate the loogin form
-        function  LoginValidateForm() {
+        function LoginValidateForm() {
             // Get form input elements
             const email = document.getElementById('email');
             const password = document.getElementById('password');
