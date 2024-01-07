@@ -138,16 +138,17 @@ img {
 
 
 
-.button {
+button, .button {
     border: none;
     color: black;
     padding: 8px 12px;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+    display: inline-block;
+    text-wrap: nowrap;
 }
 
 button:hover {
@@ -232,4 +233,84 @@ button:active {
 
     background-color: white;
     color: lightgreen;
+}
+
+
+/* Profile */
+.profile-avatar {
+    color: white;
+    text-align: center;
+    line-height: 36px;
+    width: 36px;
+    height: 36px;
+    background: orange;
+    border-radius: 8px;
+    margin-right: 8px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.profile-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    padding: 8px;
+    background: transparent;
+    text-align: left;
+    z-index: 999;
+    /* min-width: 200px; */
+}
+
+.profile-container:hover .profile-menu {
+    display: block;
+}
+
+.profile-container:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.profile-description {
+    line-height: 15px;
+}
+
+.profile-description h4 {
+    margin: 0px;
+    line-height: 17px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.profile-description p {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+
+.profile-menu {
+    display: none;
+    position: absolute;
+    width: 180px;
+    background: white;
+    top: 40px;
+    right: 0px;
+    padding: 8px 4px 8px 4px;
+    border-radius: 8px;
+    z-index: 9999;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.05);
+}
+
+.profile-menu a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: black !important;
+    padding: 4px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.profile-menu a:hover {
+    background: rgba(0, 0, 0, 0.05);
 }

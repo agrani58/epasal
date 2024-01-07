@@ -1,3 +1,6 @@
+<?php require_once("./utils/connection.php"); ?>
+<?php require_once("./model/UserManager.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,72 +15,74 @@
     <!-- CSS Stylesheets End -->
 </head>
 
+<?php
+    if($_SERVER["REQUEST_METHOD"] === "POST") {
+        $userManager = new UserManager($conn);
+        $userManager->addUser($_POST);
+    }
+?>
+
 <body>
 
-    <div class="auth-form__container">
-    <div class="auth-form">
-        <h1 class="auth-form__h1">USER REGISTRATION</h1>
+    <div class="form__container">
+    <div class="form">
+        <h1 class="form__h1">USER REGISTRATION</h1>
 
-        <form class="auth-form__wrapper" onsubmit="return SignUpValidateForm()" id="registerForm">
-            <div class="auth-form__form-group">
-                <label class="auth-form__label" for="fame">First name *</label>
-                <input class="auth-form__input" type="text" id="fname" placeholder="Enter your first Name">
+        <form class="form__wrapper" onsubmit="return SignUpValidateForm()" id="registerForm" method="POST"> 
+            <div class="form-group">
+                <label class="form-label" for="fame">First name *</label>
+                <input class="form-input" type="text" id="fname" name="fname" placeholder="Enter your first Name">
                 <span class="error-msg"></span>
             </div>
-            <div class="auth-form__form-group">
-                <label class="auth-form__label" for="lame">Last name *</label>
-                <input class="auth-form__input" type="text" id="lname" placeholder="Enter your Last Name">
-                <span class="error-msg"></span>
-            </div>
-
-            <div class="auth-form__form-group">
-                <label class="auth-form__label" for="user_photo_url">Profile Picture</label>
-                <input class="auth-form__input" type="file" id="user_photo_url">
-            </div>
-
-            <div class="auth-form__form-group">
-                <label class="auth-form__label" for="email">Email *</label>
-                <input class="auth-form__input" type="text" id="email" placeholder="Enter your email">
+            <div class="form-group">
+                <label class="form-label" for="lame">Last name *</label>
+                <input class="form-input" type="text" id="lname" name="lname" placeholder="Enter your Last Name">
                 <span class="error-msg"></span>
             </div>
 
-            <div class="auth-form__form-group">
-                <label class="auth-form__label" for="contact">Contact *</label>
-                <input class="auth-form__input" type="text" id="contact" placeholder="980*******">
+            <div class="form-group">
+                <label class="form-label" for="email">Email *</label>
+                <input class="form-input" type="text" id="email" name="email" placeholder="Enter your email">
                 <span class="error-msg"></span>
             </div>
 
-            <div class="auth-form__form-group">
-                <label class="auth-form__label" for="gender">Gender</label>
-                <div class="auth-form__radio-group">
-                    <input type="radio" name="gender" value="male" id="gMale">
-                    <label class="auth-form__radio-label" for="gMale">Male</label>
+            <div class="form-group">
+                <label class="form-label" for="contact">Contact *</label>
+                <input class="form-input" type="text" id="contact" name="contact_no" placeholder="980*******">
+                <span class="error-msg"></span>
+            </div>
 
-                    <input type="radio" name="gender" value="female" id="gFemale">
-                    <label class="auth-form__radio-label" for="gFemale">Female</label>
+            <div class="form-group">
+                <label class="form-label" for="gender">Gender</label>
+                <div class="form__radio-group">
+                    <input type="radio" name="gender" value="M" id="gMale">
+                    <label class="form__radio-label" for="gMale">Male</label>
 
-                    <input type="radio" name="gender" value="other" id="gOthers">
-                    <label class="auth-form__radio-label" for="gOthers">Others</label>
+                    <input type="radio" name="gender" value="F" id="gFemale">
+                    <label class="form__radio-label" for="gFemale">Female</label>
+
+                    <input type="radio" name="gender" value="O" id="gOthers">
+                    <label class="form__radio-label" for="gOthers">Others</label>
                 </div>
             </div>
-            <div class="auth-form__form-group">
-                <label class="auth-form__label" for="password"> Password *</label>
-                <input class="auth-form__input" type="password" id="password" placeholder="Enter your password">
+            <div class="form-group">
+                <label class="form-label" for="password"> Password *</label>
+                <input class="form-input" type="password" id="password" name="password" placeholder="Enter your password">
                 <span class="error-msg"></span>
             </div>
-            <div class="auth-form__form-group">
-                <label class="auth-form__label" for="confirm_password">Confirm-Password *</label>
-                <input class="auth-form__input" type="password" id="confirm_password"
+            <div class="form-group">
+                <label class="form-label" for="confirm_password">Confirm-Password *</label>
+                <input class="form-input" type="password" id="confirm_password"
                     placeholder="Re-enter your password">
                 <span class="error-msg"></span>
             </div>
 
-            <div class="auth-form__form-group">
+            <div class="form-group">
                     <button type="submit" class="button btn-primary" style="width: 100%;">Sign-Up</button>
             </div>
 
-            <span class="auth-form__form-group  auth-form__form-links">
-                Already have an account? <a class="link auth-form__link" href="/epasale/login.php">Sign in</a>
+            <span class="form-group  form__form-links">
+                Already have an account? <a class="link form__link" href="/epasale/login.php">Sign in</a>
             </span>
         </form>
     </div>

@@ -38,7 +38,7 @@
     display: none;
   }
 
-  .auth-form__container {
+  .form__container {
     padding: 0.5rem !important;
   }
 }
@@ -48,7 +48,7 @@
     display: none;
   }
 
-  .auth-form__form-group {
+  .form-group {
     padding: 8px !important;
   }
 

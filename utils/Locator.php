@@ -70,7 +70,7 @@ class Locator {
     }
 
     public function showDistance() {
-        echo ("(<i class=\"fas fa-bicycle\"></i> " . $this->getDistance() . "km)");
+        return ("(<i class=\"fas fa-bicycle\"></i> " . $this->getDistance() . "km)");
     }
 }
 
