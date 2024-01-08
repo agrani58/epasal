@@ -1,3 +1,20 @@
+<?php require_once("./../utils/connection.php"); ?>
+
+<?php
+    function checkLogin() {
+        session_start();
+
+        if(!isset($_SESSION["user_id"])) {
+            header("Location: /epasale?error=err_no_access");
+            exit;
+        }
+
+        return true;
+    }
+
+    checkLogin();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,38 +39,12 @@
     <!-- google font end -->
 </head>
 
+
+
+
 <body>
-    <div class="sidebar__container"> <img class="sidebar__logo" src="/epasale/public/img/epasal-primary-logo.png"
-            alt="logo" />
-        <ul class="sidebar__nav">
-            <li class="sidebar__nav-link"> <a href="#">Dashboard <i class="fa fa-angle-down"></i></a>
-                <ul class="sidebar__nav-dropdown">
-                    <li><a href="#">Sales Overview</a></li>
-                    <li><a href="#">Inventory Status</a></li>
-                    <li><a href="#">Financial Overview</a></li>
-                    <li><a href="#">Customer Insights</a></li>
-                </ul>
-            </li>
-            <li class="sidebar__nav-link"> <a href="#">Manage Users <i class="fa fa-angle-down"></i></a>
-                <ul class="sidebar__nav-dropdown">
-                    <li><a href="#">Customer Profiles</a></li>
-                    <li><a href="#">Feedback and Reviews</a></li>
-                    <li><a href="#">Customer Support Tickets</a></li>
-                    <li><a href="#">User Overview</a></li>
-                </ul>
-            </li>
-            <li class="sidebar__nav-link"> <a href="#">Manage Shops <i class="fa fa-angle-down"></i></a>
-                <ul class="sidebar__nav-dropdown">
-                    <li><a href="#">Product Management</a></li>
-                    <li><a href="#">Customer Management</a></li>
-                    <li><a href="#">Order Processing</a></li>
-                    <li><a href="#">Marketing and Promotions</a></li>
-                    <li><a href="#">Security and Compliance</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="table__customer">
+    <?php include_once("./_sidenav.php"); ?>
+    <div class="dashboard__content">
         <table>
             <th>Name</th>
             <th>Contact</th>

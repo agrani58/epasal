@@ -43,7 +43,7 @@ class Validator {
 
     // Validate if a form element's value meets password length requirement
     static validatePassword(element, message) {
-        if (element.value.length < 8) {
+        if (element.value.length < 4) {
             this.showError(element, message);
             return false;
         }
