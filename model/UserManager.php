@@ -41,7 +41,6 @@ class UserManager {
 
                 if ($result->num_rows === 1) {
                     $record = $result->fetch_assoc();
-                    session_start();
                     $_SESSION["user_id"] = $record["user_id"];
                     $_SESSION["fullname"] = $record["fname"] . " " . $record["lname"];
                     $_SESSION["email"] = $record["email"];

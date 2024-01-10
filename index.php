@@ -57,7 +57,7 @@ function getDistance($lat, $lon) {
     <div class="seller__container">
         <?php
         $productManager = new ProductManager($conn);
-        $sellers =$productManager->getProductsBySellers(50);
+        $sellers =$productManager->getProductsBySellers(null, 50);
 
 
         foreach($sellers as $seller) {
