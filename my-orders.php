@@ -1,3 +1,4 @@
+<?php require_once("./utils/connection.php"); ?>
 <!DOCTYPE html>
 <html>
 

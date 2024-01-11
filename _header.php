@@ -31,7 +31,7 @@
                         </div>
 
                         <div class="profile-menu">
-                            <a href="/epasale/my-orders">My Orders</a>
+                            <a href="/epasale/my-orders.php">My Orders</a>
                             <a href="/epasale/?action=logout">Logout</a>
                         </div>
                     </button>';

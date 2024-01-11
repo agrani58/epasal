@@ -1,3 +1,4 @@
+<?php require_once("./utils/connection.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -106,7 +107,7 @@
 
       <br/>
 
-      <a href="/epasale/order.php" class="checinfo__a">
+      <a href="/epasale/my-orders.php" class="checinfo__a">
         <button class="button btn-primary">Complete Checkout</button></a>
     </div>
   </div>
