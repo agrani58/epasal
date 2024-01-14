@@ -135,6 +135,41 @@ class ProductManager {
 
         return $record;
     }
+
+    function getSearchedProduct($query, $catname) {
+        $seller = array();
+
+        $stmt = $this->conn->prepare("SELECT p.product_id, p.product_name, p.product_description, p.product_photo_url, p.unit_price, c.category_name
+        FROM 
+            tbl_products p
+        JOIN 
+            tbl_prd_categories pc ON p.product_id = pc.product_id
+        JOIN 
+            tbl_categories c ON pc.category_id = c.category_id
+        WHERE 
+            p.product_name LIKE ? AND c.category_name LIKE ? ;");
+
+        try {
+            $stmt->bind_param("ss", $query, $catname);
+            if ($stmt->execute()) {
+                $result = $stmt->get_result();
+                if ($result->num_rows > 0) {
+                    while ($product = $result->fetch_assoc()) {
+                        $seller[] = $product;
+                    }
+                }
+            } else {
+                throw new \Exception($stmt->error);
+            }
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            echo "<script>addAlert('$msg')</script>";
+        } finally {
+            $stmt->close();
+        }
+
+        return $seller;
+    }
 }
 
 ?>

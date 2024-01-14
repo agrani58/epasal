@@ -5,12 +5,13 @@
             <img src="/epasale/public/img/epasal-primary-logo.png" alt="ePasal - Online Food App" width="120px">
         </a>
 
-        <div class="header__searchbar">
-            <input type="text" placeholder="Search for products and categories" />
+        <form class="header__searchbar" action="search.php">
+            
+            <input name ="query" type="text" placeholder="Search for products and categories" />
             <div class="search_icon_background">
                 <span class="search_icon"><i class="fas fa-search"></i></span>
             </div>
-        </div>
+</form>
 
         <div class="header__nav">
             <ul>
@@ -60,13 +61,13 @@
     <div class="container">
         <nav>
             <ul>
-                <li><a href="" class="category">Chicken</a>
-                <li><a href="" class="category">Beef</a>
-                <li><a href="" class="category">Veg</a>
-                <li><a href="" class="category">Sweets & Deserts</a>
-                <li><a href="" class="category">Snacks</a>
-                <li><a href="" class="category">Juice</a>
-                <li><a href="" class="category">Soft Drinks</a>
+                <li><a href="/epasale/search.php?category=chicken" class="category">Chicken</a>
+                <li><a href="/epasale/search.php?category=Beef" class="category">Beef</a>
+                <li><a href="/epasale/search.php?category=Veg" class="category">Veg</a>
+                <li><a href="/epasale/search.php?category=Sweets" class="category">Sweets & Deserts</a>
+                <li><a href="/epasale/search.php?category=Snacks" class="category">Snacks</a>
+                <li><a href="/epasale/search.php?category=Juice" class="category">Juice</a>
+                <li><a href="/epasale/search.php?category=Soft Drink" class="category">Soft Drinks</a>
             </ul>
         </nav>
     </div>

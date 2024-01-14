@@ -22,8 +22,22 @@ require_once("./utils/connection.php"); ?>
 
     <?php
     $productManager = new ProductManager($conn);
-    $products = $productManager->getProducts($_GET["id"]);
-    $seller = $productManager->getSeller($_GET["id"]);
+
+    if(isset($_GET["query"])) {
+        $query =  "%" . $_GET["query"] . "%";
+    }else {
+        $query =  "%" . "" . "%";
+    }
+
+    if(isset($_GET["category"])) {
+        $catname =  "%" . $_GET["category"] . "%";
+    }else {
+        $catname =  "%" . "" . "%";
+    }
+
+    $products=$productManager->getSearchedProduct($query, $catname);
+
+
 
     $productsHTML = "";
 
