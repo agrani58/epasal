@@ -36,7 +36,7 @@ p {
     margin-bottom: 0px;
 }
 
-input {
+input, textarea, select {
     font: inherit;
 }
 

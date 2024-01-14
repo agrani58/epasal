@@ -7,102 +7,29 @@ class CartManager {
         $this->conn = $conn;
     }
 
-    public function addCart($postData) {
-        $stmt = $this->conn->prepare("INSERT INTO tbl_carts (user_id, product_id, quantity) VALUES (?, ?, ?);");
-
-        try {
-            $stmt->bind_param("iii", $_SESSION["user_id"], $postData["product_id"], $postData["quantity"]);
-
-            if ($stmt->execute()) {
-                $msg = 'Item added successfully with ' . $postData["quantity"] . ' qty.';
-                echo "<script>alert('$msg')</script>";
-            } else {
-                throw new \Exception($stmt->error);
-            }
-        } catch (\Exception $e) {
-            $msg = $e->getMessage();
-            echo "<script>alert('$msg')</script>";
-        }
-
-        try {
-            $updateStmt = $this->conn->prepare("UPDATE tbl_carts SET quantity = quantity + ? WHERE user_id = ? AND product_id = ?;");
-            $updateStmt->bind_param("iii", $postData["quantity"], $_SESSION["user_id"], $postData["product_id"]);
-
-            if ($stmt->errno == 1062) {
-                // Duplicate key error
-                if ($updateStmt->execute()) {
-                    $msg = 'Item added successfully with ' . $postData["quantity"] . ' qty.';
-                    echo "<script>alert('$msg')</script>";
-                } else {
-                    throw new \Exception($updateStmt->error);
-                }
-            } else {
-                throw new \Exception($stmt->error);
-            }
-        } catch (\Exception $e) {
-            $msg = $e->getMessage();
-            echo "<script>alert('$msg')</script>";
-        } finally {
-            $updateStmt->close();
-            $stmt->close();
-        }
-
-    }
-
-    public function updateCart($postData) {
-        $stmt = $this->conn->prepare("UPDATE tbl_carts SET quantity=? WHERE cartDetailID=?");
-
-        try {
-            $cartDetailID = (int) $postData['cartDetailID'];
-            $stmt->bind_param("ii", $postData["quantity"], $cartDetailID);
-
-            if ($stmt->execute()) {
-                $msg = 'Cart updated successfully.';
-                echo "<script>alert('$msg.')</script>";
-            } else {
-                throw new \Exception($stmt->error);
-            }
-        } catch (\Exception $e) {
-            $msg = $e->getMessage();
-            echo "<script>alert('$msg')</script>";
-        } finally {
-            $stmt->close();
-        }
-    }
-
-    public function deleteCart($postData) {
-        $stmt = $this->conn->prepare("DELETE FROM tbl_carts WHERE cartDetailID=?");
-
-        try {
-            $cartDetailID = (int) $postData['cartDetailID'];
-            $stmt->bind_param("i", $cartDetailID);
-
-            if ($stmt->execute()) {
-                $msg = "Cart deleted successfully";
-                echo "<script>alert('$msg')</script>";
-            } else {
-                throw new \Exception($stmt->error);
-            }
-        } catch (\Exception $e) {
-            $msg = $e->getMessage();
-            echo "<script>alert('$msg')</script>";
-        } finally {
-            $stmt->close();
-        }
-    }
-
-    public function getAllCarts($user_id) {
+    public function getProductsFromCarts($cartJson) {
         $carts = array();
-        $stmt = $this->conn->prepare("SELECT cartDetailID, user_id, products.product_id, quantity, sellerID, product_name, unit_price, photo_url  FROM tbl_carts
-        inner join products on tbl_carts.product_id = products.product_id where user_id = ?");
+    
+        // Decode the JSON string to get the cart variable as an associative array
+        $cart = json_decode($cartJson, true);
+    
+        // Create a string for the product IDs in the cart to be used in the SQL query
+        $productIds = implode(",", array_keys($cart));
 
+        if($productIds === "") $productIds = "NULL";
+    
+        $stmt = $this->conn->prepare("SELECT product_id, product_name, unit_price, product_photo_url  
+            FROM tbl_products 
+            WHERE product_id IN ($productIds)");
+    
         try {
-            $stmt->bind_param("i", $user_id);
             if ($stmt->execute()) {
                 $result = $stmt->get_result();
                 if ($result->num_rows > 0) {
-                    while ($cart = $result->fetch_assoc()) {
-                        $carts[] = $cart;
+                    while ($product = $result->fetch_assoc()) {
+                        // Add quantity information from the cart variable to each product
+                        $product['quantity'] = $cart[$product['product_id']];
+                        $carts[] = $product;
                     }
                 }
             } else {
@@ -114,7 +41,7 @@ class CartManager {
         } finally {
             $stmt->close();
         }
-
+    
         return $carts;
     }
 

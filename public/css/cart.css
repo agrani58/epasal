@@ -30,8 +30,8 @@
 	padding-left: 10px; */
 	text-align: center;
 	object-fit: cover;
-	width: 266px;
-	height: 150px;
+	width: 200px;
+    aspect-ratio: 16 / 9;
 }
 .cart > .cart_Product__img{
 	transform: scale(1.04);
@@ -40,6 +40,10 @@
 	padding: 10px;
 	width: 100%;
 	position: relative;
+}
+
+.cart__info p {
+	line-height: 1.6;
 }
 .cart_product_title, .cart_product_discription{
 	margin-bottom: 10px;

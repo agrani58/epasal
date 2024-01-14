@@ -29,7 +29,7 @@ require_once("./utils/connection.php"); ?>
 
     foreach ($products as $product) {
         $productsHTML .= '  
-        <div class="seller__card product__card">
+        <div class="seller__card product__card" data-pid="'. $product["product_id"] .'">
             <a class="seller__a" href="/epasale/product-detail.php?id=' . $product["product_id"] . '">
                 <img class="qtygroup__cardimg" src="' . $product["product_photo_url"] . '" alt="Productimage">
             </a>
@@ -73,8 +73,6 @@ require_once("./utils/connection.php"); ?>
 
     <!-- Includes footer partial from ./_footer.php -->
     <?php include_once("_footer.php"); ?>
-
-    <script src="./public/js/add-quantity.js" defer></script>
 </body>
 <!-- makes sure the js code runs after html is parsed -->
 

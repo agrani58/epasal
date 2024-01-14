@@ -91,6 +91,17 @@
     border-radius: 8px;
 }
 
+.chec__billing .form-group {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 14px;
+}
+
+.chec__billing .form-group .form-input {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
 
 .chec__orderinfotable {
     width: 100%;

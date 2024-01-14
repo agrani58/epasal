@@ -1,4 +1,6 @@
 <?php require_once("./utils/connection.php"); ?>
+<?php require_once("./model/OrderManager.php"); ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -18,91 +20,57 @@
     <?php include_once("_header.php"); ?>
 
 
-    <br/>
+
+
+    <br />
     <div class="order__section">
         <div class="order__container">
             <h3 class="order__h3">My Orders</h3>
             <table class="order__table">
-                <tr>
-                    <td class="color"><b> Order Id</b></td>
-                    <td class="color"><b> No. of products</b></td>
-                    <td class="color"><b> Address</b></td>
-                    <td class="color"><b> Order Date</b></td>
-                    <td class="color"><b> Amount</b></td>
-                    <td class="color"><b> Order Status</b></td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>2</td>
-                    <td>Samakhushi, Kathmandu</td>
-                    <td> 2023-10-9 (11:23 AM)</td>
-                    <td>Rs. 150</td>
-                    <td>Delivered</td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>2</td>
-                    <td>Samakhushi, Kathmandu</td>
-                    <td> 2023-10-9 (11:23 AM)</td>
-                    <td>Rs. 150</td>
-                    <td>Delivered</td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>2</td>
-                    <td>Samakhushi, Kathmandu</td>
-                    <td> 2023-10-9 (11:23 AM)</td>
-                    <td>Rs. 150</td>
-                    <td>Delivered</td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>2</td>
-                    <td>Samakhushi, Kathmandu</td>
-                    <td> 2023-10-9 (11:23 AM)</td>
-                    <td>Rs. 150</td>
-                    <td>Delivered</td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>2</td>
-                    <td>Samakhushi, Kathmandu</td>
-                    <td> 2023-10-9 (11:23 AM)</td>
-                    <td>Rs. 150</td>
-                    <td>Delivered</td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>2</td>
-                    <td>Samakhushi, Kathmandu</td>
-                    <td> 2023-10-9 (11:23 AM)</td>
-                    <td>Rs. 150</td>
-                    <td>Delivered</td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>2</td>
-                    <td>Samakhushi, Kathmandu</td>
-                    <td> 2023-10-9 (11:23 AM)</td>
-                    <td>Rs. 150</td>
-                    <td>Delivered</td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td>2</td>
-                    <td>Samakhushi, Kathmandu</td>
-                    <td> 2023-10-9 (11:23 AM)</td>
-                    <td>Rs. 150</td>
-                    <td>Delivered</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Order Status</th>
+                        <th>Payment Method</th>
+                        <th>Total Amount</th>
+                        <th>Order Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $orderManager = new OrderManager($conn);
+                    $orders = $orderManager->getCustomerOrders($_SESSION["user_id"]);
+
+                    // Display the order table
+                    if (!empty($orders)) {
+                        foreach ($orders as $order) {
+                            echo '<tr>';
+                            echo '<td>' . $order['order_id'] . '</td>';
+                            echo '<td>' . $order['order_status'] . '</td>';
+                            echo '<td>' . $order['payment_method'] . '</td>';
+                            echo '<td>' . $order['total_amount'] . '</td>';
+                            echo '<td>' . $order['created_at'] . '</td>';
+                            echo '<td><a href="/epasale/invoice.php?orderID=' . $order['order_id'] . '">Invoice</a></td>';
+                            echo '</tr>';
+                        }
+
+                        echo '</tbody>';
+                        echo '</table>';
+                    } else {
+                        echo '<p>No orders found.</p>';
+                    }
+
+                    ?>
+                </tbody>
 
             </table>
         </div>
 
-        <br/>
-        
-       <!-- Includes footer partial from ./_footer.php -->
-        <?php include_once("_footer.php"); ?> 
+        <br />
+
+        <!-- Includes footer partial from ./_footer.php -->
+        <?php include_once("_footer.php"); ?>
 
     </div>
 </body>
