@@ -7,9 +7,9 @@ BEM stands for Block Element Modifier. It's a popular methodology for writing CS
 BEFORE
 <div class="product-cart">
     <img src="./img/products/Laddu.jpg" class="img" />
-    <div class="product-info">
-        <h3 class="product-name">Laddu</h3>
-        <P class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+    <div class="cart__info">
+        <h3 class="cart__h3">Laddu</h3>
+        <P class="cart__p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
         <div class="quantity">
             <button class="btn">-</button>
             <div class="no.">1</div>
@@ -48,15 +48,15 @@ Here's a breakdown of the three components:
 Block:
 
 Represents a standalone and meaningful UI component. It can exist independently and has its own specific functionality.
-Examples: Navigation bar, button, product card.
+Examples: Navigation bar, button, product seller__card.
 Element:
 
 Represents a part of a block that contributes to its functionality but doesn't have its own standalone meaning.
-Examples: Navigation bar's list item, button's icon, product card's price tag.
+Examples: Navigation bar's list item, button's icon, product seller__card's price tag.
 Modifier:
 
 Adds variations to the appearance, state, or behavior of a block or element without introducing new classes.
-Examples: button--primary, product-card--active, navigation-item--disabled.
+Examples: button--primary, product-seller__card--active, navigation-item--disabled.
 Benefits of using BEM:
 
 Modular code: BEM promotes a component-based approach, making your code more modular and easier to maintain.

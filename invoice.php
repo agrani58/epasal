@@ -1,3 +1,5 @@
+<?php require_once("./utils/connection.php"); ?>
+<?php require_once("./model/OrderManager.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,103 +7,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ePasal Table</title>
-    
-       <!-- CSS Stylesheets Start -->
-   <link rel="stylesheet" href="/epasale/public/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300&display=swap"
-        rel="stylesheet" />
+    <!-- CSS Stylesheets Start -->
+    <link rel="stylesheet" href="/epasale/public/css/style.css">
+    <link rel="stylesheet" href="/epasale/public/css/order.css">
     <!-- CSS Stylesheets End -->
 </head>
 
 <body>
-<!-- Includes header partial from ./_header.php -->
-<?php include_once("_header.php"); ?>
+    <!-- Includes header partial from ./_header.php -->
+    <?php include_once("_header.php"); ?>
+
+    <?php
+    $orderManager = new OrderManager($conn);
+
+    $order_id = $_GET["orderID"];
+    $invoice = $orderManager->getInvoice($order_id);
+    ?>
 
     <!-- Table Start -->
-    <div class="container">
-        <div class="head-section">
+    <div class="invoice__container">
+        <div class="invoice__header">
             <div class="row">
                 <div class="col-6">
-                    <img  src ="/epasale/public/img/epasal-primary-logo.png" class="logo">
+                    <img class="invoice__brand" src="/epasale/public/img/epasal-primary-logo.png">
                 </div>
                 <div class="col-6">
-                    <div class="head-detail">
+                    <div class="invoice__headertext">
                         <h1 class="text-white ">INVOICE</h1>
-                        <p class="text-white">Invoice No.:00001</p>
-                        <p class="text-white">Date: 2023-05-10</p>
+                        <p class="text-white">Invoice No.:
+                            <?php echo $invoice["order_id"]; ?>
+                        </p>
+                        <p class="text-white">Date:
+                            <?php echo date("Y-m-d", strtotime($invoice["order_date"])); ?>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="body-section">
+        <div class="invoice__body">
             <div class="row">
                 <div class="col-6">
-                    <h1 class="heading">Bill From:</h1>
-                    <p class="sub-heading">e Pasale  </p>
-                    <p class="sub-heading">Kathmandu  </p>
-                    <p class="sub-heading">9874569878  </p> 
+                    <h1 class="invoice__title">Bill From:</h1>
+                    <p class="invoice__subtitle">ePasale</p>
+                    <p class="invoice__subtitle">Kathmandu</p>
+                    <p class="invoice__subtitle">98XXXXXXXX</p>
                 </div>
                 <div class="col-6">
-                    <h1 class="heading text-right">Bill To:</h1>
-                    <p class="sub-heading text-right">Ram Thapa  </p>
-                    <p class="sub-heading text-right">Pokhara </p>
-                    <p class="sub-heading text-right">9874521452  </p>
+                    <h1 class="invoice__title text-right">Bill To:</h1>
+                    <p class="invoice__subtitle text-right">
+                        <?php echo $invoice["fname"] . " " . $invoice["lname"]; ?>
+                    </p>
+                    <p class="invoice__subtitle text-right">
+                        <?php echo $invoice["address"]; ?>
+                    </p>
+                    <p class="invoice__subtitle text-right">
+                        <?php echo $invoice["contact_no"]; ?>
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="body-section">
-            <table>
+        <div class="invoice__body">
+            <table class="invoice__table">
                 <thead>
                     <tr>
-                        <th class="right">Items</th>
-                        <th class="right">Quantity</th>
-                        <th class="right">Price</th>
+                        <th>Items</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
                         <th>Amount</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="right"> Item 1</td>
-                        <td class="right"> 1</td>
-                        <td class="right"> Rs.0</td>
-                        <td> Rs.000</td>     
-                    </tr>
-                    <tr>
-                        <td class="right"> Item 2</td>
-                        <td class="right"> 1</td>
-                        <td class="right"> Rs.0</td>
-                        <td> Rs.000</td>
-                    </tr>
-                    <tr>
-                        <td class="right"> Item 3</td>
-                        <td class="right"> 1</td>
-                        <td class="right"> Rs.0</td>
-                        <td> Rs.000</td>
-                    </tr>
-                    <tr>
-                        <td class="right"> Item 4</td>
-                        <td class="right"> 1</td>
-                        <td class="right"> Rs.0</td>
-                        <td> Rs.000</td>
-                    </tr>
-                    <tr>
-                        <td class="right"> Item 5</td>
-                        <td class="right"> 1</td>
-                        <td class="right"> Rs.0</td>
-                        <td> Rs.000</td>
-                    </tr>
-                    <tr>
-                        <td colspan ="3" class="right"> Grand Total</td>
-                        <td> Rs. 0000</td>
-                    </tr>
+                    <?php
+                    // Call the generateInvoiceItems method with the order ID
+                    $orderManager->generateInvoiceItems($order_id);
+                    ?>
                 </tbody>
             </table>
-            <h3 class="heading">Payment Status: Paid</h3>
-            <h3 class="heading">Payment Mode: Cash on Delivery</h3>
+            <h3 class="invoice__title">Payment Status:
+                <?php echo $invoice["payment_status"]; ?>
+            </h3>
+            <h3 class="invoice__title">Payment Mode:
+                <?php echo $invoice["payment_method"]; ?>
+            </h3>
         </div>
     </div>
     <!-- Table End -->

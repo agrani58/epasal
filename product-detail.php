@@ -1,3 +1,7 @@
+<?php 
+require_once("./model/ProductManager.php");
+require_once("./utils/connection.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,13 +11,7 @@
     <title>ePasal - Home Page</title>
 
     <!-- CSS Stylesheets Start -->
-   <link rel="stylesheet" href="/epasale/public/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300&display=swap"
-        rel="stylesheet" />
+    <link rel="stylesheet" href="/epasale/public/css/style.css">
     <!-- CSS Stylesheets End -->
 </head>
 
@@ -21,72 +19,39 @@
     <!-- Includes header partial from ./_header.php -->
     <?php include_once("_header.php"); ?>
 
-    <div class="product-detail">
+    <?php
+        $productManager = new ProductManager($conn);
+        $product = $productManager->getProductById($_GET["id"]);
+    ?>
 
 
-        <div class="container">
-            <div class="row">
-                <div class="col-7">
-                    <div class="product-info">
-                        <img src="/epasale/public/img/products/biryani.jpg" class="img" />
-                        <div class="product-info">
-                            <h2>Chowmein</h2>
-                            <p>NRs:100</p>
-                            <div class="quantity"><!-- div for quantity starts-->
-                                <label for="quantity">Qty:</label>
-                                <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                                    <button class="decrement">-</button>
-                                    <div class="quantity_box">1</div>
-                                    <button class="increment">+</button>
-                                </div><!-- div for quantity control ends-->
-                            </div><!-- div for quantity ends-->
-                            <h1 class="detail">Description</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                        </div>
+    <div class="just">
+        <div class="prddetail__wrapper">
+            <div class="prddetail">
+                <img src="<?php echo $product["product_photo_url"]; ?>" class="prddetail__img" />
+                <div class="prddetail__info product__card">
+                    <h3 class="prddetail__infotitle seller__cardtitle"><?php echo $product["product_name"]; ?></h3>
+                    <h4 class="prddetail__infodesc">Rs. <?php echo $product["unit_price"]; ?></h4>
+                    <div class="qtygroup">
+                        <button class="qtygroup__btn--dec">-</button>
+                        <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
+                        <button class="qtygroup__btn--inc">+</button>
                     </div>
-                </div>
-                <div class="col-5">
-                    <div class="product-recommendation">
-                        <div class="border">
-                            <p class="store">Product Recommendations</p>
-                        </div>
-                        <div class="product">
-                            <img src="/epasale/public/img/products/C Momo.jpeg" class="recommendation-picture" />
-                            <div class="product-info">
-                                <h3 class="product-name">MoMo</h3>
-                                <P class="discription">Price: Rs 200</P>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <img src="/epasale/public/img/products/cheese pizza.jpg" class="recommendation-picture" />
-                            <div class="product-info">
-                                <h3 class="product-name">Pizza</h3>
-                                <P class="discription">Price: Rs .250</P>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <img src="/epasale/public/img/products/Jalebi.jpg" class="recommendation-picture" />
-                            <div class="product-info">
-                                <h3 class="product-name">Burger</h3>
-                                <P class="discription">Price: Rs.200</P>
-                            </div>
-                        </div>
-                        <div class="product">
-                            <img src="/epasale/public/img/products/Chocolate Milk Shake.jpg"
-                                class="recommendation-picture" />
-                            <div class="product-info">
-                                <h3 class="product-name">Coffee</h3>
-                                <p class="discription">Price: Rs.150</p>
-                            </div>
-                        </div>
+                    <div class="prddetail__btngroup">
+                        <button class="button btn-primary">Buy Now</button>
+                        <button class="button btn-primary seller__btn--cart">Add To Cart</button>
                     </div>
+                    
+                    <br/>
+                    <p style="line-height: 1.6"><?php echo $product["product_description"]; ?>
+                    
                 </div>
             </div>
         </div>
     </div>
 
-   <!-- Includes footer partial from ./_footer.php -->
-   <?php include_once("_footer.php"); ?> 
+    <!-- Includes footer partial from ./_footer.php -->
+    <?php include_once("_footer.php"); ?>
 </body>
 
 </html>

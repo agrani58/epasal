@@ -1,3 +1,6 @@
+<?php require_once("./utils/Locator.php");
+require_once("./model/ProductManager.php");
+require_once("./utils/connection.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,417 +11,159 @@
 
     <!-- CSS Stylesheets Start -->
     <link rel="stylesheet" href="/epasale/public/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300&display=swap"
-        rel="stylesheet" />
     <!-- CSS Stylesheets End -->
 </head>
+<?php
+
+
+// Performs logout action
+if (isset($_GET["action"]) && $_GET["action"] === "logout") {
+    session_destroy();
+    unset($_SESSION["user_id"]);
+    unset($_SESSION["email"]);
+    unset($_SESSION["fullname"]);
+    header("Location: /epasale");
+}
+
+if (isset($_POST["submit"])) {
+    $_SESSION["latitude"] = $_POST["latitude"];
+    $_SESSION["longitude"] = $_POST["longitude"];
+}
+
+
+function getDistance($lat, $lon) {
+    if (isset($_SESSION["latitude"]) && isset($_SESSION["longitude"])) {
+        $source = new GeoLocation($_SESSION["latitude"], $_SESSION["longitude"]);
+        $target = new GeoLocation($lat, $lon);
+
+        $locator = new Locator($source, $target);
+        return $locator->showDistance();
+    }
+}
+?>
 
 <body>
 
     <!-- Includes header partial from ./_header.php -->
-   <?php include_once("_header.php"); ?> 
+    <?php include_once("_header.php"); ?>
 
- 
-    <!-- Products Start -->
-    <div class="seller-container">
-        <div class="container">
-            <div class="seller-group">
-                <div class="seller-profile">
-                    <div class="seller-info">
-                        <h3>Hymalayan Java</h3>
-                        <h5>Baneshowr, Kathmandu</h5>
+    <!-- 
+        Products Start
+        .seller__container contains all .seller(s) sections
+        .seller contains .seller__profile and all seller__card product__card sections
+     -->
+
+
+    <div class="seller__container">
+        <?php
+        $productManager = new ProductManager($conn);
+        $sellers =$productManager->getProductsBySellers(null, 50);
+
+
+        foreach($sellers as $seller) {
+            $productsHTML = "";
+
+            foreach($seller["products"] as $product) {
+                $productsHTML .= '  
+                <div class="seller__card product__card" data-pid="'. $product["product_id"] .'">
+                    <a class="seller__a" href="/epasale/product-detail.php?id='. $product["product_id"] .'">
+                        <img class="qtygroup__cardimg" src="'. $product["product_photo_url"] .'" alt="Productimage">
+                    </a>
+                    <div class="seller__cardbody">
+                        <a class="seller__a" href="/epasale/product-detail.php?id='. $product["product_id"] .'">
+                            <h3 class="seller__cardtitle">'. $product["product_name"] .'</h3>
+                        </a>
+                        <p class="seller__cardsubtitle">NRs. '. $product["unit_price"] .'</p>
+                        <div class="qtygroup">
+                            <label>Qty: </label>
+                            <button class="qtygroup__btn--dec">-</button>
+                            <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
+                            <button class="qtygroup__btn--inc">+</button>
+                        </div>
+                        <button class="seller__btn--cart" type="button">Add to Cart</button>
                     </div>
-                    <button class="button info button-small">See More</button>
+                </div>';
+            }
+
+            echo '
+            <div class="seller">
+                <div class="seller__info">
+                    <div class="seller__profile">
+                        <a class="seller__a" href="/epasale/seller-page.php?id='. $seller["user_id"] .'">
+                            <img class="seller__profile-avatar" src="/epasale/public/img/shops/shop.jpg" width="40px" />
+                        </a>
+                        <div class="seller__profile-content">
+                            <h3>'. $seller["fname"] . ' ' . $seller['lname']  .'</h3>
+                            <h4>'. $seller["province"] .' '. getDistance(27.72407583495227, 85.36264737728318) .'</h4>
+                        </div>
+                    </div>
+                    <a href="/epasale/seller-page.php?id='. $seller["user_id"] .'" class="seller__a">
+                        <button class="button button-small btn-primary">See More</button>
+                    </a>
                 </div>
-                <div class="gallery prd-grp">
-                    <div class="content prd-card">
-                        <img  class="prd-card__img" src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
-                        
-                        
-                        <div class="prd-card__body">
-                            <h2 class="prd-card__h2">Veg Chowmein</h2>
-                            <p class="prd-card__p">NRs. 100.00</p>
-                            <div class="prd-card__qty-grp">
-                                <label class="prd-card__label">Qty:</label>
-                                <input class="prd-card__qty" type="number"
-                                name="quantity" value="1" min="1" max="10" size="3" />
-                            </div>
-
-                            <button class="prd-card__button" type="button">Add to Cart</button> 
-                        </div> 
-                    </div>
+        
+                <div class="seller__content"> '. $productsHTML .' </div>
+            </div>';
+        }
+        ?>
 
 
-                    <div class="content prd-card">
-                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
-                        <h2>Veg Momo</h2>
-                        <p>NRs:100</p>
-
-
-                        <div class="quantity"><!-- div for quantity starts-->
-                            <label for="quantity">Qty:</label>
-                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                                <button class="decrement">-</button>
-                                <div class="quantity_box">1</div>
-                                <input type="number" min="1" max="10" size="3" />
-                                <button class="increment">+</button>
-                            </div><!-- div for quantity control ends-->
-                        </div><!-- div for quantity ends-->
-
-                        <div class="card__footer"><!-- div for card__footer-->
-                            <div class="action"><!-- action includes color changing while hovering-->
-                                <button type="button">Add to Cart</button>
-                            </div><!--action ends-->
-                        </div><!--div for card footer ends-->
-                    </div>
-
-                    <div class="content prd-card">
-                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
-                        <h2>Chowmein</h2>
-                        <p>NRs:100</p>
-
-
-                        <div class="quantity"><!-- div for quantity starts-->
-                            <label for="quantity">Qty:</label>
-                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                                <button class="decrement">-</button>
-                                <div class="quantity_box">1</div>
-                                <input type="number" min="1" max="10" size="3" />
-                                <button class="increment">+</button>
-                            </div><!-- div for quantity control ends-->
-                        </div><!-- div for quantity ends-->
-
-                        <div class="card__footer"><!-- div for card__footer-->
-                            <div class="action"><!-- action includes color changing while hovering-->
-                                <button type="button">Add to Cart</button>
-                            </div><!--action ends-->
-                        </div><!--div for card footer ends-->
-                    </div>
-
-
-                    <div class="content prd-card">
-                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
-                        <h2>Veg Momo</h2>
-                        <p>NRs:100</p>
-
-
-                        <div class="quantity"><!-- div for quantity starts-->
-                            <label for="quantity">Qty:</label>
-                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                                <button class="decrement">-</button>
-                                <div class="quantity_box">1</div>
-                                <input type="number" min="1" max="10" size="3" />
-                                <button class="increment">+</button>
-                            </div><!-- div for quantity control ends-->
-                        </div><!-- div for quantity ends-->
-
-                        <div class="card__footer"><!-- div for card__footer-->
-                            <div class="action"><!-- action includes color changing while hovering-->
-                                <button type="button">Add to Cart</button>
-                            </div><!--action ends-->
-                        </div><!--div for card footer ends-->
-                    </div>
-
-                    <div class="content prd-card">
-                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
-                        <h2>Chowmein</h2>
-                        <p>NRs:100</p>
-
-
-                        <div class="quantity"><!-- div for quantity starts-->
-                            <label for="quantity">Qty:</label>
-                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                                <button class="decrement">-</button>
-                                <div class="quantity_box">1</div>
-                                <input type="number" min="1" max="10" size="3" />
-                                <button class="increment">+</button>
-                            </div><!-- div for quantity control ends-->
-                        </div><!-- div for quantity ends-->
-
-                        <div class="card__footer"><!-- div for card__footer-->
-                            <div class="action"><!-- action includes color changing while hovering-->
-                                <button type="button">Add to Cart</button>
-                            </div><!--action ends-->
-                        </div><!--div for card footer ends-->
-                    </div>
-
-
-                    <div class="content prd-card">
-                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
-                        <h2>Veg Momo</h2>
-                        <p>NRs:100</p>
-
-
-                        <div class="quantity"><!-- div for quantity starts-->
-                            <label for="quantity">Qty:</label>
-                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                                <button class="decrement">-</button>
-                                <div class="quantity_box">1</div>
-                                <input type="number" min="1" max="10" size="3" />
-                                <button class="increment">+</button>
-                            </div><!-- div for quantity control ends-->
-                        </div><!-- div for quantity ends-->
-
-                        <div class="card__footer"><!-- div for card__footer-->
-                            <div class="action"><!-- action includes color changing while hovering-->
-                                <button type="button">Add to Cart</button>
-                            </div><!--action ends-->
-                        </div><!--div for card footer ends-->
-                    </div>
-
-                    <div class="content prd-card">
-                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
-                        <h2>Boilar Momo</h2>
-                        <p>NRs:100</p>
-
-
-                        <div class="quantity"><!-- div for quantity starts-->
-                            <label for="quantity">Qty:</label>
-                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                                <button class="decrement">-</button>
-                                <div class="quantity_box">1</div>
-                                <input type="number" min="1" max="10" size="3" />
-                                <button class="increment">+</button>
-                            </div><!-- div for quantity control ends-->
-                        </div><!-- div for quantity ends-->
-
-                        <div class="card__footer"><!-- div for card__footer-->
-                            <div class="action"><!-- action includes color changing while hovering-->
-                                <button type="button">Add to Cart</button>
-                            </div><!--action ends-->
-                        </div><!--div for card footer ends-->
-                    </div>
-
-                    <div class="content prd-card">
-                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
-                        <h2>Veg paneer Momo</h2>
-                        <p>NRs:100</p>
-
-
-                        <div class="quantity"><!-- div for quantity starts-->
-                            <label for="quantity">Qty:</label>
-                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                                <button class="decrement">-</button>
-                                <div class="quantity_box">1</div>
-                                <input type="number" min="1" max="10" size="3" />
-                                <button class="increment">+</button>
-                            </div><!-- div for quantity control ends-->
-                        </div><!-- div for quantity ends-->
-
-                        <div class="card__footer"><!-- div for card__footer-->
-                            <div class="action"><!-- action includes color changing while hovering-->
-                                <button type="button">Add to Cart</button>
-                            </div><!--action ends-->
-                        </div><!--div for card footer ends-->
-                    </div>
-                </div>
-            </div>
-
-            <div class="seller-group">
-                <div class="seller-profile">
-                    <div class="seller-info">
-                        <h3>Hymalayan Java</h3>
-                        <h5>Baneshowr, Kathmandu</h5>
-                    </div>
-                    <button class="button info button-small">See More</button>
-                </div>
-                <div class="gallery">
-                    <div class="content">
-                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
-                        <h2>Chowmein</h2>
-                        <p>NRs:100</p>
-
-
-                        <div class="quantity"><!-- div for quantity starts-->
-                            <label for="quantity">Qty:</label>
-                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                                <button class="decrement">-</button>
-                                <div class="quantity_box">1</div>
-                                <input type="number" min="1" max="10" size="3" />
-                                <button class="increment">+</button>
-                            </div><!-- div for quantity control ends-->
-                        </div><!-- div for quantity ends-->
-
-                        <div class="card__footer"><!-- div for card__footer-->
-                            <div class="action"><!-- action includes color changing while hovering-->
-                                <button type="button">Add to Cart</button>
-                            </div><!--action ends-->
-                        </div><!--div for card footer ends-->
-                    </div>
-
-
-                    <div class="content">
-                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
-                        <h2>Veg Momo</h2>
-                        <p>NRs:100</p>
-
-
-                        <div class="quantity"><!-- div for quantity starts-->
-                            <label for="quantity">Qty:</label>
-                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                                <button class="decrement">-</button>
-                                <div class="quantity_box">1</div>
-                                <input type="number" min="1" max="10" size="3" />
-                                <button class="increment">+</button>
-                            </div><!-- div for quantity control ends-->
-                        </div><!-- div for quantity ends-->
-
-                        <div class="card__footer"><!-- div for card__footer-->
-                            <div class="action"><!-- action includes color changing while hovering-->
-                                <button type="button">Add to Cart</button>
-                            </div><!--action ends-->
-                        </div><!--div for card footer ends-->
-                    </div>
-                    <div class="content">
-                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
-                        <h2>Chowmein</h2>
-                        <p>NRs:100</p>
-
-
-                        <div class="quantity"><!-- div for quantity starts-->
-                            <label for="quantity">Qty:</label>
-                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                                <button class="decrement">-</button>
-                                <div class="quantity_box">1</div>
-                                <input type="number" min="1" max="10" size="3" />
-                                <button class="increment">+</button>
-                            </div><!-- div for quantity control ends-->
-                        </div><!-- div for quantity ends-->
-
-                        <div class="card__footer"><!-- div for card__footer-->
-                            <div class="action"><!-- action includes color changing while hovering-->
-                                <button type="button">Add to Cart</button>
-                            </div><!--action ends-->
-                        </div><!--div for card footer ends-->
-                    </div>
-
-
-                    <div class="content">
-                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
-                        <h2>Veg Momo</h2>
-                        <p>NRs:100</p>
-
-
-                        <div class="quantity"><!-- div for quantity starts-->
-                            <label for="quantity">Qty:</label>
-                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                                <button class="decrement">-</button>
-                                <div class="quantity_box">1</div>
-                                <input type="number" min="1" max="10" size="3" />
-                                <button class="increment">+</button>
-                            </div><!-- div for quantity control ends-->
-                        </div><!-- div for quantity ends-->
-
-                        <div class="card__footer"><!-- div for card__footer-->
-                            <div class="action"><!-- action includes color changing while hovering-->
-                                <button type="button">Add to Cart</button>
-                            </div><!--action ends-->
-                        </div><!--div for card footer ends-->
-                    </div>
-                    <div class="content">
-                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
-                        <h2>Chowmein</h2>
-                        <p>NRs:100</p>
-
-
-                        <div class="quantity"><!-- div for quantity starts-->
-                            <label for="quantity">Qty:</label>
-                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                                <button class="decrement">-</button>
-                                <div class="quantity_box">1</div>
-                                <input type="number" min="1" max="10" size="3" />
-                                <button class="increment">+</button>
-                            </div><!-- div for quantity control ends-->
-                        </div><!-- div for quantity ends-->
-
-                        <div class="card__footer"><!-- div for card__footer-->
-                            <div class="action"><!-- action includes color changing while hovering-->
-                                <button type="button">Add to Cart</button>
-                            </div><!--action ends-->
-                        </div><!--div for card footer ends-->
-                    </div>
-
-
-                    <div class="content">
-                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
-                        <h2>Veg Momo</h2>
-                        <p>NRs:100</p>
-
-
-                        <div class="quantity"><!-- div for quantity starts-->
-                            <label for="quantity">Qty:</label>
-                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                                <button class="decrement">-</button>
-                                <div class="quantity_box">1</div>
-                                <input type="number" min="1" max="10" size="3" />
-                                <button class="increment">+</button>
-                            </div><!-- div for quantity control ends-->
-                        </div><!-- div for quantity ends-->
-
-                        <div class="card__footer"><!-- div for card__footer-->
-                            <div class="action"><!-- action includes color changing while hovering-->
-                                <button type="button">Add to Cart</button>
-                            </div><!--action ends-->
-                        </div><!--div for card footer ends-->
-                    </div>
-                    <div class="content">
-                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
-                        <h2>Boilar Momo</h2>
-                        <p>NRs:100</p>
-
-
-                        <div class="quantity"><!-- div for quantity starts-->
-                            <label for="quantity">Qty:</label>
-                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                                <button class="decrement">-</button>
-                                <div class="quantity_box">1</div>
-                                <input type="number" min="1" max="10" size="3" />
-                                <button class="increment">+</button>
-                            </div><!-- div for quantity control ends-->
-                        </div><!-- div for quantity ends-->
-
-                        <div class="card__footer"><!-- div for card__footer-->
-                            <div class="action"><!-- action includes color changing while hovering-->
-                                <button type="button">Add to Cart</button>
-                            </div><!--action ends-->
-                        </div><!--div for card footer ends-->
-                    </div>
-                    <div class="content">
-                        <img src="/epasale/public/img/products/veg_momo.jpg" alt="Product">
-                        <h2>Veg paneer Momo</h2>
-                        <p>NRs:100</p>
-
-
-                        <div class="quantity"><!-- div for quantity starts-->
-                            <label for="quantity">Qty:</label>
-                            <div class="quantity_control"> <!--div for quantity control(+,-) starts.-->
-                                <button class="decrement">-</button>
-                                <div class="quantity_box">1</div>
-                                <input type="number" min="1" max="10" size="3" />
-                                <button class="increment">+</button>
-                            </div><!-- div for quantity control ends-->
-                        </div><!-- div for quantity ends-->
-
-                        <div class="card__footer"><!-- div for card__footer-->
-                            <div class="action"><!-- action includes color changing while hovering-->
-                                <button type="button">Add to Cart</button>
-                            </div><!--action ends-->
-                        </div><!--div for card footer ends-->
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-    </div>
-    </div><!-- div for card body ends-->
-    <!-- Products End -->
-
     <!-- Includes footer partial from ./_footer.php -->
-   <?php include_once("_footer.php"); ?> 
+    <?php include_once("_footer.php"); ?>
+    <script>
+        function getUserLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        // Successful retrieval of user's location
+                        const latitude = position.coords.latitude;
+                        const longitude = position.coords.longitude;
+
+                        var formData = new FormData();
+
+                        formData.append("latitude", latitude);
+                        formData.append("longitude", longitude);
+                        formData.append("submit", "location");
+
+                        fetch("/epasale/index.php", {
+                            method: "POST",
+                            body: formData,
+                            headers: {
+                                // "Content-Type": "application/x-www-form-urlencoded",
+                            }
+                        }).then(response => {
+                            if (!response.ok) {
+                                throw new Error("Network response not ok");
+                            }
+                            return response.text();
+                        })
+                            .then((data) => {
+                                window.location = "/epasale/index.php";
+                            }).catch(error => {
+                                console.error("Fetch error:", error);
+                            })
+
+                        console.log("Latitude: " + latitude + ", Longitude: " + longitude);
+
+                        // You can use the coordinates in your application
+                    },
+                    function (error) {
+                        // Handle errors (e.g., user denied permission)
+                        console.error("Error getting user location:", error.message);
+                    }
+                );
+            } else {
+                // Geolocation is not supported by the browser
+                console.error("Geolocation is not supported by your browser.");
+            }
+        }
+
+        // Call the function to get the user's location
+        <?php if (!isset($_SESSION["latitude"]) || !isset($_SESSION["longitude"])) {
+            echo ("getUserLocation();");
+        } ?>
+    </script>
 </body>
 
 </html>

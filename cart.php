@@ -1,3 +1,5 @@
+<?php require_once("./utils/connection.php"); ?>
+<?php require_once("./model/CartManager.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,94 +7,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ePasal - Home Page</title>
-    
-   <!-- CSS Stylesheets Start -->
-   <link rel="stylesheet" href="/epasale/public/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300&display=swap"
-        rel="stylesheet" />
+
+    <!-- CSS Stylesheets Start -->
+    <link rel="stylesheet" href="/epasale/public/css/style.css">
+    <link rel="stylesheet" href="/epasale/public/css/cart.css">
     <!-- CSS Stylesheets End -->
 </head>
 
 <body>
-   <!-- Includes header partial from ./_header.php -->
-   <?php include_once("_header.php"); ?>
+    <!-- Includes header partial from ./_header.php -->
+    <?php include_once("_header.php"); ?>
+
+    
 
     <!-- Cart Start -->
-    <div class="cart-container">
-        <div class="container">
-            <div class="cart">
-                <div class="product-cart">
-                    <img src="/epasale/public/img/products/Laddu.jpg" class="img" />
-                    <div class="product-info">
-                        <h3 class="product-name">Laddu</h3>
-                        <P class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
-                        <div class="quantity">
-                            <button class="btn">-</button>
-                            <div class="no.">1</div>
-                            <button class="btn">+</button>
-                        </div>
-                        <p class="product-remove">
-                            <button class="button icon"><i class="fa fa-trash"></i></button>
-                        </p>
-                        <p class="price">Rs.200</p>
-                    </div>
-                </div>
+    <div class="cart__section">
+        <h3 class="cart__sectiontitle">Cart Container</h3>
+        <?php
+            $cartManager = new CartManager($conn);
+            $cart = array();
+            if(isset($_COOKIE["cart"])) {
+                $cart = $cartManager->getProductsFromCarts($_COOKIE["cart"]);
+            }else {
+                echo "Your cart is empty.";
+            }
+        ?>
+        <div class="cart__container">
+            <?php
+              foreach($cart as $product) {
+                echo '
+                <div class="cart product__card" data-pid="'. $product["product_id"] .'"  data-iscart="true">
+                    <a class="cart__a" href="/epasale/product-detail.php?id=' . $product["product_id"] . '">
+                        <img class="cart_product__img" src="/epasale/' . $product["product_photo_url"] . '" />
+                    </a>
+                    <div class="cart__info">
+                        <a class="cart__a" href="/epasale/product-detail.php?id=' . $product["product_id"] . '">
+                            <h3 class="cart__h3">' . $product["product_name"] . '</h3>
+                        </a>
 
-                <div class="product-cart">
-                    <img src="/epasale/public/img/products/Laddu.jpg" class="img" />
-                    <div class="product-info">
-                        <h3 class="product-name">Laddu</h3>
-                        <P class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
-                        <div class="quantity">
-                            <button class="btn">-</button>
-                            <div class="no.">1</div>
-                            <button class="btn">+</button>
+                        <div class="qtygroup">
+                            <label>Qty: </label>
+                            <button class="qtygroup__btn--dec">-</button>
+                            <input type="number" min="1" max="10" class="qtygroup__input" value="' . $product["quantity"] . '" size="5" disabled />
+                            <button class="qtygroup__btn--inc">+</button>
                         </div>
-                        <p class="product-remove">
-                            <button class="button icon"><i class="fa fa-trash"></i></button>
-                        </p>
-                        <p class="price">Rs.200</p>
-                    </div>
-                </div>
 
-                <div class="product-cart">
-                    <img src="/epasale/public/img/products/Laddu.jpg" class="img" />
-                    <div class="product-info">
-                        <h3 class="product-name">Laddu</h3>
-                        <P class="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
-                        <div class="quantity">
-                            <button class="btn">-</button>
-                            <div class="no.">1</div>
-                            <button class="btn">+</button>
-                        </div>
                         <p class="product-remove">
-                            <button class="button icon"><i class="fa fa-trash"></i></button>
+                            <button class="button btn--delete icon"><i class="fa fa-trash"></i></button>
                         </p>
-                        <p class="price">Rs.200</p>
+                        <p><b class="price" id="price">Rs.' . $product["unit_price"] . '</b></p>
                     </div>
-                </div>
-            </div>
+                </div>';
+              }
+            ?>
 
-           
-            <div class="end">
-                <button class="button info">Checkout</button>
-                <button class="button info">Cancel</button>
-            </div>
         </div>
-    </div>
+
+
+        <div class="cart__btn">
+            <a class="cart__a" href="/epasale/checkout.php?id=1">
+                <button class="button btn-primary">Proceed to Checkout</button>
+            </a>
+            <button class="button">Cancel</button>
+        </div>
     </div>
 
     <!-- Cart End -->
 
-    <!-- Products End -->
-
-
     <!-- Includes footer partial from ./_footer.php -->
-    <?php include_once("_footer.php"); ?> 
+    <?php include_once("_footer.php"); ?>
 </body>
 
 </html>

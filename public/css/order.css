@@ -1,12 +1,15 @@
 .order{
     background-color: rgb(241, 241, 241);
 }
-table{
+.order_table{
     border:1px solid rgb(192, 184, 184);
     border-spacing: 0px;
     width: 100%;
 }
-.order-container{
+
+
+
+.order__container{
     border:1px solid rgb(241, 241, 241);
     width:90%;
     margin-left: auto;
@@ -14,12 +17,21 @@ table{
     padding: 15px;
     background-color: white;
 }
-td{
-    border-right:1px solid rgb(192, 190, 190);
-    border-bottom:1px solid rgb(192, 186, 186) ;
+
+.order__h3 {
+    margin-bottom: 0.5rem;
+}
+
+.order__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order__table td, .order__table th{
+    border:1px solid rgb(192, 190, 190);
     padding:10px;
     text-align: center;
 }
-.color{
+.order_heading__color{
     background-color: aquamarine;
 }

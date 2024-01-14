@@ -1,3 +1,7 @@
+
+<?php require_once("./utils/connection.php"); ?>
+<?php require_once("./model/UserManager.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,52 +9,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-
     <link rel="stylesheet" href="/epasale/public/css/style.css">
-    <link rel="stylesheet" href="./login.css" />
-    <!-- google font start -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <!-- google font end -->
-
-    <!--font aweosome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/epasale/public/css/login.css" />
 </head>
 
+<?php
+    if($_SERVER["REQUEST_METHOD"] === "POST") {
+        $userManager = new UserManager($conn);
+        $userManager->login($_POST);
+    }
+?>
+
 <body>
-    
-    <div class="login-form">
-        <h1 class="login-form__h1">CUSTOMER LOGIN</h1>
 
-        <div class="login-form__wrapper">
-            <div class="login-form__form-group">
-                <i class="fa fa-user"></i>
-                <label class="login-form__label" for="username">Username</label>
-                <input class="login-form__input" type="text">
-            </div>
+    <div class="form__container">
+        <div class="form">
+            <h1 class="form__h1">SIGN IN</h1>
+            <form class="form__wrapper" onsubmit="return LoginValidateForm()" method="POST">
+                <div class="form-group">
+                    <label class="form-label" for="email"><i class="fa fa-user"></i> Email</label>
+                    <input class="form-input" type="email" id="email" name="email" placeholder="Enter your email">
+                    <span class="error-msg"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="password"><i class="fa fa-lock"></i> Password</label>
+                    <input class="form-input" type="password" id="password" name="password" placeholder="Enter your password">
+                    <span class="error-msg"></span>
+                </div>
 
-            <div class="login-form__form-group">
-                <i class="fa fa-lock"></i>
-                <label class="login-form__label" for="password">Password</label>
-                <input class="login-form__input" type="password">
+                <div class="form-group">
+                    <button type="submit" class="button btn-primary" style="width: 100%;">
+                        Sign in <i class="fa fa-arrow-right-to-bracket"></i>
+                    </button>
+                </div>
 
-            </div>
 
-            <span class="login-form__form-group">
-                    <!-- Remember me is not required -->
-                    <!-- <p> <input type="checkbox">Remember me </p> -->
-                    <p class="login-form__p"><a href="#">Forgot Password?</a></p>
-            </span>
-            <button class="button info">login <i class="fa fa-arrow-right-to-bracket"></i></button>
+                <!-- <a class="link form__link" href="/epasale">Forgot your Password?</a> <br /> -->
+                <div class="form-group form__form-links">
+                    New to ePasal?
+                    <a class="link form__link" href="/epasale/signup.php"> Create your ePasal Account</a>
+                </div>
+            </form>
         </div>
     </div>
+    <script src="/epasale/public/js/validator.js"></script>
+    <script>
+        // function to validate the loogin form
+        function LoginValidateForm() {
+            // Get form input elements
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
 
+            // Clear previous error messages
+            Validator.clearInputErrors();
+
+            // Validate email and password input
+            const isEmailValid = Validator.validateEmail(email, "Please enter valid email.");
+            const isPasswordStrong = Validator.validatePassword(password, "Your Password is Weak");
+            const isPasswordValid = Validator.validateRequired(password, "Please enter valid Password.");
+
+            // If all validations pass, show success alert
+            if (isEmailValid && isPasswordStrong && isPasswordValid) {
+                Validator.clearInputErrors();
+                return true;
+            }
+            // if fail, Prevent default form submission
+            return false;
+        }
+    </script>
 </body>
 
 </html>

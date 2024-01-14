@@ -1,87 +1,134 @@
-.shop_profile img {
-    width: 44px;
-    height: 44px;
-    margin-left: 2px;
-
-}
-/* h2 {
-    text-align: left;
-    font-size: 20px;
-    padding: 5px;
-}
-
-p {
-    text-align: left;
-    font-size: 16px;
-    font-weight: 300;
-    margin-left: 5px;
-} */
-
-.seller-container {
+.seller__container {
     margin-bottom: 1rem;
     margin-top: 1rem;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 
-.seller-group{
-    background-color: #fff;
-    border-radius: 1rem;
-    margin-bottom: 1rem;}
+.seller {
+    /* background-color: #fff; */
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    border: 2px solid #FF9800;
+    margin-bottom: 1rem;
+}
 
-.seller-profile {
+.seller__a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.seller__a:hover {
+    color: #FF9800;
+}
+
+
+.seller__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left:1rem;
+    padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.5rem;
+}
+
+
+.seller__profile {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.seller__profile .seller__profile-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #FF9800;
+    object-fit: contain;
+    background: #eee;
+    object-position: center;
+}
+
+
+.seller__content {
+    display: flex;
+    flex-wrap: nowrap;
+    /* makes horizontally stack */
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    padding: 0.5rem;
+    overflow-x: auto;
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
-  
+    /* allows horizontall scroll as needed */
 }
 
-.gallery {
+
+
+.seller__card {
+    width: 100%;
     display: flex;
-    /* flex-wrap: wrap; */
-    width: 100%;
-    /* justify-content: center; */
-    align-items: center;
-    overflow: auto;
-    gap: 1rem;
-    justify-content: flex-start;
-    max-width: 1300px;
-    margin-left:auto;
-    margin-right:auto;
-    padding:1rem;
-
- 
-}
-
-.content {
+    justify-content: space-between;
     color: black;
-    width: 281.00px;
-    float: left;
-    aspect-ratio: 16 / 9;
-    box-sizing: border-box;
-    text-align: center;
     border-radius: 20px;
-    cursor: pointer;
     border-radius: 8px;
-    /* margin-right: 5%; */
-    border: 1px solid #0b0b0b;
+    border: 1px solid #FF9800;
     background: #ffffff;
-    flex-shrink: 0;
-    flex-grow: 1;
+    flex: 300px 2 0;
+    max-width: 420px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.seller__cardbody {
+    padding: 10px;
+}
+
+.seller__cardsubtitle {
+    font-weight: 500;
+    font-size: 14px;
+    color: green;
+}
+
+.seller__btn--cart,
+.qtygroup__btn--dec,
+.qtygroup__btn--inc {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px 12px;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    background: #FF9800;
+    cursor: pointer;
+}
+
+.qtygroup__input {
+    padding: 4px 4px 4px 4px;
+    width: 60px;
+    text-align: center;
 }
 
 
-/* img {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    display: block;
-} */
+.qtygroup__btn--dec,
+.qtygroup__btn--inc {
+    background: transparent;
+    width: auto;
+    color: #333;
+    font-size: 20px;
+    margin: 0px;
+
+}
+
+
 
 .quantity {
     display: flex;
@@ -136,7 +183,7 @@ p {
 
     border: none;
     width: 100%;
-    /* Match the card width */
+    /* Match the seller__card width */
     padding: 10px 0;
     /* Adjust padding for spacing */
     cursor: pointer;
@@ -153,12 +200,12 @@ p {
 /* end */
 
 
-/* Product Card (prd-card) */
-.prd-card {
+/* Product Card (prd-seller__card) */
+.prd-seller__card {
     width: 220px;
     border-width: 1px;
     border-style: solid;
-    border-color: gray;
+    border-color: #FF9800;
 }
 
 .prd-card__img {
@@ -182,7 +229,7 @@ p {
     margin-bottom: 0.25rem;
 }
 
-.prd-card__body {
+.prd-seller__cardbody {
     padding: 0.5rem;
 
 }
@@ -204,7 +251,53 @@ p {
     border: 0px;
     outline: none;
     font: inherit;
-    font-size: 12px;
+    font-size: 14px;
     color: white;
-    background-color: lightseagreen;
+    background-color: #FF9800;
 }
+
+
+.index_card {
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.seller-info__button-seemore {
+    padding: 0.3rem;
+    width: 7rem;
+}
+
+.qtygroup__cardimg {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.seller__card--body {
+    padding: 12px;
+    border-top: 1px solid #FF9800;
+    display: flex;
+
+}
+
+.seller__cardtitle {
+    /* font-family: 'Courier New', Courier, monospace; */
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+
+
+
+/* 
+
+
+
+
+    
+.index_food_image {
+    width: 100%;
+}
+*/

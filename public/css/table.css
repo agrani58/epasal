@@ -1,75 +1,79 @@
-body{
-    background-color: white;
-    margin:0;
-    padding:0;
-  }
-  .container{
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  .head-section{
-    background-color:rgb(158, 200, 159);
-    padding: 50px 40px;
-  }
-  .logo{
-    max-width:200px;
-    height: 100px;
-  }
-  .text-white{
-    color: #fff;
-    text-align: right;
-  }
-  .body-section{
-    padding: 10px;
-    border: 1px solid gray;
-  }
-  .row{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .col-6{
-    width: 50%;
-    flex: 0 0 auto;
-  }
-  .heading{
-    font-size: 20px;
-    margin-bottom: 08px;
-  }
-  .sub-heading{
-    color: #262626;
-    margin-bottom: 5px;
-  }
-  .head-details{
-    float: right;
-    text-align: right;
-  }
-  p{
-    margin: 0;
-    padding: 0;
-  }
-  table{
-    background-color: #fff;
-    width: 100%;
-    border-spacing: 0px;
-  
-  }
-  td{
-    text-align: center;
-    padding-top: 08px;
-    padding-bottom: 08px;
-    border-bottom: 1px solid black;
-  
-  }
-  .right{
-    border-right: 1px solid black;
-  }
-  th{
-    padding-top: 08px;
-    padding-bottom: 08px;
-    border-bottom: 1px solid black;
-  }
-  .text-right{
-    text-align: right;
-  }
-  
+
+.invoice__container{
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.invoice__header{
+  background-color:rgb(185, 185, 185);
+  padding: 50px 40px;
+}
+
+.invoice__brand{
+  max-width:200px;
+  height: 100px;
+}
+
+.text-white{
+  color: #fff;
+  text-align: right;
+}
+
+.invoice__body{
+  padding: 10px;
+  border: 1px solid gray;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-6{
+  width: 50%;
+  flex: 0 0 auto;
+}
+
+.invoice__title{
+  font-size: 20px;
+  margin-bottom: 08px;
+}
+.invoice__subtitle{
+  color: #262626;
+  margin-bottom: 5px;
+}
+.invoice__headertext{
+  float: right;
+  text-align: right;
+}
+.invoice__table p{
+  margin: 0;
+  padding: 0;
+}
+.invoice__table{
+  background-color: #fff;
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
+
+}
+.invoice__table td{
+  text-align: center;
+  padding-top: 08px;
+  padding-bottom: 08px;
+  border: 1px solid gray;
+
+}
+
+.invoice__table th{
+  padding-top: 08px;
+  padding-bottom: 08px;
+  border: 1px solid gray;
+}
+.invoice__container .text-right{
+  text-align: right;
+}
