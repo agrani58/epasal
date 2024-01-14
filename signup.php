@@ -118,7 +118,6 @@
             // If all validations pass, show success alert
             if (isFnameValid && isLnameValid && isEmailValid && isContactValid && isPasswordStrong && isPasswordValid && isConfirmPasswordValid) {
                 Validator.clearInputErrors();
-                alert("You can now submit your form");
                 return true;
             }
             // if fail, Prevent default form submission

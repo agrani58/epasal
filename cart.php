@@ -1,3 +1,5 @@
+<?php require_once("./utils/connection.php"); ?>
+<?php require_once("./model/CartManager.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,81 +18,49 @@
     <!-- Includes header partial from ./_header.php -->
     <?php include_once("_header.php"); ?>
 
+    
+
     <!-- Cart Start -->
     <div class="cart__section">
         <h3 class="cart__sectiontitle">Cart Container</h3>
+        <?php
+            $cartManager = new CartManager($conn);
+            $cart = array();
+            if(isset($_COOKIE["cart"])) {
+                $cart = $cartManager->getProductsFromCarts($_COOKIE["cart"]);
+            }else {
+                echo "Your cart is empty.";
+            }
+        ?>
         <div class="cart__container">
-            <div class="cart product__card">
-                <a class="cart__a" href="/epasale/product-detail.php?id=1">
-                    <img class="cart_product__img" src="/epasale/public/img/products/Laddu.jpg" />
-                </a>
-                <div class="cart__info">
-                    <a class="cart__a" href="/epasale/product-detail.php?id=1">
-                        <h3 class="cart__h3">Laddu</h3>
+            <?php
+              foreach($cart as $product) {
+                echo '
+                <div class="cart product__card" data-pid="'. $product["product_id"] .'"  data-iscart="true">
+                    <a class="cart__a" href="/epasale/product-detail.php?id=' . $product["product_id"] . '">
+                        <img class="cart_product__img" src="/epasale/' . $product["product_photo_url"] . '" />
                     </a>
-                    <P class="cart__p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+                    <div class="cart__info">
+                        <a class="cart__a" href="/epasale/product-detail.php?id=' . $product["product_id"] . '">
+                            <h3 class="cart__h3">' . $product["product_name"] . '</h3>
+                        </a>
 
-                    <div class="qtygroup">
-                        <label>Qty: </label>
-                        <button class="qtygroup__btn--dec">-</button>
-                        <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
-                        <button class="qtygroup__btn--inc">+</button>
+                        <div class="qtygroup">
+                            <label>Qty: </label>
+                            <button class="qtygroup__btn--dec">-</button>
+                            <input type="number" min="1" max="10" class="qtygroup__input" value="' . $product["quantity"] . '" size="5" disabled />
+                            <button class="qtygroup__btn--inc">+</button>
+                        </div>
+
+                        <p class="product-remove">
+                            <button class="button btn--delete icon"><i class="fa fa-trash"></i></button>
+                        </p>
+                        <p><b class="price" id="price">Rs.' . $product["unit_price"] . '</b></p>
                     </div>
+                </div>';
+              }
+            ?>
 
-                    <p class="product-remove">
-                        <button class="button icon"><i class="fa fa-trash"></i></button>
-                    </p>
-                    <p class="price">Rs.200</p>
-                </div>
-            </div>
-
-            <div class="cart product__card">
-                <a class="cart__a" href="/epasale/product-detail.php?id=1">
-                    <img class="cart_product__img" src="/epasale/public/img/products/Laddu.jpg" />
-                </a>
-                <div class="cart__info">
-                    <a class="cart__a" href="/epasale/product-detail.php?id=1">
-                        <h3 class="cart__h3">Laddu</h3>
-                    </a>
-                    <P class="cart__p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
-
-                    <div class="qtygroup">
-                        <label>Qty: </label>
-                        <button class="qtygroup__btn--dec">-</button>
-                        <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
-                        <button class="qtygroup__btn--inc">+</button>
-                    </div>
-
-                    <p class="product-remove">
-                        <button class="button icon"><i class="fa fa-trash"></i></button>
-                    </p>
-                    <p class="price">Rs.200</p>
-                </div>
-            </div>
-
-            <div class="cart product__card">
-                <a class="cart__a" href="/epasale/product-detail.php?id=1">
-                    <img class="cart_product__img" src="/epasale/public/img/products/Laddu.jpg" />
-                </a>
-                <div class="cart__info">
-                    <a class="cart__a" href="/epasale/product-detail.php?id=1">
-                        <h3 class="cart__h3">Laddu</h3>
-                    </a>
-                    <P class="cart__p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
-
-                    <div class="qtygroup">
-                        <label>Qty: </label>
-                        <button class="qtygroup__btn--dec">-</button>
-                        <input type="number" min="1" max="10" class="qtygroup__input" value="1" size="5" disabled />
-                        <button class="qtygroup__btn--inc">+</button>
-                    </div>
-
-                    <p class="product-remove">
-                        <button class="button icon"><i class="fa fa-trash"></i></button>
-                    </p>
-                    <p class="price">Rs.200</p>
-                </div>
-            </div>
         </div>
 
 
@@ -106,7 +76,6 @@
 
     <!-- Includes footer partial from ./_footer.php -->
     <?php include_once("_footer.php"); ?>
-    <script src="./public/js/add-quantity.js" defer></script>
 </body>
 
 </html>

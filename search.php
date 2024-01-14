@@ -52,19 +52,6 @@ require_once("./utils/connection.php"); ?>
 
 
     <div class="sellerfullpage">
-        <div class="seller_detail">
-            <div class="sp-detail">
-                <div class="seller__profile">
-                    <img src="/epasale<?php echo $seller["user_photo_url"]; ?>" alt="logo">
-
-                    <div class="seller__profileinfo">
-                        <h3><?php echo $seller["fname"] . " " . $seller["lname"]; ?></h3>
-                        <p><?php echo $seller["province"] . ", " . $seller["city"]; ?></p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
 
         <div class="seller__content" style="flex-wrap: wrap; ">
             <?php echo $productsHTML; ?>

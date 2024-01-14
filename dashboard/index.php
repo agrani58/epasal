@@ -2,8 +2,6 @@
 
 <?php
     function checkLogin() {
-        session_start();
-
         if(!isset($_SESSION["user_id"])) {
             header("Location: /epasale?error=err_no_access");
             exit;

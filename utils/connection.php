@@ -14,11 +14,19 @@ if ($conn->connect_error) {
 }
 
 
+
+class Alert {
+    public static function show($message) {
+        echo "<script>alert('$message');</script>";
+    }
+
+    public static function dd($myvar) {
+        $arrayString = print_r($myvar, true);
+        echo "<pre>{$arrayString}</pre>";
+    }
+}
+
+
 session_start();
 
-// Debugging func
-function dd($myvar) {
-    $arrayString = print_r($myvar, true);
-    echo "<pre>{$arrayString}</pre>";
-}
 ?>

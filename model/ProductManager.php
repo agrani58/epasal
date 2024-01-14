@@ -5,17 +5,24 @@ class ProductManager {
     public function __construct($conn) {
         $this->conn = $conn;
     }
-    public function getProducts() {
+
+    /*
+    addProduct,
+    updateProduct,
+    */
+    public function getProducts($userId = null) {
         $items = array();
         $stmt = $this->conn->prepare("SELECT  product_id, tbl_users.user_id, tbl_users.is_active, fname, lname, province, city,
         product_name,  product_description, product_photo_url, unit_price, tbl_products.is_active, tbl_products.created_at
         FROM  tbl_products
         INNER JOIN tbl_users on tbl_products.user_id = tbl_users.user_id
         INNER JOIN tbl_addresses on tbl_addresses.address_id = tbl_users.address_id
-        WHERE tbl_users.is_active = 1
+        WHERE tbl_users.is_active = 1 AND (tbl_users.user_id = ? OR ? IS NULL)
         ORDER BY fname, lname;");
 
         try {
+            $stmt->bind_param("ii", $userId, $userId);
+
             if ($stmt->execute()) {
                 $result = $stmt->get_result();
                 if ($result->num_rows > 0) {
@@ -36,8 +43,8 @@ class ProductManager {
         return $items;
     }
 
-    public function getProductsBySellers($limit) {
-        $products = $this->getProducts();
+    public function getProductsBySellers($userId = null, $limit) {
+        $products = $this->getProducts($userId);
         $cat_products = array();
 
         foreach ($products as $product) {
@@ -72,23 +79,19 @@ class ProductManager {
     }
 
     function getSeller($user_id) {
-        $items = array();
-        $stmt = $this->conn->prepare("SELECT  product_id, tbl_users.user_id, tbl_users.is_active, fname, lname, province, city,
-        product_name,  product_description, product_photo_url, unit_price, tbl_products.is_active, tbl_products.created_at
-        FROM  tbl_products
-        INNER JOIN tbl_users on tbl_products.user_id = tbl_users.user_id
+        $seller = null;
+
+        $stmt = $this->conn->prepare("SELECT tbl_users.user_id, user_photo_url, tbl_users.is_active, fname, lname, province, city
+        FROM  tbl_users
         INNER JOIN tbl_addresses on tbl_addresses.address_id = tbl_users.address_id
-        WHERE tbl_users.is_active = 1
+        WHERE tbl_users.is_active = 1 AND tbl_users.user_id = ?
         ORDER BY fname, lname;");
 
         try {
+            $stmt->bind_param("i", $user_id);
             if ($stmt->execute()) {
                 $result = $stmt->get_result();
-                if ($result->num_rows > 0) {
-                    while ($product = $result->fetch_assoc()) {
-                        $items[] = $product;
-                    }
-                }
+                $seller = $result->fetch_assoc();
             } else {
                 throw new \Exception($stmt->error);
             }
@@ -99,8 +102,9 @@ class ProductManager {
             $stmt->close();
         }
 
-        return $items;
+        return $seller;
     }
+
 
     public function getProductById($product_id) {
         $record = array();

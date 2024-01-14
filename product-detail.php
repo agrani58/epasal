@@ -30,7 +30,7 @@ require_once("./utils/connection.php"); ?>
             <div class="prddetail">
                 <img src="<?php echo $product["product_photo_url"]; ?>" class="prddetail__img" />
                 <div class="prddetail__info product__card">
-                    <h3 class="prddetail__infotitle"><?php echo $product["product_name"]; ?></h3>
+                    <h3 class="prddetail__infotitle seller__cardtitle"><?php echo $product["product_name"]; ?></h3>
                     <h4 class="prddetail__infodesc">Rs. <?php echo $product["unit_price"]; ?></h4>
                     <div class="qtygroup">
                         <button class="qtygroup__btn--dec">-</button>
@@ -52,7 +52,6 @@ require_once("./utils/connection.php"); ?>
 
     <!-- Includes footer partial from ./_footer.php -->
     <?php include_once("_footer.php"); ?>
-    <script src="./public/js/add-quantity.js" defer></script>
 </body>
 
 </html>

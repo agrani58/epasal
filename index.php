@@ -57,7 +57,7 @@ function getDistance($lat, $lon) {
     <div class="seller__container">
         <?php
         $productManager = new ProductManager($conn);
-        $sellers =$productManager->getProductsBySellers(50);
+        $sellers =$productManager->getProductsBySellers(null, 50);
 
 
         foreach($sellers as $seller) {
@@ -65,7 +65,7 @@ function getDistance($lat, $lon) {
 
             foreach($seller["products"] as $product) {
                 $productsHTML .= '  
-                <div class="seller__card product__card">
+                <div class="seller__card product__card" data-pid="'. $product["product_id"] .'">
                     <a class="seller__a" href="/epasale/product-detail.php?id='. $product["product_id"] .'">
                         <img class="qtygroup__cardimg" src="'. $product["product_photo_url"] .'" alt="Productimage">
                     </a>
@@ -111,9 +111,6 @@ function getDistance($lat, $lon) {
     </div>
     <!-- Includes footer partial from ./_footer.php -->
     <?php include_once("_footer.php"); ?>
-
-
-    <script src="./public/js/add-quantity.js" defer></script>
     <script>
         function getUserLocation() {
             if (navigator.geolocation) {
