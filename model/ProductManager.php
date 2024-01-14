@@ -136,8 +136,14 @@ class ProductManager {
         return $record;
     }
 
-    function getSearchedProduct($query, $catname) {
+    function getSearchedProduct($query, $catname, $sort) {
         $seller = array();
+
+        if($sort == "price") {
+            $sort = "DESC";
+        }else {
+            $sort = "ASC";
+        }
 
         $stmt = $this->conn->prepare("SELECT p.product_id, p.product_name, p.product_description, p.product_photo_url, p.unit_price, c.category_name
         FROM 
@@ -147,7 +153,10 @@ class ProductManager {
         JOIN 
             tbl_categories c ON pc.category_id = c.category_id
         WHERE 
-            p.product_name LIKE ? AND c.category_name LIKE ? ;");
+            p.product_name LIKE ? AND c.category_name LIKE ? 
+        ORDER BY unit_price " . $sort . " ;");
+
+        
 
         try {
             $stmt->bind_param("ss", $query, $catname);

@@ -20,6 +20,9 @@ require_once("./utils/connection.php"); ?>
     <!-- Includes header partial from ./_header.php -->
     <?php include_once("_header.php"); ?>
 
+    <!-- FORM, for price select option (high to low, low to high),
+-->
+
     <?php
     $productManager = new ProductManager($conn);
 
@@ -35,7 +38,13 @@ require_once("./utils/connection.php"); ?>
         $catname =  "%" . "" . "%";
     }
 
-    $products=$productManager->getSearchedProduct($query, $catname);
+    if(isset($_GET["sort"])) {
+        $sortOption =  $_GET["sort"];
+    }else {
+        $sortOption =  "";
+    }
+
+    $products=$productManager->getSearchedProduct($query, $catname, $sortOption);
 
 
 
