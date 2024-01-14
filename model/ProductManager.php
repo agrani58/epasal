@@ -5,6 +5,11 @@ class ProductManager {
     public function __construct($conn) {
         $this->conn = $conn;
     }
+
+    /*
+    addProduct,
+    updateProduct,
+    */
     public function getProducts($userId = null) {
         $items = array();
         $stmt = $this->conn->prepare("SELECT  product_id, tbl_users.user_id, tbl_users.is_active, fname, lname, province, city,
