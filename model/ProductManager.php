@@ -6,10 +6,89 @@ class ProductManager {
         $this->conn = $conn;
     }
 
-    /*
-    addProduct,
-    updateProduct,
-    */
+    public function addProduct($postData) {
+
+        echo "IM EXEC";
+        $stmt = $this->conn->prepare("insert into tbl_products(product_name,product_photo_url, product_description,unit_Price,is_active,user_id)
+        values(?,?,?,?,?,?);");
+
+        try {
+
+            $photo_url="public/img/products/product.jpg";
+            $stmt->bind_param("sssiii", $postData['product_name'],$photo_url,$postData['product_description'], $postData['unit_price'], $postData['is_active'],$postData["user_id"]);
+
+            if ($stmt->execute()) {
+                $msg = 'Product added successfully.';
+                echo "<script>alert('$msg')</script>";
+            } else {
+                throw new \Exception($stmt->error);
+            }
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            echo "<script>alert('$msg')</script>";
+        } finally {
+            $stmt->close();
+        }
+    }
+
+
+    public function updateProduct($postData) {
+        $stmt = $this->conn->prepare("update tbl_products  set product_name=?, product_photo_url=?,product_description=?,unit_price=?,is_active=?, user_id=? where product_id=?;");
+
+        try {
+            $product_id = (int) $postData['product_id'];
+
+            $photo_url="public/img/products/product.jpg";
+            $stmt->bind_param("sssiiii", $postData['product_name'],$photo_url,$postData['product_description'], $postData['unit_price'], $postData['is_active'],$postData["user_id"], $postData["product_id"]);
+
+            if ($stmt->execute()) {
+                $msg = 'Product updated successfully.';
+                echo "<script>addAlert('$msg.')</script>";
+            } else {
+                throw new \Exception($stmt->error);
+            }
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            echo "<script>addAlert('$msg')</script>";
+        } finally {
+            $stmt->close();
+        }
+    }
+
+
+    public function getAllProducts(){
+        $products = array();
+        $stmt = $this->conn->prepare(" SELECT *
+        FROM 
+            tbl_products p
+        LEFT JOIN 
+            tbl_prd_categories pc ON p.product_id = pc.product_id
+        LEFT JOIN 
+            tbl_categories c ON pc.category_id = c.category_id
+        ");
+
+        try {
+            if ($stmt->execute()) {
+                $result = $stmt->get_result();
+                if ($result->num_rows > 0) {
+                    while ($product = $result->fetch_assoc()) {
+                        $products[] = $product;
+                    }
+                }
+            } else {
+                throw new \Exception($stmt->error);
+            }
+        } catch (\Exception $e) {
+            $msg = $e->getMessage();
+            echo "<script>addAlert('$msg')</script>";
+        } finally {
+            $stmt->close();
+        }
+        
+        return $products;
+    }
+
+
     public function getProducts($userId = null) {
         $items = array();
         $stmt = $this->conn->prepare("SELECT  product_id, tbl_users.user_id, tbl_users.is_active, fname, lname, province, city,

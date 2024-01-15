@@ -19,8 +19,8 @@
         </li>
         <li class="sidebar__nav-link"><a href="#">Products<i class="fa fa-angle-down"></i></a>
             <ul class="sidebar__nav-dropdown">
-                <li><a href="#">Add Product</a></li>
-                <li><a href="#">List Product</a></li>
+                <li><a href="/epasale/dashboard/product/AddProduct.php">Add Product</a></li>
+                <li><a href="/epasale/dashboard/product/ListProduct.php">List Product</a></li>
             </ul>
         </li>
         <li class="sidebar__nav-link"> <a href="/epasale/dashboard/order/ListOrders.php">List Orders</a></li>
