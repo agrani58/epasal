@@ -1,5 +1,6 @@
 <?php require_once("./../../utils/connection.php"); ?>
 <?php include_once("./../../model/CategoryManager.php"); ?>
+<?php include_once("./../../model/UserManager.php"); ?>
 
 
 <!DOCTYPE html>
@@ -32,12 +33,17 @@
         <div class="alert-container"></div>
         <?php
         $categoryManager = new CategoryManager($conn);
+        $userManager = new UserManager($conn);
 
         if (isset($_POST['submit']))
             $categoryManager->addCategory($_POST);
 
         if (isset($_POST['update']))
             $categoryManager->updateCategory($_POST);
+
+        if (isset($_POST["is_active"])) {
+            $userManager->updateUser($_POST["user_id"], "is_active", $_POST["is_active"]);
+        }
         ?>
 
         <div class="table-container">
@@ -64,7 +70,7 @@
 
                     $deliveryPersonList = $categoryManager->getAllUser(4);
 
-                    foreach ( $deliveryPersonList as $row) {
+                    foreach ($deliveryPersonList as $row) {
                         $deliveryPerson_id = $row["user_id"];
 
                         echo "<tr>";
@@ -79,12 +85,15 @@
                         echo "<td>{$row["address_id"]}</td>";
                         echo "<td>{$row["created_at"]}</td>";
                         echo "<td>{$row["is_active"]}</td>";
-                        echo "<td align='center'>
-                                 <form method='POST'>
-                                    <a class='button btn-primary' href='/epasale/dashboard/category/AddCategory.php?id={$deliveryPerson_id}'>Block</a>
-                                    <input type='text' name='category_id' value='{$deliveryPerson_id}'  hidden />
-                                 </form>
-                              </td>";
+                        echo '<td>
+                                <form method="post">
+                                    <input name="user_id" value="' . $row["user_id"] . '" hidden />
+                                    <select name="is_active" onchange="this.parentElement.submit();">
+                                        <option value="0" ' . ($row["is_active"] == "0" ? "selected=true" : "") . ' >Block</option>
+                                        <option value="1" ' . ($row["is_active"] == "1" ? "selected=true" : "") . ' >Unblock</option>
+                                    </select>
+                                </form>
+                            </td>';
                         echo "</tr>";
 
                     }

@@ -34,7 +34,7 @@
         $orderManager = new OrderManager($conn);
 
         // Alert::dd($categoryManager->getAllOrders());
-
+        
         if (isset($_POST['submit']))
             $categoryManager->addCategory($_POST);
 
@@ -51,40 +51,28 @@
         ?>
 
         <div class="table-container">
-
-           
-
             <table>
                 <thead>
                     <tr>
-                    <th align="left">Order ID</th>
-                    <th align="left">User ID</th>
+                        <th align="left">Order ID</th>
+                        <th align="left">User ID</th>
                         <th align="left">First Name</th>
                         <th align="left">Last Name</th>
-                        <th align="left">Order Status</th> 
+                        <th align="left">Order Status</th>
                         <th align="left">Payment Method</th>
                         <th align="left">Payment Status</th>
                         <th align="left">Total Amount</th>
                         <th align="left">City</th>
                         <th align="left">Created At</th>
                         <th align="left">Is Active</th>
-                       <th align="left">Action</th>
-    </tr>
-
-    </thead>
-
-
-
+                        <th align="left">Action</th>
+                    </tr>
+                </thead>
                 <tbody>
                     <?php
-
                     $adminList = $categoryManager->getAllOrders();
 
-                    function getPayStatusHtml() {
-
-                    }
-
-                    foreach ( $adminList as $row) {
+                    foreach ($adminList as $row) {
                         $admin_id = $row["user_id"];
 
                         echo "<td>{$row["order_id"]}</td>";
