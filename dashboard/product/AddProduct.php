@@ -49,8 +49,15 @@
 
             <?php echo "<input type='text' value='{$product_id}' name='product_id' hidden />"; ?>
 
-            <input hidden type="text" name="user_id" value='<?php echo $_SESSION["user_id"]; ?>' />
+            <input hidden type="text" name="seller_id" value='<?php echo $_SESSION["user_id"]; ?>' />
             <input hidden type="text" name="product_id" value='<?php echo $_GET["id"]; ?>' />
+
+            <div class="form-group">
+                <label class="form-label" for="product_photo_url">Product Photo *</label>
+                <input class="form-input" type="file" placeholder="Eg: Burger" name="product_photo_url"
+                    id="product_photo_url">
+                <span class="text-error"></span>
+            </div>
 
             <div class="form-group">
                 <label class="form-label" for="product_name">Product Name *</label>
@@ -59,40 +66,43 @@
                 <span class="text-error"></span>
             </div>
 
+
+
             <div class="form-group">
-                <label class="form-label" for="product_description">Description *</label>
-                <textarea class="form-input" type="text" placeholder="Eg: Write product description..."
-                    name="product_description"
-                    id="product_description"><?php echo ($product_id && $record['product_description'] ? trim($record['product_description']) : ''); ?></textarea>
+                <label class="form-label" for="category_id">Category *</label>
+                <select class="form-input" name="category_id" id="category_id">
+                    <option value="">--Select--</option>
+                    <?php
+
+                    //  Fetch products from database
+                    $sql = "SELECT * FROM tbl_categories";
+                    $result = mysqli_query($conn, $sql);
+
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $category_id = $row["category_id"];
+                            $category_name = $row["category_name"];
+
+                            if ($product_id && $record["category_id"]) {
+                                $selected = $category_id == $record["category_id"] ? "selected" : "";
+                                echo "<option value='$category_id' $selected >$category_name</option>";
+                            } else {
+                                echo "<option value='$category_id' >$category_name</option>";
+                            }
+                        }
+                    }
+                    ?>
+                </select>
                 <span class="text-error"></span>
             </div>
 
             <div class="form-group">
-                    <label class="form-label" for="category_id">Category *</label>
-                    <select class="form-input" name="category_id" id="category_id">
-                        <option value="">--Select--</option>
-                       <?php
-                        //  Fetch products from database
-                       $sql = "SELECT * FROM tbl_categories";
-                       $result = mysqli_query($conn, $sql);
-                       
-                       if (mysqli_num_rows($result) > 0) {
-                           while ($row = mysqli_fetch_assoc($result)) {
-                               $category_id = $row["category_id"];
-                               $category_name = $row["category_name"];
-                       
-                               if ($product_id && $record["category_id"]) {
-                                   $selected = $category_id== $record["category_id"] ? "selected" : "";
-                                   echo "<option value='$category_id' $selected >$category_name</option>";
-                               } else {
-                                   echo "<option value='$category_id' >$category_name</option>";
-                               }
-                           }
-                       }
-                        ?>
-                    </select>
-                    <span class="text-error"></span>
-                </div>
+                <label class="form-label" for="product_description">Description *</label>
+                <textarea class="form-input" type="text" placeholder="Eg: Write product description..." rows="3"
+                    name="product_description"
+                    id="product_description"><?php echo ($product_id && $record['product_description'] ? trim($record['product_description']) : ''); ?></textarea>
+                <span class="text-error"></span>
+            </div>
 
             <div class="form-group">
                 <label class="form-label" for="is_active">Status *</label>
@@ -118,9 +128,6 @@
             <button type="submit" name="<?php echo $product_id && $record ? "update" : 'submit'; ?>">
                 <?php echo $product_id && $record ? "Update Product" : 'Add Product'; ?>
             </button>
-
-
-
         </form>
     </div>
 

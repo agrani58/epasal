@@ -7,15 +7,21 @@ class ProductManager {
     }
 
     public function addProduct($postData) {
-
-        echo "IM EXEC";
-        $stmt = $this->conn->prepare("insert into tbl_products(product_name,product_photo_url, product_description,unit_Price,is_active,user_id)
-        values(?,?,?,?,?,?);");
+        $stmt = $this->conn->prepare("insert into tbl_products(product_name,product_photo_url,
+        product_description,unit_Price,user_id, category_id, is_active) values(?,?,?,?,?,?, ?);");
 
         try {
+            if (empty($postData["seller_id"]) || empty($postData["product_name"]) || empty($postData["product_description"]) || empty($postData["unit_price"]) || empty($postData["category_id"])) {
+                throw new Exception("Please fill all the required fields.");
+            }
 
-            $photo_url="public/img/products/product.jpg";
-            $stmt->bind_param("sssiii", $postData['product_name'],$photo_url,$postData['product_description'], $postData['unit_price'], $postData['is_active'],$postData["user_id"]);
+            $filename = $_FILES["product_photo_url"]["name"];
+            $tempname = $_FILES["product_photo_url"]["tmp_name"];
+            $folder =$_SERVER["DOCUMENT_ROOT"] . "/epasale/public/img/products/". $filename;
+            $fileFolder = "public/img/products/". $filename;
+            move_uploaded_file($tempname, $folder);
+
+            $stmt->bind_param("sssiiii", $postData['product_name'], $fileFolder, $postData['product_description'], $postData['unit_price'], $postData["seller_id"], $postData["category_id"], $postData["is_active"]);
 
             if ($stmt->execute()) {
                 $msg = 'Product added successfully.';
@@ -33,13 +39,24 @@ class ProductManager {
 
 
     public function updateProduct($postData) {
-        $stmt = $this->conn->prepare("update tbl_products  set product_name=?, product_photo_url=?,product_description=?,unit_price=?,is_active=?, user_id=? where product_id=?;");
-
         try {
             $product_id = (int) $postData['product_id'];
-
-            $photo_url="public/img/products/product.jpg";
-            $stmt->bind_param("sssiiii", $postData['product_name'],$photo_url,$postData['product_description'], $postData['unit_price'], $postData['is_active'],$postData["user_id"], $postData["product_id"]);
+            
+            if (isset($_FILES["product_photo_url"]) && !empty($_FILES["product_photo_url"]["name"])) {
+                $filename = $_FILES["product_photo_url"]["name"];
+                $tempname = $_FILES["product_photo_url"]["tmp_name"];
+                $folder =$_SERVER["DOCUMENT_ROOT"] . "/epasale/public/img/products/". $filename;
+                move_uploaded_file($tempname, $folder);
+                $fileFolder = "public/img/products/". $filename;
+    
+                $stmt = $this->conn->prepare("UPDATE tbl_products SET product_name=?, product_photo_url=?, product_description=?, unit_price=?, is_active=?, user_id=?, category_id=? WHERE product_id=?");
+    
+                $stmt->bind_param("sssiiiii", $postData['product_name'], $fileFolder, $postData['product_description'], $postData['unit_price'], $postData['is_active'], $postData["seller_id"], $postData["category_id"], $product_id);
+            } else {
+                $stmt = $this->conn->prepare("UPDATE tbl_products SET product_name=?, product_description=?, unit_price=?, is_active=?, user_id=?, category_id=? WHERE product_id=?");
+    
+                $stmt->bind_param("ssiiiii", $postData['product_name'], $postData['product_description'], $postData['unit_price'], $postData['is_active'], $postData["seller_id"], $postData["category_id"], $product_id);
+            }
 
             if ($stmt->execute()) {
                 $msg = 'Product updated successfully.';
@@ -56,15 +73,13 @@ class ProductManager {
     }
 
 
-    public function getAllProducts(){
+    public function getAllProducts() {
         $products = array();
-        $stmt = $this->conn->prepare(" SELECT *
+        $stmt = $this->conn->prepare("SELECT *
         FROM 
             tbl_products p
         LEFT JOIN 
-            tbl_prd_categories pc ON p.product_id = pc.product_id
-        LEFT JOIN 
-            tbl_categories c ON pc.category_id = c.category_id
+            tbl_categories c ON p.category_id = c.category_id
         ");
 
         try {
@@ -84,7 +99,7 @@ class ProductManager {
         } finally {
             $stmt->close();
         }
-        
+
         return $products;
     }
 
@@ -189,7 +204,7 @@ class ProductManager {
         $record = array();
 
         $stmt = $this->conn->prepare("SELECT product_id, product_name,  product_description, 
-        product_photo_url, unit_price, is_active, created_at
+        product_photo_url, unit_price, is_active, created_at, category_id
         FROM  tbl_products
         WHERE product_id=?");
 
@@ -218,9 +233,9 @@ class ProductManager {
     function getSearchedProduct($query, $catname, $sort) {
         $seller = array();
 
-        if($sort == "price") {
+        if ($sort == "price") {
             $sort = "DESC";
-        }else {
+        } else {
             $sort = "ASC";
         }
 
@@ -228,14 +243,12 @@ class ProductManager {
         FROM 
             tbl_products p
         JOIN 
-            tbl_prd_categories pc ON p.product_id = pc.product_id
-        JOIN 
-            tbl_categories c ON pc.category_id = c.category_id
+            tbl_categories c ON p.category_id = c.category_id
         WHERE 
             p.product_name LIKE ? AND c.category_name LIKE ? 
         ORDER BY unit_price " . $sort . " ;");
 
-        
+
 
         try {
             $stmt->bind_param("ss", $query, $catname);

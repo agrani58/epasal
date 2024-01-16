@@ -1,3 +1,9 @@
+
+<style>
+    body {
+        font-family: "Poppins", sans-serif;
+    }
+</style>
 <div class="sidebar__container"> <img class="sidebar__logo" src="/epasale/public/img/epasal-primary-logo.png"
         alt="logo" />
     <ul class="sidebar__nav">

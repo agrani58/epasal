@@ -48,6 +48,7 @@
                 <thead>
                     <tr>
                         <th align="left">Product ID</th>
+                        <th align="left">Photo</th>
                         <th align="left" width="240px">Product Name</th>
                         <th align="left" width="340px">Product Description</th>
                         <th align="left">Unit Price(Rs.)</th>
@@ -64,10 +65,17 @@
 
                     foreach ($productList as $row) {
                         $product_id = $row["product_id"];
+                        $product_image = "";
+                        $photo_url = $row['product_photo_url'];
+
+                        if ($row['product_photo_url']) {
+                            $product_image = "<img src='/epasale/$photo_url' width='80px' height='80px' />";
+                        }
                       
 
                         echo "<tr>";
                         echo "<td>{$row["product_id"]}</td>";
+                        echo "<td>$product_image</td>";
                         echo "<td>{$row["product_name"]}</td>";
                         echo "<td>{$row["product_description"]}</td>";
                         echo "<td>{$row["unit_price"]}</td>";
