@@ -1,5 +1,6 @@
 <?php require_once("./../../utils/connection.php"); ?>
 <?php include_once("./../../model/CategoryManager.php"); ?>
+<?php include_once("./../../model/OrderManager.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +31,7 @@
         <div class="alert-container"></div>
         <?php
         $categoryManager = new CategoryManager($conn);
+        $orderManager = new OrderManager($conn);
 
         // Alert::dd($categoryManager->getAllOrders());
 
@@ -38,9 +40,20 @@
 
         if (isset($_POST['update']))
             $categoryManager->updateCategory($_POST);
+
+        if (isset($_POST["payment_status"])) {
+            $orderManager->updateOrder($_POST["orderID"], "payment_status", $_POST["payment_status"]);
+        }
+
+        if (isset($_POST["order_status"])) {
+            $orderManager->updateOrder($_POST["orderID"], "order_status", $_POST["order_status"]);
+        }
         ?>
 
         <div class="table-container">
+
+           
+
             <table>
                 <thead>
                     <tr>
@@ -60,10 +73,16 @@
 
     </thead>
 
+
+
                 <tbody>
                     <?php
 
                     $adminList = $categoryManager->getAllOrders();
+
+                    function getPayStatusHtml() {
+
+                    }
 
                     foreach ( $adminList as $row) {
                         $admin_id = $row["user_id"];
@@ -72,9 +91,29 @@
                         echo "<td>{$row["user_id"]}</td>";
                         echo "<td>{$row["fname"]}</td>";
                         echo "<td>{$row["lname"]}</td>";
-                        echo "<td>{$row["order_status"]}</td>";
+                        echo '<td>
+                                <form method="post">
+                                    <input name="orderID" value="' . $row["order_id"] . '" hidden />
+                                    <select name="order_status" onchange="this.parentElement.submit();">
+                                        <option value="Pending" ' . ($row["order_status"] == "Pending" ? "selected=true" : "") . ' >Pending</option>
+                                        <option value="Processing" ' . ($row["order_status"] == "Processing" ? "selected=true" : "") . ' >Processing</option>
+                                        <option value="Packaging" ' . ($row["order_status"] == "Packaging" ? "selected=true" : "") . ' >Packaging</option>
+                                        <option value="Out for Delivery" ' . ($row["order_status"] == "Out for Delivery" ? "selected=true" : "") . ' >Out for Delivery</option>
+                                        <option value="Completed" ' . ($row["order_status"] == "Completed" ? "selected=true" : "") . ' >Completed</option>
+                                        <option value="Cancelled" ' . ($row["order_status"] == "Cancelled" ? "selected=true" : "") . ' >Cancelled</option>
+                                    </select>
+                                </form>
+                            </td>';
                         echo "<td>{$row["payment_method"]}</td>";
-                        echo "<td>{$row["payment_status"]}</td>";
+                        echo '<td>
+                                <form method="post">
+                                    <input name="orderID" value="' . $row["order_id"] . '" hidden />
+                                    <select name="payment_status" onchange="this.parentElement.submit();">
+                                        <option value="Unpaid" ' . ($row["payment_status"] == "Unpaid" ? "selected=true" : "") . ' >Not Paid</option>
+                                        <option value="Paid" ' . ($row["payment_status"] == "Paid" ? "selected=true" : "") . ' >Paid</option>
+                                    </select>
+                                </form>
+                            </td>';
                         echo "<td>{$row["total_amount"]}</td>";
                         echo "<td>{$row["city"]}</td>";
                         echo "<td>{$row["created_at"]}</td>";
