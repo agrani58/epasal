@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             // If all validations pass, show success alert
             if (isEmailValid && isPasswordValid) {
-                return false;
+                return true;
             }
             // if fail, Prevent default form submission
             return false;
