@@ -1,4 +1,5 @@
-<?php require_once("./../../utils/connection.php"); ?>
+<?php require_once("./../../config/db.config.php"); ?>
+<?php require_once("./../../config/dashboard.auth.php"); ?>
 <?php include_once("./../../model/CategoryManager.php"); ?>
 <?php include_once("./../../model/OrderManager.php"); ?>
 
@@ -26,7 +27,7 @@
 </head>
 
 <body>
-    <?php include_once("./../_sidenav.php"); ?>
+    <?php include_once("./../../includes/_sidenav.php"); ?>
     <div class="dashboard__content">
         <div class="alert-container"></div>
         <?php
@@ -58,13 +59,13 @@
                         <th align="left">User ID</th>
                         <th align="left">First Name</th>
                         <th align="left">Last Name</th>
-                        <th align="left">Order Status</th>
-                        <th align="left">Payment Method</th>
-                        <th align="left">Payment Status</th>
                         <th align="left">Total Amount</th>
                         <th align="left">City</th>
                         <th align="left">Created At</th>
                         <th align="left">Is Active</th>
+                        <th align="left">Payment Method</th>
+                        <th align="left">Payment Status</th>
+                        <th align="left">Order Status</th>
                         <th align="left">Action</th>
                     </tr>
                 </thead>
@@ -79,7 +80,14 @@
                         echo "<td>{$row["user_id"]}</td>";
                         echo "<td>{$row["fname"]}</td>";
                         echo "<td>{$row["lname"]}</td>";
-                        echo '<td>
+
+                        echo "<td>{$row["total_amount"]}</td>";
+                        echo "<td>{$row["city"]}</td>";
+                        echo "<td>{$row["created_at"]}</td>";
+                        echo "<td>{$row["is_active"]}</td>";
+                        
+                            echo "<td>{$row["payment_method"]}</td>";
+                            echo '<td>
                                 <form method="post">
                                     <input name="orderID" value="' . $row["order_id"] . '" hidden />
                                     <select name="order_status" onchange="this.parentElement.submit();">
@@ -92,8 +100,8 @@
                                     </select>
                                 </form>
                             </td>';
-                        echo "<td>{$row["payment_method"]}</td>";
-                        echo '<td>
+                               
+                                echo '<td>
                                 <form method="post">
                                     <input name="orderID" value="' . $row["order_id"] . '" hidden />
                                     <select name="payment_status" onchange="this.parentElement.submit();">
@@ -102,17 +110,10 @@
                                     </select>
                                 </form>
                             </td>';
-                        echo "<td>{$row["total_amount"]}</td>";
-                        echo "<td>{$row["city"]}</td>";
-                        echo "<td>{$row["created_at"]}</td>";
-                        echo "<td>{$row["is_active"]}</td>";
-                        echo "<td align='center'>
-                                 <form method='POST'>
-                                    <a class='button btn-primary' href='/epasale/dashboard/category/AddCategory.php?id={$admin_id}'>Edit Info</a>
-                                    <input type='text' name='category_id' value='{$admin_id}'  hidden />
-                                 </form>
-                              </td>";
-                        echo "</tr>";
+                                echo "<td align='center'>
+                                            <a class='button btn-primary' target='_blank' href='/epasale/invoice.php?orderID=" . $row["order_id"] . "'>View Invoice</a>
+                                    </td>";
+                                echo "</tr>";
 
                     }
                     ?>

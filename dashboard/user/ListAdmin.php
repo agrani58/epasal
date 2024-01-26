@@ -1,4 +1,6 @@
-<?php require_once("./../../utils/connection.php"); ?>
+<?php require_once("./../../config/db.config.php"); ?>
+<?php require_once("./../../config/dashboard.auth.php"); ?>
+
 <?php include_once("./../../model/CategoryManager.php"); ?>
 
 <!DOCTYPE html>
@@ -25,7 +27,7 @@
 </head>
 
 <body>
-    <?php include_once("./../_sidenav.php"); ?>
+    <?php include_once("./../../includes/_sidenav.php"); ?>
     <div class="dashboard__content">
         <div class="alert-container"></div>
         <?php

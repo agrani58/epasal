@@ -1,6 +1,7 @@
-<?php require_once("./utils/Locator.php");
+<?php 
+require_once("./config/db.config.php"); 
 require_once("./model/ProductManager.php");
-require_once("./utils/connection.php"); ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,8 +45,8 @@ function getDistance($lat, $lon) {
 
 <body>
 
-    <!-- Includes header partial from ./_header.php -->
-    <?php include_once("_header.php"); ?>
+    <!-- Includes header partial from ./includes/_header.php -->
+    <?php include_once("includes/_header.php"); ?>
 
     <!-- 
         Products Start
@@ -109,8 +110,8 @@ function getDistance($lat, $lon) {
 
 
     </div>
-    <!-- Includes footer partial from ./_footer.php -->
-    <?php include_once("_footer.php"); ?>
+    <!-- Includes footer partial from ./includes/_footer.php -->
+    <?php include_once("includes/_footer.php"); ?>
     <script>
         function getUserLocation() {
             if (navigator.geolocation) {

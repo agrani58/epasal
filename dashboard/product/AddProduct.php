@@ -1,4 +1,5 @@
-<?php require_once("./../../utils/connection.php"); ?>
+<?php require_once("./../../config/db.config.php"); ?>
+<?php require_once("./../../config/dashboard.auth.php"); ?>
 <?php include_once("./../../model/ProductManager.php"); ?>
 
 <!DOCTYPE html>
@@ -26,7 +27,7 @@
 </head>
 
 <body>
-    <?php include_once("./../_sidenav.php"); ?>
+    <?php include_once("./../../includes/_sidenav.php"); ?>
 
     <div class="main dashboard__content" id="main-content">
         <?php
