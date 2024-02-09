@@ -91,7 +91,7 @@ function getDistance($lat, $lon) {
                 <div class="seller__info">
                     <div class="seller__profile">
                         <a class="seller__a" href="/epasale/seller-page.php?id='. $seller["user_id"] .'">
-                            <img class="seller__profile-avatar" src="/epasale/public/img/shops/shop.jpg" width="40px" />
+                            <img class="seller__profile__avatar" src="/epasale/public/img/shops/shop.jpg" width="40px" />
                         </a>
                         <div class="seller__profile-content">
                             <h3>'. $seller["fname"] . ' ' . $seller['lname']  .'</h3>

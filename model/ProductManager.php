@@ -73,14 +73,23 @@ class ProductManager {
     }
 
 
-    public function getAllProducts() {
+    public function getAllProducts($shopID = null) {
+        $condition = "";
+
+        if($shopID) {
+            $condition .= "WHERE u.user_id = $shopID";
+        }
+
         $products = array();
         $stmt = $this->conn->prepare("SELECT *
         FROM 
             tbl_products p
         LEFT JOIN 
             tbl_categories c ON p.category_id = c.category_id
-        ");
+
+        INNER JOIN
+            tbl_users u ON u.user_id = p.user_id
+        $condition ;");
 
         try {
             if ($stmt->execute()) {
