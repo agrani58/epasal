@@ -21,8 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <body>
 
+    <?php include_once("includes/_header.php"); ?>
+    
     <div class="form__container">
-        <div class="form">
+        <div class="form shadow">
             <h1 class="form__h1">SIGN IN</h1>
             <form class="form__wrapper" onsubmit="return LoginValidateForm()" method="POST">
                 <div class="form-group">
@@ -52,6 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </form>
         </div>
     </div>
+    <?php include_once("includes/_footer.php"); ?>
     <script src="/epasale/public/js/validator.js"></script>
     <script>
         // function to validate the login form
