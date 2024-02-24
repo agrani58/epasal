@@ -29,11 +29,15 @@
         $record = "";
 
 
+        
+
+
         if (isset($_GET["id"])) {
             $product_id = $_GET["id"];
             $productManager = new ProductManager($conn);
             $record = $productManager->getProductById($product_id);
         }
+
 
         ?>
 
@@ -103,10 +107,10 @@
                 <label class="form-label" for="is_active">Status *</label>
                 <select class="form-input" name="is_active" id="is_active">
                     <option value="">--Select--</option>
-                    <option value="1" <?php echo $product_id && $record['is_active'] === 1 ? "selected" : ""; ?>>
+                    <option value="1" <?php echo $product_id && $record['is_active'] == 1 ? "selected" : ""; ?>>
                         Enabled
                     </option>
-                    <option value="0" <?php echo $product_id && $record['is_active'] === 0 ? "selected" : ""; ?>>
+                    <option value="0" <?php echo $product_id && $record['is_active'] == 0 ? "selected" : ""; ?>>
                         Disabled</option>
                 </select>
                 <span class="text-error"></span>

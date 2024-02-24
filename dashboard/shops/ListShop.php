@@ -75,8 +75,8 @@
                             <form method="post">
                                 <input name="user_id" value="' . $row["user_id"] . '" hidden />
                                 <select name="is_verified" onchange="this.parentElement.submit();">
-                                    <option value="0" ' . ($row["is_verified"] == "0" ? "selected=true" : "") . ' >Unverified</option>
-                                    <option value="1" ' . ($row["is_verified"] == "1" ? "selected=true" : "") . ' >Verified</option>
+                                    <option value="0" ' . ($row["is_verified"] == 0 ? "selected=true" : "") . ' >Unverified</option>
+                                    <option value="1" ' . ($row["is_verified"] == 1 ? "selected=true" : "") . ' >Verified</option>
                                 </select>
                             </form>
                         </td>';
@@ -84,8 +84,8 @@
                                 <form method="post">
                                     <input name="user_id" value="' . $row["user_id"] . '" hidden />
                                     <select name="is_active" onchange="this.parentElement.submit();">
-                                        <option value="0" ' . ($row["is_active"] == "0" ? "selected=true" : "") . ' >Disabled</option>
-                                        <option value="1" ' . ($row["is_active"] == "1" ? "selected=true" : "") . ' >Enabled</option>
+                                        <option value="0" ' . ($row["is_active"] == 0 ? "selected=true" : "") . ' >Disabled</option>
+                                        <option value="1" ' . ($row["is_active"] == 1 ? "selected=true" : "") . ' >Enabled</option>
                                     </select>
                                 </form>
                             </td>';

@@ -278,8 +278,28 @@ class UserManager {
 
     public function getAllShop() {
         $users = array();
-        $stmt = $this->conn->prepare("SELECT * FROM tbl_shops s
-        INNER JOIN tbl_users u on u.user_id = s.user_id");
+        $stmt = $this->conn->prepare("SELECT 
+        s.shop_id,
+        s.user_id,
+        s.shop_name,
+        s.shop_photo_url,
+        s.shop_city,
+        s.shop_address,
+        s.shop_lon,
+        s.shop_lat,
+        s.shop_contact_no,
+        s.is_active,
+        s.is_verified,
+        u.user_photo_url,
+        u.fname,
+        u.lname,
+        u.email,
+        u.contact_no,
+        u.gender
+    FROM
+        tbl_shops s
+            INNER JOIN
+        tbl_users u ON u.user_id = s.user_id");
 
         try {
             if ($stmt->execute()) {

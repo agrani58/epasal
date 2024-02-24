@@ -80,7 +80,10 @@ class ProductManager {
         }
 
         $products = array();
-        $stmt = $this->conn->prepare("SELECT *
+        $stmt = $this->conn->prepare("SELECT  product_id, u.user_id, fname, lname, p.is_active,
+        product_name,  product_description, product_photo_url, unit_price, p.created_at,
+        s.shop_name, s.shop_photo_url, s.shop_lon, s.shop_lat, s.shop_contact_no,s.shop_city,s.shop_address,
+        c.category_name, c.category_id
         FROM 
             tbl_products p
         LEFT JOIN 
@@ -228,10 +231,13 @@ class ProductManager {
     public function getProductById($product_id) {
         $record = array();
 
-        $stmt = $this->conn->prepare("SELECT *
+        $stmt = $this->conn->prepare("SELECT product_id, u.user_id, p.is_active, fname, lname,
+        product_name,  product_description, product_photo_url, unit_price, p.is_active, p.created_at,
+        s.shop_name, s.shop_photo_url, s.shop_lon, s.shop_lat, s.shop_contact_no, s.is_active,s.shop_city,s.shop_address,
+        c.category_name, c.category_id
         FROM  tbl_products p
         INNER JOIN tbl_users u on p.user_id = u.user_id
-        INNER JOIN tbl_shops shop on shop.user_id = p.user_id
+        INNER JOIN tbl_shops s on s.user_id = p.user_id
         INNER JOIN tbl_categories c on p.category_id = c.category_id
         WHERE product_id=?");
 
