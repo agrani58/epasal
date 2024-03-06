@@ -12,6 +12,10 @@ require_once("./model/ProductManager.php");
 
     <!-- CSS Stylesheets Start -->
     <link rel="stylesheet" href="/epasale/public/css/style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <!-- CSS Stylesheets End -->
 </head>
 <?php
@@ -65,7 +69,7 @@ function getDistance($lat, $lon) {
 
             foreach($seller["products"] as $product) {
                 $productsHTML .= '  
-                <div class="seller__card product__card" data-pid="'. $product["product_id"] .'">
+                <div class="seller__card product__card animate__animated animate__fadeIn" data-pid="'. $product["product_id"] .'">
                     <a class="seller__a" href="/epasale/product-detail.php?id='. $product["product_id"] .'">
                         <img class="qtygroup__cardimg" src="'. $product["product_photo_url"] .'" alt="Productimage">
                     </a>
@@ -86,8 +90,8 @@ function getDistance($lat, $lon) {
             }
 
             echo '
-            <div class="seller">
-                <div class="seller__info">
+            <div class="seller animate__animated animate__fadeIn">
+                <div class="seller__info ">
                     <div class="seller__profile">
                         <a class="seller__a" href="/epasale/seller-page.php?id='. $seller["user_id"] .'">
                             <img class="seller__profile__avatar" src="' . $seller["shop_photo_url"] . '" width="40px" />
@@ -100,6 +104,19 @@ function getDistance($lat, $lon) {
                     <a href="/epasale/seller-page.php?id='. $seller["user_id"] .'" class="seller__a">
                         <button class="button button-small btn-primary">See More</button>
                     </a>
+
+                    <div class="act-btn">
+                        <button class="btn-prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223"/>
+                        </svg>
+                        </button>
+                        <button class="btn-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"/>
+                        </svg>
+                        </button>
+                    </div>
                 </div>
         
                 <div class="seller__content"> '. $productsHTML .' </div>
@@ -111,6 +128,7 @@ function getDistance($lat, $lon) {
     </div>
     <!-- Includes footer partial from ./includes/_footer.php -->
     <?php include_once("includes/_footer.php"); ?>
+    <script src="/epasale/public/js/prdx-scroll.js"></script>
     <script>
         function getUserLocation() {
             if (navigator.geolocation) {

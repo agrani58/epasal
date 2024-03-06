@@ -1,7 +1,7 @@
 .seller__container {
     margin-bottom: 1rem;
     margin-top: 1rem;
-    max-width: 1320px;
+    max-width: 1480px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
@@ -10,12 +10,14 @@
 
 
 .seller {
+    position: relative;
     /* background-color: #fff; */
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 8px;
     font-size: 0.8rem;
     border: 2px solid #FF9800;
     margin-bottom: 1rem;
+
 }
 
 .seller__a {
@@ -59,15 +61,20 @@
     display: flex;
     flex-wrap: nowrap;
     /* makes horizontally stack */
-    align-items: center;
+    align-items:  flex-start;
     gap: 0.5rem;
     justify-content: flex-start;
     padding: 0.5rem;
     overflow-x: auto;
-    max-width: 1300px;
+    max-width: 1460px;
     margin-left: auto;
     margin-right: auto;
+    scroll-behavior: smooth;
     /* allows horizontall scroll as needed */
+}
+
+.seller__content::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -81,8 +88,8 @@
     border-radius: 8px;
     border: 1px solid #FF9800;
     background: #ffffff;
-    flex: 300px 0 0;
-    max-width: 420px;
+    flex: 280px 0 0;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
 }
@@ -161,6 +168,44 @@
     padding: 10px;
     font-size: 14px;
     font-weight: bold;
+}
+
+
+/* Products Horizontal Scroll */
+.act-btn {
+    position: absolute;
+    width: 100%;
+    top: 160px;
+    left: 0px;
+    transform: translateY(0px);
+    z-index: 99;
+}
+
+.act-btn .btn-prev {
+    left: 35px;
+    position: absolute;
+}
+
+.act-btn .btn-next {
+    right: 35px;
+    position: absolute;
+}
+
+.act-btn button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    opacity: 0.9;
+}
+
+.act-btn button:hover {
+    opacity: 0.8;
+}
+
+.act-btn button.hide {
+    display: none;
 }
 
 /* Center the button */
@@ -283,7 +328,7 @@
     /* font-family: 'Courier New', Courier, monospace; */
     display: block;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 

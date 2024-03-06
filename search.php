@@ -12,6 +12,10 @@ require_once("./config/db.config.php"); ?>
 
     <!-- CSS Stylesheets Start -->
     <link rel="stylesheet" href="/epasale/public/css/style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <!-- CSS Stylesheets End -->
 
 </head>
@@ -50,7 +54,7 @@ require_once("./config/db.config.php"); ?>
 
     foreach ($products as $product) {
         $productsHTML .= '  
-        <div class="seller__card product__card" data-pid="'. $product["product_id"] .'">
+        <div class="seller__card product__card animate__animated animate__fadeIn" data-pid="'. $product["product_id"] .'">
             <a class="seller__a" href="/epasale/product-detail.php?id=' . $product["product_id"] . '">
                 <img class="qtygroup__cardimg" src="' . $product["product_photo_url"] . '" alt="Productimage">
             </a>
