@@ -15,3 +15,7 @@ Aashish Maharjan
 # Group
 Minor I Group J 2023
 
+[Visit Linkedin](https://www.linkedin.com/in/aacismaharjan/)
+
+# Screenshot
+![Screen of Epasale](./public/img/epasale-screenshot.png)
