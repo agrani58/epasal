@@ -1,7 +1,7 @@
 <!-- Footer Start -->
 <footer id="main-footer">
     <div class="container container-md">
-        <img src="/mysite/public/img/epasal.png" alt="Epasal Logo" width="100px" />
+        <img src="/public/img/epasal-primary-logo.png" alt="Epasal Logo" width="100px" />
         <p>
             ePasal transforms Nepal's digital marketplace, simplifying local business discovery and engagement. As a
             bridge between users and local businesses, ePasal enhances economic growth

@@ -1,6 +1,13 @@
 <?php require_once("./config/db.config.php"); ?>
 <?php require_once("./model/UserManager.php"); ?>
 
+<?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $userManager = new UserManager($conn);
+    $userManager->login($_POST);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,12 +19,7 @@
     <link rel="stylesheet" href="/public/css/login.css" />
 </head>
 
-<?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $userManager = new UserManager($conn);
-    $userManager->login($_POST);
-}
-?>
+
 
 <body>
 
