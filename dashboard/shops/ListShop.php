@@ -11,8 +11,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="/epasale/public/css/style.css" />
-    <link rel="stylesheet" href="/epasale/public/css/dashboard.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/dashboard.css" />
 </head>
 
 <body>
@@ -64,8 +64,8 @@
                             echo "<tr>";
                             echo "<td>{$row["shop_id"]}</td>";
                             echo "<td>{$row["user_id"]}</td>";
-                            echo "<td><img src='/epasale/" . $row["user_photo_url"] . "' width='50px' alt='User Profile'>&nbsp;{$row["fname"]}</td>";
-                            echo "<td><img src='/epasale/" . $row["shop_photo_url"] . "' width='50px' alt='User Profile'>&nbsp;{$row["shop_name"]}</td>";
+                            echo "<td><img src='/" . $row["user_photo_url"] . "' width='50px' alt='User Profile'>&nbsp;{$row["fname"]}</td>";
+                            echo "<td><img src='/" . $row["shop_photo_url"] . "' width='50px' alt='User Profile'>&nbsp;{$row["shop_name"]}</td>";
                             echo "<td>{$row["shop_city"]}</td>";
                             echo "<td>{$row["shop_address"]}</td>";
                             echo "<td>{$row["shop_contact_no"]}</td>";
@@ -98,7 +98,7 @@
             </div>
         </div>
     </div>
-    <script src="/epasale/public/js/dashboard.js"></script>
+    <script src="/public/js/dashboard.js"></script>
 </body>
 
 </html>

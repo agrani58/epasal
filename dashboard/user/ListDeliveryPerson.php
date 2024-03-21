@@ -13,8 +13,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="/epasale/public/css/style.css" />
-    <link rel="stylesheet" href="/epasale/public/css/dashboard.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/dashboard.css" />
 </head>
 
 
@@ -68,7 +68,7 @@
                             
                             echo "<tr>";
                             echo "<td>{$row["user_id"]}</td>";
-                            echo "<td><img src='/epasale/" . $row["user_photo_url"] . "' width='50px' alt='User Profile'>&nbsp;{$row["fname"]} {$row["lname"]}</td>";
+                            echo "<td><img src='/" . $row["user_photo_url"] . "' width='50px' alt='User Profile'>&nbsp;{$row["fname"]} {$row["lname"]}</td>";
                             echo "<td>{$row["email"]}</td>";
                             echo "<td>{$row["contact_no"]}</td>";
                             echo "<td>{$row["gender"]}</td>";
@@ -92,7 +92,7 @@
             </div>
         </div>
     </div>
-    <script src="/epasale/public/js/dashboard.js"></script>
+    <script src="/public/js/dashboard.js"></script>
 </body>
 
 </html>

@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if(buyNowButton != null) {
             buyNowButton.addEventListener('click', function () {
                 myCart.addProduct(pId, totalQuantity);
-                window.location = "/epasale/cart.php";
+                window.location = "/cart.php";
             });
         }
     }

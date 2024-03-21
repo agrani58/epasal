@@ -11,8 +11,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="/epasale/public/css/style.css" />
-    <link rel="stylesheet" href="/epasale/public/css/dashboard.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/dashboard.css" />
 </head>
 
 
@@ -42,7 +42,7 @@
         ?>
 
 
-        <form method="POST" action="/epasale/dashboard/product/ListProduct.php" class="product-form form__wrapper"
+        <form method="POST" action="/dashboard/product/ListProduct.php" class="product-form form__wrapper"
             id="form-category" ENCTYPE="multipart/form-data">
             <h3>Product Information</h3>
 
@@ -132,7 +132,7 @@
     </div>
 
     <script defer src="./js/script.js"></script>
-    <script src="/epasale/public/js/dashboard.js"></script>
+    <script src="/public/js/dashboard.js"></script>
 </body>
 
 </html>

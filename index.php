@@ -11,7 +11,7 @@ require_once("./model/ProductManager.php");
     <title>ePasal - Home Page</title>
 
     <!-- CSS Stylesheets Start -->
-    <link rel="stylesheet" href="/epasale/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/style.css">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -27,7 +27,7 @@ if (isset($_GET["action"]) && $_GET["action"] === "logout") {
     unset($_SESSION["user_id"]);
     unset($_SESSION["email"]);
     unset($_SESSION["fullname"]);
-    header("Location: /epasale");
+    header("Location: ");
 }
 
 if (isset($_POST["submit"])) {
@@ -70,11 +70,11 @@ function getDistance($lat, $lon) {
             foreach($seller["products"] as $product) {
                 $productsHTML .= '  
                 <div class="seller__card product__card animate__animated animate__fadeIn" data-pid="'. $product["product_id"] .'">
-                    <a class="seller__a" href="/epasale/product-detail.php?id='. $product["product_id"] .'">
+                    <a class="seller__a" href="/product-detail.php?id='. $product["product_id"] .'">
                         <img class="qtygroup__cardimg" src="'. $product["product_photo_url"] .'" alt="Productimage">
                     </a>
                     <div class="seller__cardbody">
-                        <a class="seller__a" href="/epasale/product-detail.php?id='. $product["product_id"] .'">
+                        <a class="seller__a" href="/product-detail.php?id='. $product["product_id"] .'">
                             <h3 class="seller__cardtitle">'. $product["product_name"] .'</h3>
                         </a>
                         <p class="seller__cardsubtitle">NRs. '. $product["unit_price"] .'</p>
@@ -93,15 +93,15 @@ function getDistance($lat, $lon) {
             <div class="seller animate__animated animate__fadeIn">
                 <div class="seller__info ">
                     <div class="seller__profile">
-                        <a class="seller__a" href="/epasale/seller-page.php?id='. $seller["user_id"] .'">
+                        <a class="seller__a" href="/seller-page.php?id='. $seller["user_id"] .'">
                             <img class="seller__profile__avatar" src="' . $seller["shop_photo_url"] . '" width="40px" />
                         </a>
                         <div class="seller__profile-content">
-                            <h3><a class="seller__a" href="/epasale/seller-page.php?id='. $seller["user_id"] .'">'. $seller["shop_name"] . ' </a></h3>
+                            <h3><a class="seller__a" href="/seller-page.php?id='. $seller["user_id"] .'">'. $seller["shop_name"] . ' </a></h3>
                             <h4>'. $seller["shop_address"] . ', ' . $seller["shop_city"]  .' '. getDistance($seller["shop_lat"], $seller["shop_lon"]) .'</h4>
                         </div>
                     </div>
-                    <a href="/epasale/seller-page.php?id='. $seller["user_id"] .'" class="seller__a">
+                    <a href="/seller-page.php?id='. $seller["user_id"] .'" class="seller__a">
                         <button class="button button-small btn-primary">See More</button>
                     </a>
 
@@ -128,7 +128,7 @@ function getDistance($lat, $lon) {
     </div>
     <!-- Includes footer partial from ./includes/_footer.php -->
     <?php include_once("includes/_footer.php"); ?>
-    <script src="/epasale/public/js/prdx-scroll.js"></script>
+    <script src="/public/js/prdx-scroll.js"></script>
     <script>
         function getUserLocation() {
             if (navigator.geolocation) {
@@ -144,7 +144,7 @@ function getDistance($lat, $lon) {
                         formData.append("longitude", longitude);
                         formData.append("submit", "location");
 
-                        fetch("/epasale/index.php", {
+                        fetch("/index.php", {
                             method: "POST",
                             body: formData,
                             headers: {
@@ -157,7 +157,7 @@ function getDistance($lat, $lon) {
                             return response.text();
                         })
                             .then((data) => {
-                                window.location = "/epasale/index.php";
+                                window.location = "/index.php";
                             }).catch(error => {
                                 console.error("Fetch error:", error);
                             })

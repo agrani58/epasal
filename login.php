@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="/epasale/public/css/style.css">
-    <link rel="stylesheet" href="/epasale/public/css/login.css" />
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/login.css" />
 </head>
 
 <?php
@@ -46,16 +46,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </div>
 
 
-                <!-- <a class="link form__link" href="/epasale">Forgot your Password?</a> <br /> -->
+                <!-- <a class="link form__link" href="">Forgot your Password?</a> <br /> -->
                 <div class="form-group form__form-links">
                     New to ePasal?
-                    <a class="link form__link" href="/epasale/signup.php"> Create your ePasal Account</a>
+                    <a class="link form__link" href="/signup.php"> Create your ePasal Account</a>
                 </div>
             </form>
         </div>
     </div>
     <?php include_once("includes/_footer.php"); ?>
-    <script src="/epasale/public/js/validator.js"></script>
+    <script src="/public/js/validator.js"></script>
     <script>
         // function to validate the login form
         function LoginValidateForm() {

@@ -22,8 +22,8 @@
   <title>CheckOut Page</title>
 
   <!-- CSS Stylesheets Start -->
-  <link rel="stylesheet" href="/epasale/public/css/style.css">
-  <link rel="stylesheet" href="/epasale/public/css/login.css" />
+  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="/public/css/login.css" />
   <!-- CSS Stylesheets End -->
 </head>
 
@@ -62,7 +62,7 @@
 
           echo '
                 <div class="checinfo__card">
-                <img class="checinfo__img" src="/epasale/' . $product["product_photo_url"] . '" alt="photo of lassi" />
+                <img class="checinfo__img" src="/' . $product["product_photo_url"] . '" alt="photo of lassi" />
       
                 <div class="checinfo__content">
                   <h3 class="checkinfo__cardh3">' . $product["product_name"] . '</h3>

@@ -12,8 +12,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="/epasale/public/css/style.css" />
-    <link rel="stylesheet" href="/epasale/public/css/dashboard.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/dashboard.css" />
 </head>
 
 
@@ -105,7 +105,7 @@
 
 
                             echo "<td align='center'>
-                                            <a class='button btn-primary' target='_blank' href='/epasale/invoice.php?orderID=" . $row["order_id"] . "'>View Invoice</a>
+                                            <a class='button btn-primary' target='_blank' href='/invoice.php?orderID=" . $row["order_id"] . "'>View Invoice</a>
                                     </td>";
                             echo "</tr>";
 
@@ -116,7 +116,7 @@
             </div>
         </div>
     </div>
-    <script src="/epasale/public/js/dashboard.js"></script>
+    <script src="/public/js/dashboard.js"></script>
 </body>
 
 </html>

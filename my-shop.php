@@ -10,8 +10,8 @@
     <title>Shop Information</title>
 
     <!-- CSS Stylesheets Start -->
-    <link rel="stylesheet" href="/epasale/public/css/style.css">
-    <link rel="stylesheet" href="/epasale/public/css/order.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/order.css">
     <!-- CSS Stylesheets End -->
 </head>
 

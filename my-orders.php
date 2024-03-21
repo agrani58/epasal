@@ -10,8 +10,8 @@
     <title>Orders</title>
 
     <!-- CSS Stylesheets Start -->
-    <link rel="stylesheet" href="/epasale/public/css/style.css">
-    <link rel="stylesheet" href="/epasale/public/css/order.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/order.css">
     <!-- CSS Stylesheets End -->
 </head>
 
@@ -53,7 +53,7 @@
                             echo '<td><span class="table__badge">' . $order['payment_status'] . '</span></td>';
                             echo '<td>' . $order['total_amount'] . '</td>';
                             echo '<td>' . $order['created_at'] . '</td>';
-                            echo '<td><a class="button btn-primary" href="/epasale/invoice.php?orderID=' . $order['order_id'] . '">Invoice</a></td>';
+                            echo '<td><a class="button btn-primary" href="/invoice.php?orderID=' . $order['order_id'] . '">Invoice</a></td>';
                             echo '</tr>';
                         }
 

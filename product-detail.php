@@ -11,7 +11,7 @@ require_once("./config/db.config.php"); ?>
     <title>ePasal - Home Page</title>
 
     <!-- CSS Stylesheets Start -->
-    <link rel="stylesheet" href="/epasale/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/style.css">
     <!-- CSS Stylesheets End -->
 </head>
 
@@ -64,12 +64,12 @@ require_once("./config/db.config.php"); ?>
                         ?>
 
                         <a class="link badge"
-                            href="/epasale/search.php?category=<?php echo $product["category_name"]; ?>">
+                            href="/search.php?category=<?php echo $product["category_name"]; ?>">
                             <?php echo $product["category_name"]; ?>
                         </a>
 
                         <a class="link badge"
-                            href="/epasale/seller-page.php?id=<?php echo $product["user_id"]; ?>">
+                            href="/seller-page.php?id=<?php echo $product["user_id"]; ?>">
                             <?php echo $product["shop_name"]; ?>
                         </a>
                     </div>

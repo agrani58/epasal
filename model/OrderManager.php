@@ -79,7 +79,7 @@ class OrderManager {
         }
 
          // Redirect after 5 seconds
-         echo '<meta http-equiv="refresh" content="0.5;url=/epasale">';
+         echo '<meta http-equiv="refresh" content="0.5;url=">';
     }
 
     public function getCustomerOrders($userId) {

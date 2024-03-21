@@ -9,8 +9,8 @@
     <title>ePasal - Home Page</title>
 
     <!-- CSS Stylesheets Start -->
-    <link rel="stylesheet" href="/epasale/public/css/style.css">
-    <link rel="stylesheet" href="/epasale/public/css/cart.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/cart.css">
     <!-- CSS Stylesheets End -->
 </head>
 
@@ -38,11 +38,11 @@
               foreach($cart as $product) {
                 echo '
                 <div class="cart product__card" data-pid="'. $product["product_id"] .'"  data-iscart="true">
-                    <a class="cart__a" href="/epasale/product-detail.php?id=' . $product["product_id"] . '">
-                        <img class="cart_product__img" src="/epasale/' . $product["product_photo_url"] . '" />
+                    <a class="cart__a" href="/product-detail.php?id=' . $product["product_id"] . '">
+                        <img class="cart_product__img" src="/' . $product["product_photo_url"] . '" />
                     </a>
                     <div class="cart__info">
-                        <a class="cart__a" href="/epasale/product-detail.php?id=' . $product["product_id"] . '">
+                        <a class="cart__a" href="/product-detail.php?id=' . $product["product_id"] . '">
                             <h3 class="cart__h3">' . $product["product_name"] . '</h3>
                         </a>
 
@@ -66,11 +66,11 @@
 
 
         <div class="cart__btn">
-            <a class="cart__a" href="/epasale/checkout.php?id=1" style="margin-right: 8px">
+            <a class="cart__a" href="/checkout.php?id=1" style="margin-right: 8px">
                 <button class="button btn-primary">Proceed to Checkout</button>
             </a>
 
-            <a class="cart__a" href="/epasale" >
+            <a class="cart__a" href="" >
                 <button class="button">Cancel</button>
             </a>
         </div>

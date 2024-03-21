@@ -10,8 +10,8 @@
     <title>Registration Page</title>
 
     <!-- CSS Stylesheets Start -->
-    <link rel="stylesheet" href="/epasale/public/css/style.css">
-    <link rel="stylesheet" href="/epasale/public/css/login.css" />
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/login.css" />
     <!-- CSS Stylesheets End -->
 </head>
 
@@ -92,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </div>
 
                 <span class="form-group  form__form-links">
-                    Already have an account? <a class="link form__link" href="/epasale/login.php">Sign in</a>
+                    Already have an account? <a class="link form__link" href="/login.php">Sign in</a>
                 </span>
             </form>
         </div>
@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <?php include_once("includes/_footer.php"); ?>
 
-    <script src="/epasale/public/js/validator.js"></script>
+    <script src="/public/js/validator.js"></script>
     <script>
         // function to validate the loogin form
         function SignUpValidateForm() {

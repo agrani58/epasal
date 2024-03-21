@@ -28,7 +28,7 @@ function hasRole($userRoles, $allowedRoles) {
 function hasPermission($allowedRoles) {
     if(!isset($_SESSION["roles"]) || hasRole($_SESSION["roles"], $allowedRoles) == false) {
         $_SESSION["redirect_url"] = $_SERVER["REQUEST_URI"];
-        header("Location: /epasale/login.php?error=err_no_access");
+        header("Location: /login.php?error=err_no_access");
         exit;
     }
 }
@@ -133,12 +133,12 @@ class FileUploader {
         $uniqueFilename = $name . $timestamp . '.' . $extension;
 
         // Define the destination folder
-        if (!file_exists($_SERVER["DOCUMENT_ROOT"] . "/epasale/" . $folder)) {
+        if (!file_exists($_SERVER["DOCUMENT_ROOT"] . "/" . $folder)) {
             throw new \Exception('Destination folder does not exist.');
         }
 
         // Move the uploaded file to the destination folder
-        $destination = $_SERVER["DOCUMENT_ROOT"] . "/epasale/" . $folder . '/' . $uniqueFilename;
+        $destination = $_SERVER["DOCUMENT_ROOT"] . "/" . $folder . '/' . $uniqueFilename;
         if (!move_uploaded_file($tempname, $destination)) {
             throw new \Exception('Failed to move uploaded file.');
         }

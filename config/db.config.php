@@ -3,7 +3,7 @@
 require(__DIR__ . "/../utils/utils.php");
 
 // Local DB
-$servername = "localhost";
+$servername = "mysql";
 $username = "root";
 $password = "root";
 $dbname = "test_epasal_db";

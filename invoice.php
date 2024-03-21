@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ePasal Table</title>
     <!-- CSS Stylesheets Start -->
-    <link rel="stylesheet" href="/epasale/public/css/style.css">
-    <link rel="stylesheet" href="/epasale/public/css/order.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/order.css">
     <!-- CSS Stylesheets End -->
 </head>
 
@@ -29,7 +29,7 @@
         <div class="invoice__header">
             <div class="row">
                 <div class="col-6" style="display: flex">
-                    <img class="invoice__brand" src="/epasale/public/img/epasal-primary-logo.png">
+                    <img class="invoice__brand" src="/public/img/epasal-primary-logo.png">
                 </div>
                 <div class="col-6">
                     <div class="invoice__headertext">

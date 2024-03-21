@@ -11,7 +11,7 @@
     </button>
 
     <button class="profile__container profile__container--dashboard">
-        <img class="profile__avatar" src="/epasale/<?php echo $_SESSION["user_photo_url"]; ?>" />
+        <img class="profile__avatar" src="/<?php echo $_SESSION["user_photo_url"]; ?>" />
         <div class="profile__description">
             <h4>
                 <?php echo $full_name; ?>
@@ -25,11 +25,11 @@
         </div>
 
         <div class="profile__menu">
-            <a href="/epasale/my-details.php" target="_blank">My Details</a>
-            <a href="/epasale/my-shop.php" target="_blank">My Shop</a>
-            <a href="/epasale/change-password.php" target="_blank">Change Password</a>
-            <a href="/epasale/">Browse EPasal</a>
-            <a href="/epasale/?action=logout">Logout</a>
+            <a href="/my-details.php" target="_blank">My Details</a>
+            <a href="/my-shop.php" target="_blank">My Shop</a>
+            <a href="/change-password.php" target="_blank">Change Password</a>
+            <a href="/">Browse EPasal</a>
+            <a href="/?action=logout">Logout</a>
         </div>
     </button>
 

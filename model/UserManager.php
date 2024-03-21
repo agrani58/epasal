@@ -89,7 +89,7 @@ class UserManager {
                     $_SESSION["roles"] = $this->getRoles($record["user_id"]);
                     $_SESSION["user_photo_url"] = $record["user_photo_url"];
 
-                    $redirect_url = "/epasale";
+                    $redirect_url = "";
 
                     if (isset($_SESSION["redirect_url"])) {
                         $redirect_url = $_SESSION["redirect_url"];

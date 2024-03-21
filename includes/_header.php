@@ -6,8 +6,8 @@ require_once("model/CategoryManager.php");
 ?>
 <header class="header">
     <div class="header__container">
-        <a class="header_logo" href="/epasale/">
-            <img src="/epasale/public/img/epasal-primary-logo.png" alt="ePasal - Online Food App" width="120px">
+        <a class="header_logo" href="/">
+            <img src="/public/img/epasal-primary-logo.png" alt="ePasal - Online Food App" width="120px">
         </a>
 
         <div class="header__searchbar">
@@ -47,7 +47,7 @@ require_once("model/CategoryManager.php");
         <div class="header__nav">
             <ul>
                 <li class="header_nav-links">
-                    <a href="/epasale/cart.php">
+                    <a href="/cart.php">
                         <span class="cart__icon"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
                                 fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                                 <path
@@ -62,7 +62,7 @@ require_once("model/CategoryManager.php");
                 if (isset($_SESSION) && isset($_SESSION["user_id"])) {
                     echo '
                     <div class="profile__container">
-                        <img  class="profile__avatar" src="/epasale/' . $_SESSION["user_photo_url"] .'" />
+                        <img  class="profile__avatar" src="/' . $_SESSION["user_photo_url"] .'" />
                         <div class="profile__description">
                             <h4>' . $_SESSION["fullname"] . '</h4>
                             <p>Customer <svg height="1em" viewBox="0 0 512 512" fill="currentColor"> <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
@@ -70,21 +70,21 @@ require_once("model/CategoryManager.php");
                         </div>
 
                         <div class="profile__menu">
-                            <a href="/epasale/my-orders.php">My Orders</a>
-                            <a href="/epasale/my-details.php">My Info</a>
-                            <a href="/epasale/my-shop.php">My Shop Info</a>
-                            <a href="/epasale/change-password.php">Change Password</a>
-                            <a href="/epasale/dashboard">Go to Dashboard</a>
-                            <a href="/epasale/?action=logout">Logout</a>
+                            <a href="/my-orders.php">My Orders</a>
+                            <a href="/my-details.php">My Info</a>
+                            <a href="/my-shop.php">My Shop Info</a>
+                            <a href="/change-password.php">Change Password</a>
+                            <a href="/dashboard">Go to Dashboard</a>
+                            <a href="/?action=logout">Logout</a>
                         </div>
                     </div>';
                 } else {
                     echo '
                         <li class="header_nav-links auth--links">
-                            <a href="/epasale/login.php">Sign in</a>
+                            <a href="/login.php">Sign in</a>
                         </li>
                         <li class="header_nav-links auth--links">
-                            <a href="/epasale/signup.php">Sign up </a>
+                            <a href="/signup.php">Sign up </a>
                         </li>';
                 }
 
@@ -117,7 +117,7 @@ require_once("model/CategoryManager.php");
 
 <script>
     function updateQuery(name, value) {
-        let searchUrl = new URL(location.origin + "/epasale/search.php" + location.search);
+        let searchUrl = new URL(location.origin + "/search.php" + location.search);
 
         searchUrl.searchParams.set(name, value);
         window.location.href = searchUrl.href;

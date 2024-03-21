@@ -17,7 +17,7 @@ body {
     margin: 0px 0px 0px 0px;
     /*background-color: #eee; /* /* default bg is gray */
     background:  linear-gradient(to bottom, rgba(255, 255, 255,0.9), rgba(255, 255, 255,0.9)),
-    url("/epasale/public/img/background.jpg") center/300px 300px repeat;
+    url("/public/img/background.jpg") center/300px 300px repeat;
 
 }
 

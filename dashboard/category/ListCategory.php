@@ -12,8 +12,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="/epasale/public/css/style.css" />
-    <link rel="stylesheet" href="/epasale/public/css/dashboard.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/dashboard.css" />
 </head>
 
 <body>
@@ -57,7 +57,7 @@
                             echo "<td>{$row["category_name"]}</td>";
                             echo "<td align='center'>
                                  <form method='POST'>
-                                    <a class='button btn-primary' href='/epasale/dashboard/category/AddCategory.php?id={$category_id}'>Edit Info</a>
+                                    <a class='button btn-primary' href='/dashboard/category/AddCategory.php?id={$category_id}'>Edit Info</a>
                                     <input type='text' name='category_id' value='{$category_id}'  hidden />
                                  </form>
                               </td>";
@@ -70,7 +70,7 @@
             </div>
         </div>
     </div>
-    <script src="/epasale/public/js/dashboard.js"></script>
+    <script src="/public/js/dashboard.js"></script>
 </body>
 
 </html>
