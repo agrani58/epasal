@@ -1,5 +1,5 @@
 # ePasal - Online Food App Nearby
-We have created frontend. We are working on it currently.
+The project has been completed and no further updates will be made.
 
 # Supervisor 
 Bharat Khanal
@@ -8,14 +8,14 @@ Bharat Khanal
 Aashish Maharjan
 
 # Members
-* Alisha Pokhrel
 * Agrani Chapagain
+* Alisha Pokhrel
 * Asha G.C.
 
 # Group
 Minor I Group J 2023
 
-[Visit Linkedin](https://www.linkedin.com/in/aacismaharjan/)
+[Visit Linkedin](https://www.linkedin.com/in/agrani-chapagain-842121227/)
 
 # Screenshot
 ![Screen of Epasale](./public/img/epasale-screenshot.png)
